@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="conversations">聊天</string>
+    <string name="ai_assistants">AI 助手</string>
+    <string name="app_icon">应用图标</string>
+    <string name="ask_me_anything">问我任何事...</string>
+
+    <string name="share">分享</string>
+    <string name="write_article">写文章</string>
+    <string name="write_article_description">在任何你想要的主题上生成精美的文章</string>
+
+    <string name="all">全部</string>
+    <string name="examples">示例</string>
+    <string name="examples_1">推荐活动 \n远程员工的团建日</string>
+    <string name="examples_2">告诉我罗马帝国的一个有趣事实\n</string>
+    <string name="examples_3">解释期权交易\n如果我熟悉买卖股票</string>
+    <string name="examples_img_1">生成白色暹罗猫的图像\n</string>
+    <string name="examples_img_2">生成一个现代的带有太阳的标志\n为一家营销公司</string>
+    <string name="examples_img_3">生成一个社交媒体应用的功能图形\n类似于 Instagram</string>
+    <string name="examples_desc">这只是我能做的一些例子</string>
+    <string name="stop_generating">停止生成…</string>
+    <string name="copy">复制</string>
+    <string name="write_article_example1">写一篇文章，探讨在日常生活中练习正念的好处</string>
+    <string name="write_article_example2">写一篇文章，探讨气候变化对地球的影响。</string>
+    <string name="write_article_example3">写一篇文章，讨论保持健康的工作与生活平衡的重要性。</string>
+    <string name="type_something_like">试试这样的：</string>
+    <string name="empty">空</string>
+    <string name="no_history">您还没有任何对话。</string>
+    <string name="clear_all_history">清除所有对话</string>
+    <string name="are_you_sure_delete_all_history">您确定要清除所有历史记录吗？</string>
+    <string name="cancel">取消</string>
+    <string name="yes_clear_all">清除</string>
+    <string name="search_conversation">搜索…</string>
+    <string name="dark_theme">深色主题</string>
+    <string name="privacy_policy">隐私政策</string>
+    <string name="about_us">关于 AskAI</string>
+    <string name="logout">注销</string>
+    <string name="are_you_sure_logout">您确定要注销吗？</string>
+    <string name="yes_logout">注销</string>
+    <string name="settings">设置</string>
+    <string name="powered_by_chat_gpt">由 ChatGPT 4 提供支持</string>
+    <string name="watch_ad">观看广告</string>
+    <string name="you_reach_free_message_limit">看起来您已经用完了所有的免费积分！明天回来获取更多，或升级到高级版本以获取无限访问权限！此请求所需的最低积分：%1$d</string>
+
+    <string name="network_error">网络错误</string>
+    <string name="no_conection_try_again">请连接到互联网然后重试。</string>
+    <string name="save_to_gallery">已成功保存！</string>
+    <string name="sign_in_with_google">使用 Google 登录</string>
+    <string name="app_welcome">欢迎来到</string>
+    <string name="sign_in_api_key">使用 OpenAI API 密钥登录</string>
+    <string name="user_continue">继续</string>
+    <string name="api_key">API 密钥</string>
+    <string name="or">或</string>
+    <string name="key_error">需要 API 密钥</string>
+    <string name="google_signin_error">出了点问题，请稍后再试</string>
+    <string name="credits_i_have">我的积分</string>
+    <string name="recharge">充值</string>
+    <string name="credits">积分</string>
+    <string name="please_login_msg">请登录以充值您的积分钱包。</string>
+    <string name="free_credits">获取 1 个免费积分</string>
+    <string name="generate_image">生成图像</string>
+    <string name="generate_text">开始聊天</string>
+    <string name="delete">删除</string>
+
+    <string name="image_content">图像生成</string>
+    <string name="image_content_logo">生成标志</string>
+    <string name="image_content_logo_description">为不同品牌生成标志</string>
+    <string name="image_content_logo_example1">为市场公司设计一个带太阳的现代标志。</string>
+    <string name="image_content_logo_example2">极可爱的外星鱼在外星可居住的水下星球游泳的照片，珊瑚礁，如梦幻般的氛围。</string>
+    <string name="image_content_logo_example3">设计 [品牌名称] 的 3D 标志</string>
+
+    <string name="image_content_product">产品图片</string>
+    <string name="image_content_product_description">为不同产品生成图像</string>
+    <string name="image_content_product_example1">为 [产品或服务] 的广告生成图像</string>
+    <string name="image_content_product_example2">为社交媒体帖子生成 [产品名称] 的图像。</string>
+    <string name="image_content_product_example3">为类似 WhatsApp 的社交媒体应用生成功能图形。</string>
+
+    <string name="image_content_art">AI 艺术</string>
+    <string name="image_content_art_description">生成引人注目的艺术</string>
+    <string name="image_content_art_example1">生成白色暹罗猫的图像。</string>
+    <string name="image_content_art_example2">雾霭的森林里有一只愤怒的全身狼。</string>
+    <string name="image_content_art_example3">使用柔和的粉彩色和流动的线条，生成一个带有梦幻，空灵质感的人物画像。</string>
+
+    <string name="social_media">社交媒体</string>
+    <string name="social_media_fb">Facebook</string>
+    <string name="social_media_fb_description">制作引人注目的 Facebook 帖子</string>
+    <string name="social_media_fb_example1">制作一篇有活力的 Facebook 帖子，宣传 [产品/服务]</string>
+    <string name="social_media_fb_example2">为主题 [添加内容主题] 的 3 条 Facebook 帖子创意，以吸引目标受众 [添加目标受众]。</string>
+    <string name="social_media_fb_example3">为我关于 [主题] 的 Facebook 群组发布有趣而引人入胜的问题</string>
+
+    <string name="social_media_insta">Instagram</string>
+    <string name="social_media_insta_description">编写引人注目的 Instagram 标题</string>
+    <string name="social_media_insta_example1">为与 [添加内容主题] 相关的 Instagram 帖子制作 3 个标题，以吸引目标受众 [添加目标受众]</string>
+    <string name="social_media_insta_example2">为推广我的产品 [名称] 创意 Instagram 帖子的想法。</string>
+    <string name="social_media_insta_example3">为 [添加产品或服务] 制作一个 15 秒的 Instagram 视频广告的脚本</string>
+
+    <string name="social_media_tweet">Twitter</string>
+    <string name="social_media_tweet_description">撰写引人注目的推文</string>
+    <string name="social_media_tweet_example1">在 [主题] 上写一条引人入胜的推文</string>
+    <string name="social_media_tweet_example2">创建一个引人入胜且详细的 Twitter 线程，讨论 [主题]。确保包含相关的标签。</string>
+    <string name="social_media_tweet_example3">我需要一个推文的想法，以在 Twitter 上推广我的在线课程产品，吸引理想的客户购买。</string>
+
+    <string name="social_media_linkdin">领英</string>
+    <string name="social_media_linkdin_description">制作突出的领英帖子</string>
+    <string name="social_media_linkdin_example1">创建一篇关于使用 [产品/服务] 好处的推广领英帖子</string>
+    <string name="social_media_linkdin_example2">为 [网站 URL] 创建 5 个领英广告标题</string>
+    <string name="social_media_linkdin_example3">您能帮忙撰写一篇领英帖子，重点介绍客户对我们的产品是如何解决他们独特挑战的?</string>
+
+    <string name="social_media_tiktok">TikTok</string>
+    <string name="social_media_tiktok_description">制作引人注目且易分享的 TikTok 标题</string>
+    <string name="social_media_tiktok_example1">分享如何在 TikTok 上获得更多粉丝。</string>
+    <string name="social_media_tiktok_example2">为与 [内容主题] 相关的 TikTok 帖子制作 3 个标题，以吸引目标受众 [目标受众]</string>
+    <string name="social_media_tiktok_example3">需要一个在 TikTok 上提问我的粉丝并在评论中引发讨论的标题想法。</string>
+
+    <string name="business">业务</string>
+    <string name="business_marketing">营销</string>
+    <string name="business_marketing_description">为营销活动生成内容</string>
+    <string name="business_marketing_example1">为 [产品/服务/公司] 制作一分钟广告脚本</string>
+    <string name="business_marketing_example2">为我的 [产品/服务/公司] 撰写产品描述</string>
+    <string name="business_marketing_example3">建议我以/不以 [媒体渠道] 的方式廉价推广我的 [公司]</string>
+
+    <string name="business_sales">销售</string>
+    <string name="business_sales_description">撰写提升销售计划</string>
+    <string name="business_sales_example1">有哪些为我的 [利基] 公司生成潜在客户的创意方式？</string>
+    <string name="business_sales_example2">为我的蜡烛业务推荐的交叉销售机会有哪些？</string>
+    <string name="business_sales_example3">为我 [利基] 公司销售的潜在客户创建一封个性化的销售电子邮件。</string>
+
+    <string name="business_email">电子邮件活动</string>
+    <string name="business_email_description">撰写商业电子邮件</string>
+    <string name="business_email_example1">为我的 [利基] 通讯制作 10 个主题行。</string>
+    <string name="business_email_example2">使用主题行：[您的主题行] 撰写一封跟进电子邮件</string>
+    <string name="business_email_example3">我如何重新吸引我的电子邮件列表中的不活跃订阅者？</string>
+
+    <string name="business_cs">客户服务</string>
+    <string name="business_cs_description">提出改进客户服务的想法</string>
+    <string name="business_cs_example1">请提供一份解释标准零售退货政策的模板。</string>
+    <string name="business_cs_example2">提供使我的客户接受我公司优惠的创意。</string>
+    <string name="business_cs_example3">请提供客户服务代理可以用来表达同情的 X 个示例短语。</string>
+
+    <string name="business_ec">电子商务</string>
+    <string name="business_ec_description">为电子商务业务提出想法</string>
+    <string name="business_ec_example1">客户最近购买了运动鞋，请给我推荐类似或互补产品，他们可能会喜欢。</string>
+    <string name="business_ec_example2">为 Google Tag Manager 编写一个 JavaScript，当单击回调按钮时发送 Facebook 自定义转换事件。</string>
+    <string name="business_ec_example3">为 [Trader Joe\'s Awake Blend 咖啡豆] 撰写一个 50 字的产品描述。[以欢快、信息丰富的语调书写。]</string>
+
+    <string name="writing">写作</string>
+    <string name="writing_article">文章写作</string>
+    <string name="writing_article_description">在您选择的主题上写好文章</string>
+    <string name="writing_article_example1">写一篇关于全球变暖的文章。</string>
+    <string name="writing_article_example2">撰写一篇强调在日常生活中保持和谐工作与生活平衡的重要性的文章。</string>
+    <string name="writing_article_example3">起草一个社区项目提案，提交给您当地的市政委员会。包括项目目的、预期收益、实施步骤以及您计划如何资助它。</string>
+
+    <string name="writing_blog">博客写作</string>
+    <string name="writing_blog_description">创建博客以展示产品</string>
+    <string name="writing_blog_example1">您能为我提供有关 [您选择的主题] 博客文章的一些建议吗？</string>
+    <string name="writing_blog_example2">以健康专业人员的视角，撰写一篇 1500 字的博客文章，强调均衡饮食和定期运动的重要性。</string>
+    <string name="writing_blog_example3">为我的博客文章 [主题] 撰写一个 100 字的元描述。</string>
+
+    <string name="writing_edu">教育/学术</string>
+    <string name="writing_edu_description">撰写教育性文章，如论文和报告</string>
+    <string name="writing_edu_example1">撰写一个以年代顺序概述 [您选择的主题] 的论文</string>
+    <string name="writing_edu_example2">撰写一篇关于技术如何影响当今教育的论文。</string>
+    <string name="writing_edu_example3">提出在学习考试时提高记忆和回忆能力的 10 种方法。</string>
+
+    <string name="writing_email">电子邮件写作</string>
+    <string name="writing_email_description">撰写教育性电子邮件。</string>
+    <string name="writing_email_example1">为参加我的 [网络研讨会主题] 网络研讨会的人们写跟进电子邮件。</string>
+    <string name="writing_email_example2">为 VIP 客户创造个性化的电子邮件问候。</string>
+    <string name="writing_email_example3">我需要写一封关于项目时间表变更的电子邮件给客户。您能给我一些措辞建议吗？</string>
+
+    <string name="programing">编程</string>
+    <string name="programing_mobile">移动开发</string>
+    <string name="programing_mobile_description">为任何移动平台生成代码。</string>
+    <string name="programing_mobile_example1">编写一个用于消耗 Rest API 的 Kotlin 代码。</string>
+    <string name="programing_mobile_example2">为 Facebook 登录集成编写 Swift 代码</string>
+    <string name="programing_mobile_example3">帮我找出以下代码中的错误 [粘贴下面的代码]</string>
+
+    <string name="programing_web">Web 开发</string>
+    <string name="programing_web_description">为任何网站编写 Html/CSS。</string>
+    <string name="programing_web_example1">使用 JavaScript 为 [网站描述] 网站开发架构和代码。</string>
+    <string name="programing_web_example2">我想在我的网站上实现一个粘性标题。您能提供使用 CSS 和 JavaScript 进行此操作的示例吗？</string>
+    <string name="programing_web_example3">查找此代码的错误：[在下面贴代码]</string>
+
+    <string name="programing_server">后端服务器</string>
+    <string name="programing_server_description">为后端服务器编写代码</string>
+    <string name="programing_server_example1">编写一个在 Node.js 中集成 Firebase 推送通知的代码。</string>
+    <string name="programing_server_example2">在 Python 编程语言中给我一个 CRUD 函数。</string>
+    <string name="programing_server_example3">我想为我的 React 应用实现服务器端渲染。您能提供使用 Next.js 进行此操作的示例吗？</string>
+
+    <string name="life_style">生活方式</string>
+    <string name="life_style_health">健康</string>
+    <string name="life_style_health_description">找到健康建议</string>
+    <string name="life_style_health_example1">描述六个对背部和颈部疼痛有效的瑜伽姿势或伸展动作。</string>
+    <string name="life_style_health_example2">想出在半小时或更短时间内可以准备的 10 个有营养的餐食。</string>
+    <string name="life_style_health_example3">适合职业人士的简单初学者友好的健身例程</string>
+
+    <string name="life_style_cooking">烹饪与食物</string>
+    <string name="life_style_cooking_description">找到美味的食谱</string>
+    <string name="life_style_cooking_example1">有什么简单的方法可以制作带有白酱和蘑菇的意大利面食谱？</string>
+    <string name="life_style_cooking_example2">想出在半小时或更短时间内可以准备的 10 个有营养的餐食。</string>
+    <string name="life_style_cooking_example3">建议一个以冬季食材为主的多道菜晚宴菜单</string>
+    <string name="life_style_travel">旅行与旅游</string>
+    <string name="life_style_travel_description">获取全球热门旅行目的地</string>
+    <string name="life_style_travel_example1">作为游客在 [地点] 的 X 天需要多少钱？</string>
+    <string name="life_style_travel_example2">从 X 到 Y 最方便的航空公司是哪家？</string>
+    <string name="life_style_travel_example3">阿姆斯特丹有哪些评价最高的餐厅，每人预算为 100 欧元？</string>
+
+    <string name="share_app">分享应用</string>
+    <string name="recharge_msg">免费积分无法用于图像生成，请充值您的钱包。</string>
+    <string name="usage_cost1">%1$s：%2$s 积分 / %3$s 字</string>
+    <string name="usage_cost2">%1$s：%2$s 积分 / %3$s 字</string>
+    <string name="image_generating">生成图像中...</string>
+    <string name="policy_text">登录即表示您同意我们的 </string>
+    <string name="terms_service">服务条款</string>
+    <string name="powered_by">由 ChatGPT-4 提供支持</string>
+    <string name="rate_change_info">注：字数包括问题中的字数和答案中的字数。</string>
+    <string name="pricing">定价</string>
+
+    <string name="usage_cost_img">图像：%1$s 积分 / 图像</string>
+    <string name="default_model">默认模型</string>
+    <string name="default_style">风格：%1$s</string>
+    <string name="select_style">选择风格</string>
+
+    <string name="style_no">无风格</string>
+    <string name="style_enhance">增强</string>
+    <string name="style_anime">动漫</string>
+    <string name="style_photographic">摄影</string>
+    <string name="style_digital_art">数字艺术</string>
+    <string name="style_comic_book">漫画书</string>
+    <string name="style_fantasy_art">奇幻艺术</string>
+    <string name="style_line_art">线描艺术</string>
+    <string name="style_analog_film">模拟电影</string>
+    <string name="style_neon_punk">霓虹庞克</string>
+    <string name="style_isometric">等距投影</string>
+    <string name="style_low_poly">低多边形</string>
+    <string name="style_origami">折纸艺术</string>
+    <string name="style_modeling_compound">建模复合物</string>
+    <string name="style_cinematic">电影风</string>
+    <string name="style_3d_model">3D 模型</string>
+    <string name="style_pixel_art">像素艺术</string>
+    <string name="style_tile_texture">瓷砖纹理</string>
+    <string name="congrats">恭喜</string>
+    <string name="daily_free_credits">您获得了免费积分！明天再来获取更多。</string>
+    <string name="ok">好的</string>
+    <string name="sub_title">高级计划</string>
+    <string name="gpt_4_access">访问 GPT-4</string>
+    <string name="no_ads">无广告体验</string>
+    <string name="unlimited_messages">无限消息</string>
+    <string name="unlimited_words">无字数限制</string>
+    <string name="unlimited_image">无限图像生成</string>
+    <string name="weekly">每周</string>
+    <string name="monthly">每月</string>
+    <string name="yearly">每年</string>
+    <string name="cancel_billing">随时取消定期账单</string>
+    <string name="pro_title">升级到高级版！</string>
+    <string name="pro_sub_title">无限访问所有功能</string>
+    <string name="manage_sub">管理订阅</string>
+    <string name="products_not_found">未找到产品</string>
+    <string name="restore_purchase">恢复购买</string>
+    <string name="welcome_pre">欢迎使用高级版本！</string>
+    <string name="premium_not">您没有任何有效的订阅！</string>
+    <string name="usage_message">积分使用情况：%1$s 积分 / %2$s 字</string>
+    <string name="usage_image">积分使用情况：%1$s 积分 / 图像</string>
+    <string name="free_usage">每日免费使用</string>
+    <string name="watch_short_ad">观看短广告</string>
+    <string name="upgrade_to_pre">升级到高级版</string>
+    <string name="confirmation">确认</string>
+    <string name="no">否</string>
+    <string name="yes">是</string>
+    <string name="no_chats">现在开始您新的引人入胜的对话。</string>
+    <string name="select_media_source">选择媒体来源</string>
+    <string name="camera">相机</string>
+    <string name="gallery">相册</string>
+    <string name="image_input_p1">为图像编写引人入胜的标题</string>
+    <string name="image_input_p2">根据图像创作一个引人入胜的故事</string>
+    <string name="image_input_p3">为这张图像生成一个热门的标签</string>
+    <string name="image_input_p4">从这张图像中检测并提取文本</string>
+    <string name="image_input_prompt">选择提示</string>
+    <string name="image_url">粘贴图像网址</string>
+    <string name="link">链接</string>
+    <string name="url_error">无效的链接</string>
+    <string name="image_load_failed">无法从链接加载图像。</string>
+
+    <string name="continue_guest">以访客身份继续</string>
+    <string name="exit_guest">退出访客模式</string>
+    <string name="are_you_sure_exit">您确定要退出吗？</string>
+
+    <string name="delete_account">删除帐户</string>
+    <string name="delete_account_error">删除帐户错误！请稍后重试</string>
+    <string name="are_you_sure_delete_account">您确定要删除帐户吗？这将删除所有您的数据，包括积分和订阅。</string>
+
+    <string name="generate_anything">生成任何内容...</string>
+    <string name="download">下载</string>
+    <string name="image_detail">详细图像</string>
+    <string name="image_try">尝试</string>灵感！
+    <string name="image_inspirations">灵感！</string>
+    <string name="image_inp_1">一只拥有金色翅膀的飞翔熊猫，奇幻艺术</string>
+    <string name="image_inp_2">一位美丽的爱神肖像，拥有美丽的绿色眼睛，令人惊叹的超详细张静那摄影，复杂的宝石王冠</string>
+    <string name="image_inp_3">一幅紫色猫头鹰坐在森林中的画作，在ArtStation、Pixiv上流行，戏剧性、电影感、4k、高度详细、神秘</string>
+    <string name="image_inp_4">单色阴影，引人入胜的都市庞克女子，黑发纹身和邪恶的美丽，双色调，分裂色调精通的风格，清晰的新波普插画，浅青、白色、鲑色和米白，32k UHD，漫画艺术，蒸汽朋克，街头流行，情感，特写，充满活力，插画，戴着耳机，抽象背景，电影感</string>
+    <string name="image_inp_5">詹姆斯·克里斯滕森风格，雪神肖像，精致细节，30兆像素，4k，85毫米镜头，锐利对焦，复杂细致，长曝光时间，f/8，ISO 100，快门速度1/125，漫射背光，屡获殊荣的照片，面向摄像头，凝视镜头，单色视觉，Elle杂志，小捕光灯，低对比度，高锐度，对称性，景深，金色时光，超详细摄影，闪亮金属表面，复杂的珍珠贝壳镶嵌，光线追踪，全局照明</string>
+    <string name="image_inp_6">极简主义插图，鲜艳色彩的热带鸟栖息在一株有分支的植物上，前面是一条山间溪流，瀑布倾泻而下，每个表面都用细线纹理，创造了错综复杂的交锋图案，由Frankin Booth制作的8k、4色木刻版印刷，极简主义</string>
+    <string name="image_inp_7">一幅描绘戴着蓝色和橙色珠宝的女子的画作，以幻想插画的风格，逼真的超详细渲染，深银和深琥珀，闪亮的眼睛，罗曼风格，强烈的特写，插画</string>
+    <string name="image_inp_8">高度详细的数字绘画，大气照明，Octane渲染，虚幻引擎，专业制作，金属喙鹰猫头鹰的幻想之谜，电影感，戏剧性的色彩，特写，CGSociety，计算机渲染，由迈克·温克尔曼制作，UHD，在Cinema4D中渲染，硬表面建模，8k，Octane渲染，灵感来自Beksinski</string>
+    <string name="image_inp_9">Erin Hanson&amp; Donato Giancola&amp; Nicolas de Stael，满月，沙质停车场，冲浪板，棕榈树，白水，云，饱和绘画，波浪，8k</string>
+    <string name="image_inp_10">一只在发光的魔法森林中的迷幻熊的插画，(((艺术家Sam Bosma制作)))</string>
+    <string name="page_count">页数：%1$s</string>
+    <string name="pdf_input_p1">总结此 PDF 的内容</string>
+    <string name="pdf_question">总结从 PDF 复制并相应格式化的以下文本。\n</string>
+    <string name="pdf_question_custom">以下文本是从 PDF 复制的，%1$s\n</string>
+    <string name="pdf_max_pages">失败！：目前 PDF 文件最多支持 %1$s 页</string>
+    <string name="language">语言</string>
+
+    <string name="vision_limit">已达到视觉每日使用限额</string>
+    <string name="generation_limit">已达到图像生成每日使用限额</string>
+    <string name="gpt4_limit">已达到GPT-4每日使用限额</string>
+
+</resources>

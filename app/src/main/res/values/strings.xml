@@ -1,0 +1,319 @@
+<resources>
+    <string name="app_name" translatable="false">AiVision</string>
+    <string name="conversations">Chats</string>
+    <string name="ai_assistants">AI Assistants</string>
+    <string name="app_icon">App Icon</string>
+    <string name="ask_me_anything">Ask anything...</string>
+
+    <string name="share">Share</string>
+    <string name="write_article">Write Articles</string>
+    <string name="write_article_description">Generate well-written articles on any topic you want</string>
+
+    <string name="all">All</string>
+    <string name="examples">Assistants</string>
+    <string name="examples_1">Recommend activities \nFor a team-building day with remote employees</string>
+    <string name="examples_2">Tell me a fun fact about\n the Roman Empire</string>
+    <string name="examples_3"> Explain options trading\nIf I’m familiar with being and selling stocks</string>
+    <string name="examples_img_1">Generate image \nof a white siamese cat</string>
+    <string name="examples_img_2">Generate a modern logo \nwith a sun for a marketing company</string>
+    <string name="examples_img_3">Generate a feature graphic \nof social media app like Instagram</string>
+    <string name="examples_desc">These are just few examples of what I can do</string>
+    <string name="stop_generating">Stop generating…</string>
+    <string name="copy">Copy</string>
+    <string name="write_article_example1">Write an article discussing the benefits of practicing mindfulness in daily life</string>
+    <string name="write_article_example2">Write an article discussing the impact of climate change on the planet.</string>
+    <string name="write_article_example3">Write an article discussing the importance of maintaining a healthy work-life balance.</string>
+    <string name="type_something_like">Try something like:</string>
+    <string name="empty">Empty</string>
+    <string name="no_history">You don\'t have any conversation yet.</string>
+    <string name="clear_all_history">Clear All Conversations</string>
+    <string name="are_you_sure_delete_all_history">Are you sure you want to clear all history?</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes_clear_all">Clear</string>
+    <string name="search_conversation">Search…</string>
+    <string name="dark_theme">Dark Theme</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="about_us">About AskAI</string>
+    <string name="logout">Logout</string>
+    <string name="are_you_sure_logout">Are you sure you want to logout?</string>
+    <string name="yes_logout">Logout</string>
+    <string name="settings">Settings</string>
+    <string name="powered_by_chat_gpt">Powered by ChatGPT 4</string>
+    <string name="watch_ad">Watch Ad</string>
+    <string name="you_reach_free_message_limit">Looks like you\'ve used up all your free credits! Return tomorrow for more, or upgrade to the premium version for unlimited access!. Minimum credits required for this request: %1$d</string>
+
+    <string name="network_error">Network Error</string>
+    <string name="no_conection_try_again">Please, connect to the internet and try again.</string>
+    <string name="save_to_gallery">Saved! Successfully</string>
+    <string name="sign_in_with_google">Login with Google</string>
+    <string name="app_welcome">Welcome to</string>
+    <string name="sign_in_api_key">Use OpenAI API Key</string>
+    <string name="user_continue">Continue</string>
+    <string name="api_key">API Key</string>
+    <string name="or">or</string>
+    <string name="key_error">API key is required</string>
+    <string name="google_signin_error">Something went wrong, try Later</string>
+    <string name="credits_i_have">Credits I have</string>
+    <string name="recharge">Recharge</string>
+    <string name="credits">Credits</string>
+    <string name="please_login_msg">Please login to recharge your credits wallet.</string>
+    <string name="free_credits">Get 1 free credit</string>
+    <string name="generate_image">Generate Image</string>
+    <string name="generate_text">Start Chat</string>
+    <string name="delete">Delete</string>
+
+    <string name="image_content">Image Generation</string>
+    <string name="image_content_logo">Generate Logo</string>
+    <string name="image_content_logo_description">Generate Logos for different brands</string>
+    <string name="image_content_logo_example1">Design a modern logo with a sun for a marketing company.</string>
+    <string name="image_content_logo_example2">photo of an extremely cute alien fish swimming on an alien habitable underwater planet, coral reefs, dream-like atmosphere.</string>
+    <string name="image_content_logo_example3">Design a 3d logo of the [brand name]</string>
+
+    <string name="image_content_product">Product Images</string>
+    <string name="image_content_product_description">Generate images for different products</string>
+    <string name="image_content_product_example1">Generate a image for the advertisement of [product or service]</string>
+    <string name="image_content_product_example2">Generate image of [Product name] for social media post.</string>
+    <string name="image_content_product_example3">  Generate a feature graphic of social media app like WhatsApp.</string>
+
+    <string name="image_content_art">AI Art</string>
+    <string name="image_content_art_description">Generate an eye catching art</string>
+    <string name="image_content_art_example1">Generate image of a white siamese cat.</string>
+    <string name="image_content_art_example2">an angry full-bodied wolf in the foggy woods.</string>
+    <string name="image_content_art_example3">Generate a portrait of a person with a dreamy, ethereal quality, using soft pastel colors and flowing lines.</string>
+
+    <string name="social_media">Social Media</string>
+    <string name="social_media_fb">Facebook</string>
+    <string name="social_media_fb_description">Make eye-catching Facebook posts</string>
+    <string name="social_media_fb_example1">Come up with an energetic Facebook post to promote [product/service]</string>
+    <string name="social_media_fb_example2">Generate 3 ideas for Facebook posts on the topic [add content topic] that will engage the target audience [add target audience].</string>
+    <string name="social_media_fb_example3">Give me an interesting and engaging question to post on my Facebook Group about [topic]</string>
+
+    <string name="social_media_insta">Instagram</string>
+    <string name="social_media_insta_description">Write catchy Instagram captions</string>
+    <string name="social_media_insta_example1">Create 3 captions for an Instagram post related to [add content topic] that will engage the target audience [add target audience]</string>
+    <string name="social_media_insta_example2">Give idea of instagram post to market my product [name].</string>
+    <string name="social_media_insta_example3">Generate a script for a 15-second instagram video ad for [add product or service]</string>
+
+    <string name="social_media_tweet">Twitter</string>
+    <string name="social_media_tweet_description">Write attention-grabbing tweets</string>
+    <string name="social_media_tweet_example1">Write an engaging tweet on [topic]  </string>
+    <string name="social_media_tweet_example2">Create an engaging and detailed Twitter thread on [topic]. Make sure to include relevant hashtags.</string>
+    <string name="social_media_tweet_example3"> I need a tweet idea to promote my online course product for the ideal customer on twitter to buy it. </string>
+
+    <string name="social_media_linkdin">LinkedIn</string>
+    <string name="social_media_linkdin_description">Make standout LinkedIn posts</string>
+    <string name="social_media_linkdin_example1">Create a promotional LinkedIn post about the benefits of using [product/service]</string>
+    <string name="social_media_linkdin_example2">Create 5 LinkedIn ad headlines for [website URL]</string>
+    <string name="social_media_linkdin_example3">Could you assist in crafting a LinkedIn post spotlighting a client\'s testimonial about how our product resolved their unique challenge?</string>
+
+    <string name="social_media_tiktok">TikTok</string>
+    <string name="social_media_tiktok_description">Craft catchy and shareable TikTok captions</string>
+    <string name="social_media_tiktok_example1">Share ways to gain more followers on TikTok.</string>
+    <string name="social_media_tiktok_example2">Create 3 captions for a TikTok post related to [content topic] that will engage the target audience [target audience]</string>
+    <string name="social_media_tiktok_example3">Need a TikTok caption idea that asks my followers a question and gets them talking in the comments.</string>
+
+    <string name="business">Business</string>
+    <string name="business_marketing">Marketing</string>
+    <string name="business_marketing_description">Generate content for marketing campaigns</string>
+    <string name="business_marketing_example1">Write a minute-long script for an advertisement about [product or service or company]</string>
+    <string name="business_marketing_example2">Write a product description for my [product or service or company]</string>
+    <string name="business_marketing_example3">Suggest inexpensive ways I can promote my [company] with/without using [Media channel]</string>
+
+    <string name="business_sales">Sales</string>
+    <string name="business_sales_description">Write plan to boost sales</string>
+    <string name="business_sales_example1">What are some creative ways to generate leads for my [niche] company?</string>
+    <string name="business_sales_example2">What cross-selling opportunities would you recommend for my candle business?</string>
+    <string name="business_sales_example3">Create a personalized sales email for a potential customer for my [niche] company selling.</string>
+
+    <string name="business_email">Email Campaigns</string>
+    <string name="business_email_description">Craft business emails</string>
+    <string name="business_email_example1">Give me 10 subject lines for my [niche] newsletter.</string>
+    <string name="business_email_example2">Write a follow-up email with the subject line: [Your subject line]</string>
+    <string name="business_email_example3">How can I re-engage inactive subscribers on my email list?</string>
+
+    <string name="business_cs">Customer Services</string>
+    <string name="business_cs_description">Generate ideas to improve customer service</string>
+    <string name="business_cs_example1">Please provide a template to explain the standard retail return policy.</string>
+    <string name="business_cs_example2">Give ideas to make my customer receptive to my company\'s offers.</string>
+    <string name="business_cs_example3">Please provide X example phrases that customer service agents can use to display empathy.</string>
+
+    <string name="business_ec">E-commerce</string>
+    <string name="business_ec_description">Generate ideas for E-commerce business</string>
+    <string name="business_ec_example1">A customer has recently purchased sneakers, can you please give me recommendations for similar or complementary products that the customer may enjoy.</string>
+    <string name="business_ec_example2">Write a javascript for Google Tag Manager that sends a Facebook Custom Conversion event when a callback button is clicked.</string>
+    <string name="business_ec_example3">Write a 50-word product description for [trader joes awake blend coffee beans.] [Write in an upbeat, informative tone.]</string>
+
+    <string name="writing">Writing</string>
+    <string name="writing_article">Article Writing</string>
+    <string name="writing_article_description">Write good articles on your chosen topic</string>
+    <string name="writing_article_example1">Write an article about global warming.</string>
+    <string name="writing_article_example2">Compose a piece highlighting the significance of preserving a harmonious work-life equilibrium.</string>
+    <string name="writing_article_example3">Draft a proposal for a community project to present to your local city council. Include the project\'s purpose, expected benefits, steps for implementation, and how you plan to fund it.</string>
+
+    <string name="writing_blog">Blog Writing</string>
+    <string name="writing_blog_description">Create a blog to showcase products</string>
+    <string name="writing_blog_example1">Can you provide me with some ideas for blog posts about [topic of your choice]?</string>
+    <string name="writing_blog_example2">Compose a blog post of 1500 words from the perspective of a health professional on the importance of a balanced diet and regular exercise.</string>
+    <string name="writing_blog_example3">Write a 100-character meta description for my blog post about [topic].</string>
+
+    <string name="writing_edu">Education/academic</string>
+    <string name="writing_edu_description">Write educational pieces like essays and reports</string>
+    <string name="writing_edu_example1">Write a paper outlining the topic [Topic of your choice] in chronological order</string>
+    <string name="writing_edu_example2">Write a paper on how technology impacts today\'s education.</string>
+    <string name="writing_edu_example3">Come up with 10 ways to improve memory and recall while studying for exams.</string>
+
+    <string name="writing_email">Email Writing</string>
+    <string name="writing_email_description">Write educational emails.</string>
+    <string name="writing_email_example1">Write follow-up emails to people who attended my [webinar topic] webinar.</string>
+    <string name="writing_email_example2">Create a personalized email greeting for a VIP customer.</string>
+    <string name="writing_email_example3">I need to write an email to a client regarding a change in the project timeline. Can you give me some guidance on how to phrase it?</string>
+
+    <string name="programing">Programing</string>
+    <string name="programing_mobile">Mobile Development</string>
+    <string name="programing_mobile_description">Generate code for any mobile platform.</string>
+    <string name="programing_mobile_example1">Write a kotlin code to consume Rest API.</string>
+    <string name="programing_mobile_example2">Write a swift code for facebook login integration</string>
+    <string name="programing_mobile_example3">Help me find mistakes in the following code [paste code below]</string>
+
+    <string name="programing_web">Web Development</string>
+    <string name="programing_web_description">Write Html/CSS for any website.</string>
+    <string name="programing_web_example1">Develop an architecture and code for a [website description] website with JavaScript.</string>
+    <string name="programing_web_example2">I want to implement a sticky header on my website. Can you provide an example of how to do that using CSS and JavaScript?</string>
+    <string name="programing_web_example3">Find the bug with this code: [post code below]</string>
+
+    <string name="programing_server">Backend Server</string>
+    <string name="programing_server_description">Write code for backend server</string>
+    <string name="programing_server_example1">Write a code for integration of Firebase push notification in Node js.</string>
+    <string name="programing_server_example2">Give me a CRUD function in Python programming language.</string>
+    <string name="programing_server_example3">I want to implement server-side rendering for my React application. Can you provide an example of how to do that using Next.js?</string>
+
+    <string name="life_style">Life style</string>
+    <string name="life_style_health">Health</string>
+    <string name="life_style_health_description">Find health advice</string>
+    <string name="life_style_health_example1">Describe six effective yoga poses or stretches for back and neck pain.</string>
+    <string name="life_style_health_example2">Come up with 10 nutritious meals that can be prepared within half an hour or less.</string>
+    <string name="life_style_health_example3">Easy and beginner-friendly fitness routines for a working professional</string>
+
+    <string name="life_style_cooking">Cooking &amp; Food</string>
+    <string name="life_style_cooking_description">Find delicious food recipes</string>
+    <string name="life_style_cooking_example1">What is an easy way to make a pasta recipe that features white sauce and mushroom?</string>
+    <string name="life_style_cooking_example2">Come up with 10 nutritious meals that can be prepared within half an hour or less.</string>
+    <string name="life_style_cooking_example3">Suggest a multi-course dinner party menu with winter ingredients</string>
+
+    <string name="life_style_travel">Travel &amp; Tourism</string>
+    <string name="life_style_travel_description">Get world top travel destinations</string>
+    <string name="life_style_travel_example1">How much money do I need as a tourist for X days in [Location]?</string>
+    <string name="life_style_travel_example2">What is the most convenient airline to go from X to Y?</string>
+    <string name="life_style_travel_example3">What are the top-rated restaurants in Amsterdam with a budget of €100 per person?</string>
+
+    <string name="share_app">Share App</string>
+    <string name="recharge_msg">Free credits can\'t be used for image generation, Please recharge your wallet.</string>
+    <string name="usage_cost1">%1$s : %2$s credit / %3$s words</string>
+    <string name="usage_cost2">%1$s : %2$s credits / %3$s words</string>
+    <string name="image_generating">Generating image…</string>
+    <string name="policy_text">By signing in you agree with our </string>
+    <string name="terms_service"> Terms of Services</string>
+    <string name="powered_by">Powered by ChatGPT-4</string>
+    <string name="rate_change_info">Note: Word count equals words in question plus words in answer.</string>
+    <string name="pricing">Pricing</string>
+
+    <string name="usage_cost_img">Image : %1$s credits / Image</string>
+    <string name="default_model">Default Model</string>
+    <string name="default_style">Style: (%1$s)</string>
+    <string name="select_style">Select Style</string>
+
+    <string name="style_no">No Style</string>
+    <string name="style_enhance">Enhance</string>
+    <string name="style_anime">Anime</string>
+    <string name="style_photographic">Photographic</string>
+    <string name="style_digital_art">Digital Art</string>
+    <string name="style_comic_book">Comic Book</string>
+    <string name="style_fantasy_art">Fantasy Art</string>
+    <string name="style_line_art">Line Art</string>
+    <string name="style_analog_film">Analog Film</string>
+    <string name="style_neon_punk">Neon Punk</string>
+    <string name="style_isometric">Isometric</string>
+    <string name="style_low_poly">Low Poly</string>
+    <string name="style_origami">Origami</string>
+    <string name="style_modeling_compound">Modeling Compound</string>
+    <string name="style_cinematic">Cinematic</string>
+    <string name="style_3d_model">3d Model</string>
+    <string name="style_pixel_art">Pixel Art</string>
+    <string name="style_tile_texture">Tile Texture</string>
+    <string name="congrats">Congratulations</string>
+    <string name="daily_free_credits">You received free credits! Come back tomorrow for more.</string>
+    <string name="ok">OK</string>
+    <string name="sub_title">Premium Plan</string>
+    <string name="gpt_4_access">Access to GPT-4</string>
+    <string name="no_ads">Ads Free Experience</string>
+    <string name="unlimited_messages">Unlimited Messages</string>
+    <string name="unlimited_words">No Words limit</string>
+    <string name="unlimited_image">Unlimited Image Generations</string>
+    <string name="weekly">Weekly</string>
+    <string name="monthly">Monthly</string>
+    <string name="yearly">Yearly</string>
+    <string name="cancel_billing">Cancel recurring billing anytime</string>
+    <string name="pro_title">Upgrade to Premium!</string>
+    <string name="pro_sub_title">Unlimited access to all features</string>
+    <string name="manage_sub">Manage Subscription</string>
+    <string name="products_not_found">Products not found</string>
+    <string name="restore_purchase">Restore Purchase</string>
+    <string name="welcome_pre">Welcome to the Premium Version!</string>
+    <string name="premium_not">You don\'t have any active subscription!</string>
+    <string name="usage_message">Credits Usage : %1$s credit / %2$s words</string>
+    <string name="usage_image">Credits Usage : %1$s credit / image</string>
+    <string name="free_usage">Daily Free Usage</string>
+    <string name="watch_short_ad">Watch short Ad</string>
+    <string name="upgrade_to_pre">Upgrade to Premium</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="no_chats">Start your new engaging conversation now.</string>
+    <string name="select_media_source">Select Media Source</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="image_input_p1">Write an intriguing caption that complements the image</string>
+    <string name="image_input_p2">Craft a fascinating story inspired by the image</string>
+    <string name="image_input_p3">Generate a trending hashtag for this image</string>
+    <string name="image_input_p4">Detect and extract text from this image</string>
+    <string name="image_input_prompt">Select a prompt</string>
+    <string name="image_url">Paste Image Url</string>
+    <string name="link">Link</string>
+    <string name="url_error">Invalid link</string>
+    <string name="image_load_failed">Failed to load image from link.</string>
+
+    <string name="continue_guest">Continue as Guest</string>
+    <string name="exit_guest">Exit Guest Mode</string>
+    <string name="are_you_sure_exit">Are you sure you want to exit?</string>
+
+    <string name="delete_account">Delete Account</string>
+    <string name="delete_account_error">Delete account error!, try again later</string>
+    <string name="are_you_sure_delete_account">Are you sure you want to delete your account? This will delete all your data including credits and subscription.</string>
+
+    <string name="generate_anything">Generate anything...</string>
+    <string name="download">Download</string>
+    <string name="image_detail">Detailed Image</string>
+    <string name="image_try">TRY</string>Inspirations!
+    <string name="image_inspirations">Inspirations!</string>
+    <string name="image_inp_1">A flying panda with golden wings, fantasy art</string>
+    <string name="image_inp_2">portrait of beautiful goddess of love, with beautiful green eyes, Amazing ultra - detailed zhang jingna photography , intricate jewelled coronet</string>
+    <string name="image_inp_3">a painting of a purple owl sitting in a forest, trending on artstation, pixiv, dramatic, cinematic, 4k, highly detailed, mystic</string>
+    <string name="image_inp_4">Monochromatic shadows, Enticing metropolitan punk woman with black hair tattoos and sinister beauty, dual tone, hard lighting in the style of split tone mastery, crisp neo-pop illustrations, light-teal, white, salmon and off-white, 32k uhd, comic art, steampunk, street pop, emotion, close up, vibrant, illustration, wearing headphones, abstract background, cinematic</string>
+    <string name="image_inp_5">sJames Christensen, style, portrait of a snow goddess, exquisite detail, 30-megapixel, 4k, 85-mm-lens, sharp-focus, intricately-detailed, long exposure time, f/8, ISO 100, shutter-speed 1/125, diffuse-back-lighting, award-winning photograph, facing-camera, looking-into-camera, monovisions, elle, small-catchlight, low-contrast, High-sharpness, symmetry, depth-of-field, golden-hour, ultra-detailed photography, shiny metal surface with intricate swirling mother of pearl inlays, raytraced, global illumination</string>
+    <string name="image_inp_6">Ultra-minimalist illustration of a brightly colored tropical bird sitting on a branching plant in from of a mountain stream with a beautiful waterfall, every surface is textured with fine lines creating intricate interlocking patterns, hires textures and patterns, 8k, 4-color wood block engraving print by Frankin Booth minimalism</string>
+    <string name="image_inp_7">a painting of a woman in blue and orange jewelry, in the style of fantasy illustration, realistic hyper-detailed rendering, dark silver and dark amber, shiny eyes, romanesque, intense close-ups, illustration</string>
+    <string name="image_inp_8">Highly detailed, digital painting, atmospheric lighting, octane render, unreal engine, professional, eagle owl metal beak fantasy mystery sick,  cinematic, dramatic colors, close-up, cgscociety, computer rendering, by mike winkelmann, uhd, rendered in cinema4d, hard surface modeling, 8k,render octane, inspired by beksinski</string>
+    <string name="image_inp_9">Erin Hanson&amp; Donato Giancola&amp; Nicolas de Stael, full moon, sandy parking lot, surfboards, palm, whitewater, clouds, saturated, painting, waves, 8k</string>
+    <string name="image_inp_10">illustration of psychadelic bear in a glowing enchanted forrest , (((by artist Sam Bosma)))</string>
+    <string name="page_count">Pages : %1$s</string>
+    <string name="pdf_input_p1">Summarize the content of this PDF</string>
+    <string name="pdf_question">Summarize the following text copied from a pdf and format accordingly. \n</string>
+    <string name="pdf_question_custom">The following text is copied from a pdf, %1$s \n</string>
+    <string name="pdf_max_pages">Failure!: Currently maximum %1$s pages are supported in a PDF file</string>
+    <string name="language">Language</string>
+    <string name="vision_limit">Vision daily usage limit reached</string>
+    <string name="generation_limit">Image generation daily usage limit reached</string>
+    <string name="gpt4_limit">GPT4 daily usage limit reached</string>
+
+
+</resources>

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="conversations">الدردشات</string>
+    <string name="ai_assistants">مساعدين ذكاء صناعي</string>
+    <string name="app_icon">رمز التطبيق</string>
+    <string name="ask_me_anything">اسأل أي شيء...</string>
+
+    <string name="share">مشاركة</string>
+    <string name="write_article">كتابة مقالات</string>
+    <string name="write_article_description">إنشاء مقالات مكتوبة بشكل جيد حول أي موضوع تريده</string>
+
+    <string name="all">الكل</string>
+    <string name="examples">المساعدين</string>
+    <string name="examples_1">توصيات الأنشطة\nليوم فريقي مع الموظفين العمليين عن بعد</string>
+    <string name="examples_2">قل لي حقيقة ممتعة عن\nالإمبراطورية الرومانية</string>
+    <string name="examples_3">شرح تداول الخيارات\nإذا كنت على دراية بكيفية شراء وبيع الأسهم</string>
+    <string name="examples_img_1">إنشاء صورة\nلقطة بيضاء سيامية</string>
+    <string name="examples_img_2">إنشاء شعار حديث\nبشمس لشركة تسويق</string>
+    <string name="examples_img_3">إنشاء رسم جرافيكي مميز\nلتطبيق وسائل التواصل الاجتماعي مثل Instagram</string>
+    <string name="examples_desc">هذه مجرد أمثلة قليلة على ما يمكنني القيام به</string>
+    <string name="stop_generating">إيقاف الإنشاء...</string>
+    <string name="copy">نسخ</string>
+    <string name="write_article_example1">كتابة مقال يناقش فوائد ممارسة الانفصال في الحياة اليومية</string>
+    <string name="write_article_example2">كتابة مقال يناقش تأثير التغيرات المناخية على الكوكب.</string>
+    <string name="write_article_example3">كتابة مقال يناقش أهمية الحفاظ على توازن صحي في العمل والحياة الشخصية.</string>
+    <string name="type_something_like">جرب شيئًا مثل:</string>
+    <string name="empty">فارغ</string>
+    <string name="no_history">ليس لديك أي محادثة بعد.</string>
+    <string name="clear_all_history">مسح جميع المحادثات</string>
+    <string name="are_you_sure_delete_all_history">هل أنت متأكد أنك تريد مسح كل التاريخ؟</string>
+    <string name="cancel">إلغاء</string>
+    <string name="yes_clear_all">مسح</string>
+    <string name="search_conversation">البحث...</string>
+    <string name="dark_theme">وضع الظلام</string>
+    <string name="privacy_policy">سياسة الخصوصية</string>
+    <string name="about_us">حول AskAI</string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="are_you_sure_logout">هل أنت متأكد أنك تريد تسجيل الخروج؟</string>
+    <string name="yes_logout">تسجيل الخروج</string>
+    <string name="settings">الإعدادات</string>
+    <string name="powered_by_chat_gpt">مدعوم بواسطة ChatGPT 4</string>
+    <string name="watch_ad">شاهد إعلان</string>
+    <string name="you_reach_free_message_limit">يبدو أنك قد استهلكت كل رصيدك المجاني! عد غدًا للمزيد، أو قم بالترقية إلى النسخة المميزة للوصول غير المحدود!. الحد الأدنى للرصيد المطلوب لهذا الطلب: %1$d</string>
+
+    <string name="network_error">خطأ في الشبكة</string>
+    <string name="no_conection_try_again">يرجى الاتصال بالإنترنت والمحاولة مرة أخرى.</string>
+    <string name="save_to_gallery">تم الحفظ! بنجاح</string>
+    <string name="sign_in_with_google">تسجيل الدخول باستخدام Google</string>
+    <string name="app_welcome">مرحبًا بك في</string>
+    <string name="sign_in_api_key">استخدام مفتاح API لـ OpenAI</string>
+    <string name="user_continue">متابعة</string>
+    <string name="api_key">مفتاح API</string>
+    <string name="or">أو</string>
+    <string name="key_error">المفتاح API مطلوب</string>
+    <string name="google_signin_error">حدث خطأ ما، حاول لاحقًا</string>
+    <string name="credits_i_have">الرصيد المتاح</string>
+    <string name="recharge">شحن</string>
+    <string name="credits">الرصيد</string>
+    <string name="please_login_msg">الرجاء تسجيل الدخول لشحن محفظة الرصيد الخاصة بك.</string>
+    <string name="free_credits">احصل على رصيد مجاني 1</string>
+    <string name="generate_image">إنشاء صورة</string>
+    <string name="generate_text">بدء الدردشة</string>
+    <string name="delete">حذف</string>
+
+    <string name="image_content">إنشاء صورة</string>
+    <string name="image_content_logo">إنشاء شعار</string>
+    <string name="image_content_logo_description">إنشاء شعارات لعلامات تجارية مختلفة</string>
+    <string name="image_content_logo_example1">تصميم شعار حديث بشمس لشركة تسويق.</string>
+    <string name="image_content_logo_example2">صورة لسمكة فضائية جميلة تسبح في كوكب بيئي فضائي تحت الماء، مع مرجان وجو جامد.</string>
+    <string name="image_content_logo_example3">تصميم شعار ثلاثي الأبعاد لـ [اسم العلامة التجارية]</string>
+
+    <string name="image_content_product">صور المنتجات</string>
+    <string name="image_content_product_description">إنشاء صور لمنتجات مختلفة</string>
+    <string name="image_content_product_example1">إنشاء صورة للإعلان عن [المنتج أو الخدمة]</string>
+    <string name="image_content_product_example2">إنشاء صورة لـ [اسم المنتج] لنشرها على وسائل التواصل الاجتماعي.</string>
+    <string name="image_content_product_example3">إنشاء رسم جرافيكي مميز لتطبيق وسائل التواصل الاجتماعي مثل WhatsApp.</string>
+
+    <string name="image_content_art">فن الذكاء الاصطناعي</string>
+    <string name="image_content_art_description">إنشاء فن جذاب</string>
+    <string name="image_content_art_example1">إنشاء صورة لقطة بيضاء سيامية.</string>
+    <string name="image_content_art_example2">ذئب غاضب بالكامل في غابة ضبابية.</string>
+    <string name="image_content_art_example3">إنشاء صورة شخصية بجودة حلمية وفاخرة، باستخدام ألوان الباستيل الناعمة والخطوط السلسة.</string>
+
+    <string name="social_media">وسائل التواصل الاجتماعي</string>
+    <string name="social_media_fb">فيسبوك</string>
+    <string name="social_media_fb_description">إنشاء منشورات جذابة على فيسبوك</string>
+    <string name="social_media_fb_example1">تصميم منشور نشيط على فيسبوك للترويج لـ [المنتج/الخدمة]</string>
+    <string name="social_media_fb_example2">إنشاء 3 أفكار لمنشورات على فيسبوك حول [إضافة موضوع المحتوى] ستشد انتباه الجمهور المستهدف [إضافة جمهور مستهدف].</string>
+    <string name="social_media_fb_example3">قدم لي سؤالًا مثيرًا وجذابًا لنشره على مجموعتي على فيسبوك حول [الموضوع]</string>
+
+    <string name="social_media_insta">إنستجرام</string>
+    <string name="social_media_insta_description">كتابة تسميات جذابة على إنستجرام</string>
+    <string name="social_media_insta_example1">إنشاء 3 تسميات لمنشور على إنستجرام تتعلق بـ [إضافة موضوع المحتوى] ستشد انتباه الجمهور المستهدف [إضافة جمهور مستهدف]</string>
+    <string name="social_media_insta_example2">أعط فكرة عن منشور إنستجرام لتسويق منتجي [الاسم].</string>
+    <string name="social_media_insta_example3">إنشاء سيناريو لإعلان فيديو إنستجرام لمدة 15 ثانية لـ [إضافة المنتج أو الخدمة]</string>
+
+    <string name="social_media_tweet">تويتر</string>
+    <string name="social_media_tweet_description">كتابة تغريدات تجذب الانتباه</string>
+    <string name="social_media_tweet_example1">كتابة تغريدة جذابة حول [الموضوع]</string>
+    <string name="social_media_tweet_example2">إنشاء موضوع مفصل وجذاب على تويتر حول [الموضوع]. تأكد من تضمين الوسوم ذات الصلة.</string>
+    <string name="social_media_tweet_example3">أحتاج إلى فكرة لتغريدة للترويج لمنتجي الدورة الدراسية عبر الإنترنت للعميل المثالي على تويتر لشراءها.</string>
+    <string name="social_media_linkdin">لينكدإن</string>
+    <string name="social_media_linkdin_description">إنشاء منشورات بارزة على لينكدإن</string>
+    <string name="social_media_linkdin_example1">إنشاء منشور ترويجي على لينكدإن حول فوائد استخدام [المنتج/الخدمة]</string>
+    <string name="social_media_linkdin_example2">إنشاء 5 عناوين إعلانات على لينكدإن لـ [رابط موقع الويب]</string>
+    <string name="social_media_linkdin_example3">هل يمكنك المساعدة في صياغة منشور على لينكدإن يبرز شهادة تقدير العميل حول كيف قام منتجنا بحل تحديهم الفريد؟</string>
+
+    <string name="social_media_tiktok">تيك توك</string>
+    <string name="social_media_tiktok_description">كتابة تسميات جذابة وقابلة للمشاركة على تيك توك</string>
+    <string name="social_media_tiktok_example1">مشاركة طرق لزيادة عدد المتابعين على تيك توك.</string>
+    <string name="social_media_tiktok_example2">إنشاء 3 تسميات لمنشور على تيك توك تتعلق بـ [موضوع المحتوى] وستشد انتباه الجمهور المستهدف [الجمهور المستهدف]</string>
+    <string name="social_media_tiktok_example3">هلدي لي فكرة عن تسمية لتيك توك تطرح على متابعيني سؤالًا وتحفزهم على التعليقات.</string>
+
+    <string name="business">أعمال</string>
+    <string name="business_marketing">التسويق</string>
+    <string name="business_marketing_description">إنشاء محتوى لحملات التسويق</string>
+    <string name="business_marketing_example1">كتابة نص دعائي لمدة دقيقة حول [المنتج أو الخدمة أو الشركة]</string>
+    <string name="business_marketing_example2">كتابة وصف المنتج لـ [المنتج أو الخدمة أو الشركة] الخاص بي</string>
+    <string name="business_marketing_example3">اقتراح طرق ميسرة يمكنني بها الترويج لـ [الشركة] مع/بدون استخدام [قناة الوسائط]</string>
+
+    <string name="business_sales">المبيعات</string>
+    <string name="business_sales_description">كتابة خطة لتعزيز المبيعات</string>
+    <string name="business_sales_example1">ما هي بعض الطرق الإبداعية لجذب العملاء لـ [الشركة ذات النيش]؟</string>
+    <string name="business_sales_example2">ما هي الفرص التي توصي بها للبيع المشترك لـ [شمعة] في عملي؟</string>
+    <string name="business_sales_example3">إنشاء بريد إلكتروني للمبيعات شخصي لعميل محتمل لـ [شركة ذات نيش] بيعه.</string>
+
+    <string name="business_email">حملات البريد الإلكتروني</string>
+    <string name="business_email_description">كتابة رسائل عمل</string>
+    <string name="business_email_example1">قدم لي 10 عبارات عنوان للنشرة الإخبارية الخاصة بي لـ [قطاع النيش]</string>
+    <string name="business_email_example2">كتابة رسالة متابعة بعنوان: [عنوان موضوعك]</string>
+    <string name="business_email_example3">كيف يمكنني إعادة جذب المشتركين الغير نشطين على قائمة البريد الإلكتروني الخاصة بي؟</string>
+
+    <string name="business_cs">خدمة العملاء</string>
+    <string name="business_cs_description">إنشاء أفكار لتحسين خدمة العملاء</string>
+    <string name="business_cs_example1">يرجى توفير قالب لشرح سياسة الإرجاع التجزئة القياسية.</string>
+    <string name="business_cs_example2">قدم أفكارًا لجعل عملائي مستعدون لقبول عروض شركتي.</string>
+    <string name="business_cs_example3">يرجى توفير X أمثلة على عبارات يمكن لوكلاء خدمة العملاء استخدامها لعرض الاحترام.</string>
+
+    <string name="business_ec">التجارة الإلكترونية</string>
+    <string name="business_ec_description">إنشاء أفكار لأعمال التجارة الإلكترونية</string>
+    <string name="business_ec_example1">قام العميل مؤخرًا بشراء أحذية رياضية، هل يمكنكم أن تقدموا لي توصيات لمنتجات مماثلة أو مكملة قد يستمتع بها العميل؟</string>
+    <string name="business_ec_example2">كتابة كود JavaScript لمدير علامات Google يرسل حدث Facebook Custom Conversion عند النقر فوق زر الرد الآلي.</string>
+    <string name="business_ec_example3">كتابة وصف للمنتج بنص يحتوي على 50 كلمة لـ [فاصوليا الفجر من ترايدر جوز]. [كتابة بنبرة مرحة ومفيدة.]</string>
+
+    <string name="writing">الكتابة</string>
+    <string name="writing_article">كتابة المقالات</string>
+    <string name="writing_article_description">كتابة مقالات جيدة حول موضوعك المختار</string>
+    <string name="writing_article_example1">كتابة مقال حول الاحتباس الحراري.</string>
+    <string name="writing_article_example2">صياغة قطعة تسليط الضوء على أهمية الحفاظ على توازن عمل حياة هارموني.</string>
+    <string name="writing_article_example3">صياغة مقترح لمشروع مجتمعي لتقديمه إلى مجلس مدينتك المحلي. قدم هدف المشروع والفوائد المتوقعة وخطوات التنفيذ وكيفية تمويله.</string>
+    <string name="writing_blog">كتابة المدونة</string>
+    <string name="writing_blog_description">إنشاء مدونة لعرض المنتجات</string>
+    <string name="writing_blog_example1">هل يمكنكم توفير بعض الأفكار لمشاركات المدونة حول [موضوع اختيارك]؟</string>
+    <string name="writing_blog_example2">صياغة مقال في المدونة بطول 1500 كلمة من وجهة نظر محترف صحي حول أهمية نظام غذائي متوازن وممارسة الرياضة بانتظام.</string>
+    <string name="writing_blog_example3">كتابة وصف ميتا بطول 100 حرف لمنشور المدونة الخاص بي حول [الموضوع].</string>
+
+    <string name="writing_edu">التعليم/الأكاديمية</string>
+    <string name="writing_edu_description">كتابة قطع تعليمية مثل المقالات والتقارير</string>
+    <string name="writing_edu_example1">كتابة ورقة تشير إلى موضوع [موضوع اختيارك] بترتيب زمني</string>
+    <string name="writing_edu_example2">كتابة ورقة حول كيف يؤثر التكنولوجيا على التعليم في الوقت الحالي.</string>
+    <string name="writing_edu_example3">التفكير في 10 طرق لتحسين الذاكرة والاسترجاع أثناء الدراسة للاختبارات.</string>
+
+    <string name="writing_email">كتابة البريد الإلكتروني</string>
+    <string name="writing_email_description">كتابة رسائل بريد تعليمية.</string>
+    <string name="writing_email_example1">كتابة رسائل متابعة للأشخاص الذين حضروا ورشة العمل الخاصة بي حول [موضوع الندوة عبر الإنترنت].</string>
+    <string name="writing_email_example2">إنشاء تحية بريد إلكتروني شخصية لعميل VIP.</string>
+    <string name="writing_email_example3">أحتاج إلى كتابة بريد إلكتروني لعميل بخصوص تغيير في جدول المشروع. هل يمكنكم إعطائي بعض التوجيه حول كيفية صياغته؟</string>
+
+    <string name="programing">البرمجة</string>
+    <string name="programing_mobile">تطوير التطبيقات المحمولة</string>
+    <string name="programing_mobile_description">إنشاء رمز لأي منصة محمولة.</string>
+    <string name="programing_mobile_example1">كتابة كود Kotlin لاستهلاك واجهة برمجة التطبيقات الراحة.</string>
+    <string name="programing_mobile_example2">كتابة كود Swift لتكامل تسجيل الدخول باستخدام Facebook.</string>
+    <string name="programing_mobile_example3">ساعدني في العثور على أخطاء في الكود التالي [الصق الكود أدناه].</string>
+
+    <string name="programing_web">تطوير الويب</string>
+    <string name="programing_web_description">كتابة Html/CSS لأي موقع ويب.</string>
+    <string name="programing_web_example1">تطوير هندسة وكود لـ [وصف موقع الويب] مع JavaScript.</string>
+    <string name="programing_web_example2">أريد تنفيذ رأس ثابت على موقع الويب الخاص بي. هل يمكنكم توفير مثال على كيفية القيام بذلك باستخدام CSS وJavaScript؟</string>
+    <string name="programing_web_example3">العثور على خطأ في هذا الكود: [أرفق الكود أدناه].</string>
+
+    <string name="programing_server">خادم الخلفية</string>
+    <string name="programing_server_description">كتابة كود لخادم الخلفية</string>
+    <string name="programing_server_example1">كتابة كود لتكامل الإشعارات الفورية من Firebase في Node js.</string>
+    <string name="programing_server_example2">قدم لي وظيفة CRUD بلغة البرمجة Python.</string>
+    <string name="programing_server_example3">أريد تنفيذ تقديم الصفحة من الخادم لتطبيق React الخاص بي. هل يمكنكم توفير مثال على كيفية القيام بذلك باستخدام Next.js؟</string>
+
+    <string name="life_style">نمط حياة</string>
+    <string name="life_style_health">الصحة</string>
+    <string name="life_style_health_description">البحث عن نصائح الصحة</string>
+    <string name="life_style_health_example1">شرح ستة تمارين أو تمديدات يوغا فعّالة لآلام الظهر والرقبة.</string>
+    <string name="life_style_health_example2">تقديم 10 وجبات غذائية غنية بالعناصر الغذائية يمكن تحضيرها في نصف ساعة أو أقل.</string>
+    <string name="life_style_health_example3">روتينات لياقة بدنية سهلة ومناسبة للمبتدئين للمحترفين العاملين.</string>
+
+    <string name="life_style_cooking">الطهي والطعام</string>
+    <string name="life_style_cooking_description">البحث عن وصفات طعام لذيذة</string>
+    <string name="life_style_cooking_example1">ما هو وسيلة سهلة لتحضير وصفة مع صلصة بيضاء وفطر للمكرونة؟</string>
+    <string name="life_style_cooking_example2">تقديم 10 وجبات غذائية غنية بالعناصر الغذائية يمكن تحضيرها في نصف ساعة أو أقل.</string>
+    <string name="life_style_cooking_example3">اقتراح قائمة عشاء متعددة الدورات باستخدام مكونات الشتاء.</string>
+    <string name="life_style_travel">السفر والسياحة</string>
+    <string name="life_style_travel_description">احصل على أفضل وجهات السفر في العالم</string>
+    <string name="life_style_travel_example1">كم من المال أحتاج كسائح لمدة X يومًا في [الموقع]؟</string>
+    <string name="life_style_travel_example2">ما هي أكثر شركة طيران ملائمة للانتقال من X إلى Y؟</string>
+    <string name="life_style_travel_example3">ما هي أفضل المطاعم في أمستردام مع ميزانية قدرها 100 يورو للشخص الواحد؟</string>
+
+    <string name="share_app">مشاركة التطبيق</string>
+    <string name="recharge_msg">لا يمكن استخدام الرصيد المجاني لإنشاء الصور ، يرجى إعادة شحن محفظتك.</string>
+    <string name="usage_cost1">%1$s : %2$s رصيد / %3$s كلمة</string>
+    <string name="usage_cost2">%1$s : %2$s رصيد / %3$s كلمة</string>
+    <string name="image_generating">جاري إنشاء الصورة...</string>
+    <string name="policy_text">من خلال تسجيل الدخول ، فإنك توافق على</string>
+    <string name="terms_service"> شروط الخدمة</string>
+    <string name="powered_by">مدعوم بواسطة ChatGPT-4</string>
+    <string name="rate_change_info">ملاحظة: عدد الكلمات يعادل الكلمات في السؤال بالإضافة إلى الكلمات في الإجابة.</string>
+    <string name="pricing">التسعير</string>
+
+    <string name="usage_cost_img">صورة : %1$s رصيد / صورة</string>
+    <string name="default_model">النموذج الافتراضي</string>
+    <string name="default_style">النمط: (%1$s)</string>
+    <string name="select_style">اختر النمط</string>
+
+    <string name="style_no">بدون نمط</string>
+    <string name="style_enhance">تعزيز</string>
+    <string name="style_anime">أنمي</string>
+    <string name="style_photographic">تصوير فوتوغرافي</string>
+    <string name="style_digital_art">فن رقمي</string>
+    <string name="style_comic_book">كتاب الكوميديا</string>
+    <string name="style_fantasy_art">فن الخيال</string>
+    <string name="style_line_art">رسم الخطوط</string>
+    <string name="style_analog_film">فيلم أنالوج</string>
+    <string name="style_neon_punk">نيون بانك</string>
+    <string name="style_isometric">إيزومتري</string>
+    <string name="style_low_poly">لو بولي</string>
+    <string name="style_origami">أوريغامي</string>
+    <string name="style_modeling_compound">مركب النمذجة</string>
+    <string name="style_cinematic">سينمائي</string>
+    <string name="style_3d_model">نموذج ثلاثي الأبعاد</string>
+    <string name="style_pixel_art">فن البكسل</string>
+    <string name="style_tile_texture">تأثير البلاط</string>
+    <string name="congrats">تهانينا</string>
+    <string name="daily_free_credits">لقد حصلت على رصيد مجاني! عد غدًا للمزيد.</string>
+    <string name="ok">موافق</string>
+    <string name="sub_title">خطة مميزة</string>
+    <string name="gpt_4_access">وصول إلى GPT-4</string>
+    <string name="no_ads">تجربة خالية من الإعلانات</string>
+    <string name="unlimited_messages">رسائل غير محدودة</string>
+    <string name="unlimited_words">بلا حدود للكلمات</string>
+    <string name="unlimited_image">إنشاء صور غير محدودة</string>
+    <string name="weekly">أسبوعيًا</string>
+    <string name="monthly">شهريًا</string>
+    <string name="yearly">سنويًا</string>
+    <string name="cancel_billing">إلغاء الفوترة المتكررة في أي وقت</string>
+    <string name="pro_title">قم بالترقية إلى الإصدار المميز!</string>
+    <string name="pro_sub_title">وصول غير محدود إلى جميع الميزات</string>
+    <string name="manage_sub">إدارة الاشتراك</string>
+    <string name="products_not_found">لم يتم العثور على المنتجات</string>
+    <string name="restore_purchase">استعادة الشراء</string>
+    <string name="welcome_pre">مرحبًا بك في الإصدار المميز!</string>
+    <string name="premium_not">ليس لديك أي اشتراك نشط!</string>
+    <string name="usage_message">استخدام الرصيد: %1$s رصيد / %2$s كلمة</string>
+    <string name="usage_image">استخدام الرصيد: %1$s رصيد / صورة</string>
+    <string name="free_usage">استخدام مجاني يوميًا</string>
+    <string name="watch_short_ad">شاهد إعلانًا قصيرًا</string>
+    <string name="upgrade_to_pre">الترقية إلى الإصدار المميز</string>
+    <string name="confirmation">تأكيد</string>
+    <string name="no">لا</string>
+    <string name="yes">نعم</string>
+    <string name="no_chats">ابدأ محادثتك المثيرة الجديدة الآن.</string>
+    <string name="select_media_source">حدد مصدر الوسائط</string>
+    <string name="camera">الكاميرا</string>
+    <string name="gallery">المعرض</string>
+    <string name="image_input_p1">اكتب تسمية جذابة تكمل الصورة</string>
+    <string name="image_input_p2">قم بصياغة قصة مثيرة مستوحاة من الصورة</string>
+    <string name="image_input_p3">أنشئ وسمًا رائجًا لهذه الصورة</string>
+    <string name="image_input_p4">اكتشف واستخرج النص من هذه الصورة</string>
+    <string name="image_input_prompt">حدد موضوعًا</string>
+    <string name="image_url">لصق رابط الصورة</string>
+    <string name="link">رابط</string>
+    <string name="url_error">رابط غير صالح</string>
+    <string name="image_load_failed">فشل في تحميل الصورة من الرابط.</string>
+
+    <string name="continue_guest">المتابعة كضيف</string>
+    <string name="exit_guest">الخروج من وضع الضيف</string>
+    <string name="are_you_sure_exit">هل أنت متأكد أنك تريد الخروج؟</string>
+
+    <string name="delete_account">حذف الحساب</string>
+    <string name="delete_account_error">خطأ في حذف الحساب! حاول مرة أخرى لاحقًا</string>
+    <string name="are_you_sure_delete_account">هل أنت متأكد أنك تريد حذف حسابك؟ سيؤدي ذلك إلى حذف جميع بياناتك بما في ذلك الرصيد والاشتراك.</string>
+
+    <string name="generate_anything">إنشاء أي شيء...</string>
+    <string name="download">تنزيل</string>
+    <string name="image_detail">صورة مفصلة</string>
+    <string name="image_try">جرب</string>الإلهام!
+    <string name="image_inspirations">الإلهام!</string>
+    <string name="image_inp_1">باندا طائرة بأجنحة ذهبية، فن خيالي</string>
+    <string name="image_inp_2">صورة لإلهة الحب الجميلة، بعيون خضراء جميلة، تصوير مذهل لـ زهانغ جينجنا، تاج مجوهرات معقد</string>
+    <string name="image_inp_3">لوحة لبومة بنفسجية جالسة في غابة، تتصدر الاتجاهات على ArtStation و Pixiv، درامية، سينمائية، 4K، تفاصيل عالية، خيالية</string>
+    <string name="image_inp_4">ظلال ثنائية اللون، امرأة جاذبة بشعر أسود ووشوم وجمال مكرر، إضاءة صعبة بأسلوب السيدر الثنائي، رسوم توضيحية نيو بوب واضحة، توقيت 32K UHD، فن كوميك، ستيمبانك، ستريت بوب، عاطفة، تقريبًا، حيوية، رسم توضيحي، ارتداء سماعات، خلفية مجردة، سينمائية</string>
+    <string name="image_inp_5">جيمس كريستنسن، نمط، صورة لإلهة الثلج، تفاصيل رائعة، 30 ميجابكسل، 4K، عدسة 85 ملم، التركيز الحاد، تفاصيل معقدة، وقت تعرض طويل، f/8، ISO 100، سرعة الغالق 1/125، إضاءة خلفية مشتتة، صورة فائزة بجوائز، تواجه الكاميرا، تنظر إلى الكاميرا، أحادية الرؤية، الي، نقطة صغيرة مشعة، منخفضة التباين، حدة عالية، تماثل، عمق الميدان، الساعة الذهبية، تصوير تفصيلي للغاية، سطح معدني لامع مع تفاصيل ملتوية من لؤلؤ الأم الدوار، تتبع الأشعة، إضاءة عالمية</string>
+    <string name="image_inp_6">رسم توضيحي فائق الحد الأدنى لطائر استوائي ملون بشكل جميل جالس على نبتة أمام جدول جبلي بشلال جميل، كل سطح م textexر بخطوط دقيقة تخلق أنماطًا معقدة تتداخل، تكنولوجيا رفيعة ونماذج رفيعة، 8K، طباعة حفر خشبية من 4 ألوان من قبل فرانكين بوث</string>
+    <string name="image_inp_7">لوحة لامرأة ترتدي مجوهرات زرقاء وبرتقالية، بأسلوب رسم خيالي، تقديم واقعي مفصل، فضة داكنة وعنبر داكن، عيون لامعة، رومانسي، تقريب كثيف، رسم توضيحي</string>
+    <string name="image_inp_8">رسم رقمي مفصل لإضاءة جوية، رندر أوكتين، محرك غير حقيقي، نسر بمنقار معدني فانتازي مغامرة، ألوان درامية، تقريبًا، ألوان درامية، قرب، CGSociety، تقديم الكمبيوتر، بواسطة مايك وينكلمان، UHD، تقديم في Cinema4D، نمذجة سطح صلبة، 8K، رندر أوكتين، مستوحاة من بيكسينسكي</string>
+    <string name="image_inp_9">إيرين هانسون ودوناتو جيانكولا ونيكولاس دي ستال، قمر كامل، موقف سيارات رملي، لوحات تزلج، نخيل، ماء أبيض، غيوم، مشبعة، رسم، أمواج، 8K</string>
+    <string name="image_inp_10">رسم توضيحي لدب بسحر الغابة المتوهجة، (((بواسطة الفنان سام بوسما)))</string>
+
+    <string name="page_count">الصفحات: %1$s</string>
+    <string name="pdf_input_p1">تلخيص محتوى هذا الكتاب الإلكتروني</string>
+    <string name="pdf_question">تلخيص النص التالي المنسوخ من كتاب إلكتروني وتنسيقه وفقًا لذلك. \n</string>
+    <string name="pdf_question_custom">النص التالي منسوخ من كتاب إلكتروني، %1$s \n</string>
+    <string name="pdf_max_pages">فشل!: حاليًا يتم دعم حد أقصى للكتب الإلكترونية هو %1$s صفحة</string>
+    <string name="language">اللغة</string>
+
+    <string name="vision_limit">تجاوز الحد اليومي لاستخدام الرؤية</string>
+    <string name="generation_limit">تجاوز الحد اليومي لإنشاء الصور</string>
+    <string name="gpt4_limit">تجاوز الحد اليومي لاستخدام GPT-4</string>
+
+
+</resources>

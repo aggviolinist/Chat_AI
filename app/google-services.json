@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "185864616111",
+    "project_id": "ai-vision-8f111",
+    "storage_bucket": "ai-vision-8f111.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:185864616892:android:52a33fcafb9b8710111111",
+        "android_client_info": {
+          "package_name": "com.apps.aivision"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChAetaswEoXAN4OdGjADf0aXoK1111"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

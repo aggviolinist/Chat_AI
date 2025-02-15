@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="conversations">Chats</string>
+    <string name="ai_assistants">Assistant IA</string>
+    <string name="app_icon">Icône de l\'application</string>
+    <string name="ask_me_anything">Posez-moi n\'importe quelle question...</string>
+
+    <string name="share">Partager</string>
+    <string name="write_article">Rédiger des articles</string>
+    <string name="write_article_description">Générez des articles bien écrits sur n\'importe quel sujet de votre choix</string>
+
+    <string name="all">Tous</string>
+    <string name="examples">Exemples</string>
+    <string name="examples_1">Recommander des activités \nPour une journée de renforcement d\'équipe avec des employés à distance</string>
+    <string name="examples_2">Racontez un fait amusant à propos\n de l\'Empire romain</string>
+    <string name="examples_3">Expliquer le trading d\'options\nSi je suis familier avec l\'achat et la vente d\'actions</string>
+    <string name="examples_img_1">Générer une image \nd\'un chat siamois blanc</string>
+    <string name="examples_img_2">Générer un logo moderne \navec un soleil pour une entreprise de marketing</string>
+    <string name="examples_img_3">Générer une image de présentation \nd\'une application de médias sociaux comme Instagram</string>
+    <string name="examples_desc">Ce ne sont que quelques exemples de ce que je peux faire</string>
+    <string name="stop_generating">Arrêter la génération...</string>
+    <string name="copy">Copier</string>
+    <string name="write_article_example1">Rédigez un article sur les avantages de la pratique de la pleine conscience dans la vie quotidienne</string>
+    <string name="write_article_example2">Rédigez un article sur l\'impact du changement climatique sur la planète.</string>
+    <string name="write_article_example3">Rédigez un article sur l\'importance de maintenir un équilibre sain entre vie professionnelle et vie personnelle.</string>
+
+    <string name="type_something_like">Essayez quelque chose comme :</string>
+    <string name="empty">Vide</string>
+    <string name="no_history">Vous n\'avez encore aucune conversation.</string>
+    <string name="clear_all_history">Effacer toutes les conversations</string>
+    <string name="are_you_sure_delete_all_history">Êtes-vous sûr de vouloir effacer tout l\'historique ?</string>
+    <string name="cancel">Annuler</string>
+    <string name="yes_clear_all">Effacer</string>
+    <string name="search_conversation">Rechercher…</string>
+    <string name="dark_theme">Thème sombre</string>
+    <string name="privacy_policy">Politique de confidentialité</string>
+    <string name="about_us">À propos d\'AskAI</string>
+    <string name="logout">Déconnexion</string>
+    <string name="are_you_sure_logout">Êtes-vous sûr de vouloir vous déconnecter ?</string>
+    <string name="yes_logout">Déconnexion</string>
+    <string name="settings">Paramètres</string>
+    <string name="powered_by_chat_gpt">Propulsé par ChatGPT 4</string>
+    <string name="watch_ad">Regarder la publicité</string>
+    <string name="you_reach_free_message_limit">On dirait que vous avez utilisé toutes vos crédits gratuits ! Revenez demain pour plus, ou passez à la version premium pour un accès illimité !. Crédits minimum requis pour cette demande : %1$d</string>
+
+    <string name="network_error">Erreur réseau</string>
+    <string name="no_conection_try_again">Veuillez vous connecter à Internet et réessayer.</string>
+    <string name="save_to_gallery">Sauvegardé ! Avec succès</string>
+    <string name="sign_in_with_google">Connexion avec Google</string>
+    <string name="app_welcome">Bienvenue sur</string>
+    <string name="sign_in_api_key">Utiliser la clé API OpenAI</string>
+    <string name="user_continue">Continuer</string>
+    <string name="api_key">Clé API</string>
+    <string name="or">ou</string>
+    <string name="key_error">La clé API est requise</string>
+    <string name="google_signin_error">Quelque chose s\'est mal passé, réessayez plus tard</string>
+    <string name="credits_i_have">Crédits disponibles</string>
+    <string name="recharge">Recharger</string>
+    <string name="credits">Crédits</string>
+    <string name="please_login_msg">Veuillez vous connecter pour recharger votre portefeuille de crédits.</string>
+    <string name="free_credits">Obtenez 1 crédit gratuit</string>
+    <string name="generate_image">Générer une image</string>
+    <string name="generate_text">Démarrer la conversation</string>
+    <string name="delete">Supprimer</string>
+
+    <string name="image_content">Génération d\'images</string>
+    <string name="image_content_logo">Générer un logo</string>
+    <string name="image_content_logo_description">Générer des logos pour différentes marques</string>
+    <string name="image_content_logo_example1">Concevoir un logo moderne avec un soleil pour une entreprise de marketing.</string>
+    <string name="image_content_logo_example2">Photo d\'un poisson extrêmement mignon nageant sur une planète sous-marine habitable extraterrestre, récifs coralliens, atmosphère onirique.</string>
+    <string name="image_content_logo_example3">Concevoir un logo 3D de la [nom de la marque]</string>
+
+    <string name="image_content_product">Images de produits</string>
+    <string name="image_content_product_description">Générer des images pour différents produits</string>
+    <string name="image_content_product_example1">Générer une image pour la publicité de [produit ou service]</string>
+    <string name="image_content_product_example2">Générer une image de [nom du produit] pour une publication sur les médias sociaux.</string>
+    <string name="image_content_product_example3">Générer une image graphique de fonctionnalité pour une application de médias sociaux comme WhatsApp.</string>
+    <string name="image_content_art">Art IA</string>
+    <string name="image_content_art_description">Générer une œuvre d\'art accrocheuse</string>
+    <string name="image_content_art_example1">Générer une image d\'un chat siamois blanc.</string>
+    <string name="image_content_art_example2">un loup en colère en pleine forêt brumeuse.</string>
+    <string name="image_content_art_example3">Générer le portrait d\'une personne avec une qualité onirique et éthérée, en utilisant des couleurs pastel douces et des lignes fluides.</string>
+
+    <string name="social_media">Médias sociaux</string>
+    <string name="social_media_fb">Facebook</string>
+    <string name="social_media_fb_description">Créer des publications Facebook accrocheuses</string>
+    <string name="social_media_fb_example1">Trouver une publication énergique sur Facebook pour promouvoir [produit/service]</string>
+    <string name="social_media_fb_example2">Générer 3 idées de publications Facebook sur le sujet [ajouter le sujet du contenu] qui captiveront le public cible [ajouter le public cible].</string>
+    <string name="social_media_fb_example3">Donnez-moi une question intéressante et engageante à publier sur mon groupe Facebook à propos de [sujet]</string>
+
+    <string name="social_media_insta">Instagram</string>
+    <string name="social_media_insta_description">Rédiger des légendes accrocheuses pour Instagram</string>
+    <string name="social_media_insta_example1">Créer 3 légendes pour une publication Instagram liée à [ajouter le sujet du contenu] qui captiveront le public cible [ajouter le public cible]</string>
+    <string name="social_media_insta_example2">Donnez une idée de publication Instagram pour commercialiser mon produit [nom].</string>
+    <string name="social_media_insta_example3">Générer un script pour une publicité vidéo de 15 secondes sur Instagram pour [ajouter un produit ou un service]</string>
+
+    <string name="social_media_tweet">Twitter</string>
+    <string name="social_media_tweet_description">Rédiger des tweets accrocheurs</string>
+    <string name="social_media_tweet_example1">Rédiger un tweet captivant sur [sujet]</string>
+    <string name="social_media_tweet_example2">Créer un fil Twitter détaillé et captivant sur [sujet]. Assurez-vous d\'inclure des hashtags pertinents.</string>
+    <string name="social_media_tweet_example3">J\'ai besoin d\'une idée de tweet pour promouvoir mon produit de cours en ligne auprès du client idéal sur Twitter pour qu\'il l\'achète.</string>
+
+    <string name="social_media_linkdin">LinkedIn</string>
+    <string name="social_media_linkdin_description">Créer des publications LinkedIn remarquables</string>
+    <string name="social_media_linkdin_example1">Créer une publication promotionnelle sur LinkedIn sur les avantages de l\'utilisation de [produit/service]</string>
+    <string name="social_media_linkdin_example2">Créer 5 titres d\'annonces LinkedIn pour [URL du site Web]</string>
+    <string name="social_media_linkdin_example3">Pourriez-vous aider à élaborer une publication LinkedIn mettant en lumière le témoignage d\'un client sur la manière dont notre produit a résolu son défi unique ?</string>
+
+    <string name="social_media_tiktok">TikTok</string>
+    <string name="social_media_tiktok_description">Créer des légendes accrocheuses et partageables pour TikTok</string>
+    <string name="social_media_tiktok_example1">Partager des moyens d\'obtenir plus de followers sur TikTok.</string>
+    <string name="social_media_tiktok_example2">Créer 3 légendes pour une publication TikTok liée à [ajouter le sujet du contenu] qui captiveront le public cible [ajouter le public cible]</string>
+    <string name="social_media_tiktok_example3">Besoin d\'une idée de légende TikTok qui pose une question à mes abonnés et les incite à discuter dans les commentaires.</string>
+    <string name="business">Affaires</string>
+    <string name="business_marketing">Marketing</string>
+    <string name="business_marketing_description">Générer du contenu pour des campagnes marketing</string>
+    <string name="business_marketing_example1">Rédiger un script d\'une minute pour une publicité sur [produit ou service ou entreprise]</string>
+    <string name="business_marketing_example2">Rédiger une description de produit pour mon [produit ou service ou entreprise]</string>
+    <string name="business_marketing_example3">Suggérer des moyens peu coûteux de promouvoir ma [entreprise] avec/ou sans utiliser [canal média]</string>
+
+    <string name="business_sales">Ventes</string>
+    <string name="business_sales_description">Rédiger un plan pour augmenter les ventes</string>
+    <string name="business_sales_example1">Quelles sont quelques idées créatives pour générer des prospects pour ma société [niche] ?</string>
+    <string name="business_sales_example2">Quelles opportunités de vente croisée recommanderiez-vous pour mon entreprise de bougies ?</string>
+    <string name="business_sales_example3">Créer un e-mail de vente personnalisé pour un client potentiel pour ma société [niche].</string>
+
+    <string name="business_email">Campagnes par e-mail</string>
+    <string name="business_email_description">Rédiger des e-mails commerciaux</string>
+    <string name="business_email_example1">Donnez-moi 10 lignes d\'objet pour ma newsletter [niche].</string>
+    <string name="business_email_example2">Rédiger un e-mail de suivi avec la ligne d\'objet : [Votre ligne d\'objet]</string>
+    <string name="business_email_example3">Comment puis-je réengager les abonnés inactifs sur ma liste de diffusion ?</string>
+
+    <string name="business_cs">Service client</string>
+    <string name="business_cs_description">Générer des idées pour améliorer le service client</string>
+    <string name="business_cs_example1">Veuillez fournir un modèle pour expliquer la politique de retour standard au détail.</string>
+    <string name="business_cs_example2">Donnez des idées pour rendre mon client réceptif aux offres de ma société.</string>
+    <string name="business_cs_example3">Veuillez fournir X phrases types que les agents du service client peuvent utiliser pour montrer de l\'empathie.</string>
+
+    <string name="business_ec">Commerce électronique</string>
+    <string name="business_ec_description">Générer des idées pour une entreprise de commerce électronique</string>
+    <string name="business_ec_example1">Un client a récemment acheté des baskets, pouvez-vous s\'il vous plaît me donner des recommandations pour des produits similaires ou complémentaires que le client pourrait apprécier.</string>
+    <string name="business_ec_example2">Rédiger un script Javascript pour Google Tag Manager qui envoie un événement de conversion personnalisé Facebook lorsqu\'un bouton de rappel est cliqué.</string>
+    <string name="business_ec_example3">Rédiger une description de produit de 50 mots pour [café en grains Trader Joe\'s Awake Blend]. [Rédiger dans un ton optimiste et informatif.]</string>
+
+    <string name="writing">Écriture</string>
+    <string name="writing_article">Rédaction d\'articles</string>
+    <string name="writing_article_description">Rédiger de bons articles sur le sujet de votre choix</string>
+    <string name="writing_article_example1">Rédiger un article sur le réchauffement climatique.</string>
+    <string name="writing_article_example2">Composer un article mettant en avant l\'importance de préserver un équilibre harmonieux entre vie professionnelle et vie personnelle.</string>
+    <string name="writing_article_example3">Rédiger une proposition de projet communautaire à présenter au conseil municipal local. Inclure l\'objectif du projet, les avantages attendus, les étapes de mise en œuvre et comment vous prévoyez de le financer.</string>
+
+    <string name="writing_blog">Rédaction de blog</string>
+    <string name="writing_blog_description">Créer un blog pour présenter des produits</string>
+    <string name="writing_blog_example1">Pouvez-vous me fournir des idées d\'articles de blog sur [sujet de votre choix] ?</string>
+    <string name="writing_blog_example2">Composer un article de blog de 1500 mots du point de vue d\'un professionnel de la santé sur l\'importance d\'une alimentation équilibrée et d\'un exercice régulier.</string>
+    <string name="writing_blog_example3">Rédiger une méta-description de 100 caractères pour mon article de blog sur [sujet].</string>
+
+    <string name="writing_edu">Éducation/académique</string>
+    <string name="writing_edu_description">Rédiger des documents éducatifs tels que des essais et des rapports</string>
+    <string name="writing_edu_example1">Rédiger un document décrivant le sujet [Sujet de votre choix] dans l\'ordre chronologique</string>
+    <string name="writing_edu_example2">Rédiger un document sur l\'impact de la technologie sur l\'éducation d\'aujourd\'hui.</string>
+    <string name="writing_edu_example3">Proposer 10 moyens d\'améliorer la mémoire et la récupération lors de la préparation aux examens.</string>
+
+    <string name="writing_email">Rédaction d\'e-mails</string>
+    <string name="writing_email_description">Rédiger des e-mails éducatifs.</string>
+    <string name="writing_email_example1">Rédiger des e-mails de suivi pour les personnes ayant assisté à mon webinaire sur [sujet du webinaire].</string>
+    <string name="writing_email_example2">Créer un salut personnalisé par e-mail pour un client VIP.</string>
+    <string name="writing_email_example3">Je dois rédiger un e-mail à un client concernant un changement dans le calendrier du projet. Pouvez-vous me donner des conseils sur la manière de le formuler ?</string>
+
+    <string name="programing">Programmation</string>
+    <string name="programing_mobile">Développement mobile</string>
+    <string name="programing_mobile_description">Générer du code pour n\'importe quelle plateforme mobile.</string>
+    <string name="programing_mobile_example1">Rédiger un code Kotlin pour consommer une API Rest.</string>
+    <string name="programing_mobile_example2">Rédiger un code Swift pour l\'intégration de la connexion Facebook.</string>
+    <string name="programing_mobile_example3">Aidez-moi à trouver des erreurs dans le code suivant [coller le code ci-dessous].</string>
+
+    <string name="programing_web">Développement web</string>
+    <string name="programing_web_description">Rédiger du HTML/CSS pour n\'importe quel site web.</string>
+    <string name="programing_web_example1">Développer une architecture et un code pour un site web [description du site] avec JavaScript.</string>
+    <string name="programing_web_example2">Je veux implémenter un en-tête fixe sur mon site web. Pouvez-vous fournir un exemple de comment le faire en utilisant CSS et JavaScript ?</string>
+    <string name="programing_web_example3">Trouver le bug avec ce code : [coller le code ci-dessous].</string>
+
+    <string name="programing_server">Serveur backend</string>
+    <string name="programing_server_description">Rédiger du code pour le serveur backend</string>
+    <string name="programing_server_example1">Rédiger un code pour l\'intégration des notifications push Firebase en Node.js.</string>
+    <string name="programing_server_example2">Donnez-moi une fonction CRUD en langage de programmation Python.</string>
+    <string name="programing_server_example3">Je veux implémenter le rendu côté serveur pour mon application React. Pouvez-vous fournir un exemple de comment le faire en utilisant Next.js ?</string>
+
+    <string name="life_style">Style de vie</string>
+    <string name="life_style_health">Santé</string>
+    <string name="life_style_health_description">Trouver des conseils de santé</string>
+    <string name="life_style_health_example1">Décrivez six poses ou étirements de yoga efficaces pour les douleurs au dos et au cou.</string>
+    <string name="life_style_health_example2">Proposez 10 repas nutritifs qui peuvent être préparés en une demi-heure ou moins.</string>
+    <string name="life_style_health_example3">Routines de fitness faciles et adaptées aux débutants pour un professionnel actif</string>
+
+    <string name="life_style_cooking">Cuisine &amp; Alimentation</string>
+    <string name="life_style_cooking_description">Trouver des recettes de cuisine délicieuses</string>
+    <string name="life_style_cooking_example1">Quelle est une manière facile de préparer une recette de pâtes avec une sauce blanche et des champignons ?</string>
+    <string name="life_style_cooking_example2">Proposez 10 repas nutritifs qui peuvent être préparés en une demi-heure ou moins.</string>
+    <string name="life_style_cooking_example3">Suggérez un menu de dîner à plusieurs plats avec des ingrédients d\'hiver</string>
+
+    <string name="life_style_travel">Voyages &amp; Tourisme</string>
+    <string name="life_style_travel_description">Découvrez les meilleures destinations de voyage dans le monde</string>
+    <string name="life_style_travel_example1">Combien d\'argent ai-je besoin en tant que touriste pour X jours à [emplacement] ?</string>
+    <string name="life_style_travel_example2">Quelle est la compagnie aérienne la plus pratique pour aller de X à Y ?</string>
+    <string name="life_style_travel_example3">Quels sont les restaurants les mieux notés à Amsterdam avec un budget de 100 € par personne ?</string>
+
+    <string name="share_app">Partager l\'application</string>
+    <string name="recharge_msg">Les crédits gratuits ne peuvent pas être utilisés pour la génération d\'images. Veuillez recharger votre portefeuille.</string>
+    <string name="usage_cost1">%1$s : %2$s crédit / %3$s mots</string>
+    <string name="usage_cost2">%1$s : %2$s crédits / %3$s mots</string>
+    <string name="image_generating">Génération de l\'image...</string>
+    <string name="policy_text">En vous connectant, vous acceptez nos </string>
+    <string name="terms_service">Conditions d\'utilisation</string>
+    <string name="powered_by">Propulsé par ChatGPT-4</string>
+    <string name="rate_change_info">Remarque : Le nombre de mots équivaut aux mots dans la question plus les mots dans la réponse.</string>
+    <string name="pricing">Tarification</string>
+    <string name="usage_cost_img">Image : %1$s crédits / Image</string>
+    <string name="default_model">Modèle par défaut</string>
+    <string name="default_style">Style : (%1$s)</string>
+    <string name="select_style">Sélectionner le style</string>
+
+    <string name="style_no">Pas de style</string>
+    <string name="style_enhance">Amélioration</string>
+    <string name="style_anime">Anime</string>
+    <string name="style_photographic">Photographique</string>
+    <string name="style_digital_art">Art numérique</string>
+    <string name="style_comic_book">Bande dessinée</string>
+    <string name="style_fantasy_art">Art fantastique</string>
+    <string name="style_line_art">Dessin en traits</string>
+    <string name="style_analog_film">Film analogique</string>
+    <string name="style_neon_punk">Néon Punk</string>
+    <string name="style_isometric">Isométrique</string>
+    <string name="style_low_poly">Low Poly</string>
+    <string name="style_origami">Origami</string>
+    <string name="style_modeling_compound">Modélisation de composés</string>
+    <string name="style_cinematic">Cinématographique</string>
+    <string name="style_3d_model">Modèle 3D</string>
+    <string name="style_pixel_art">Art pixelisé</string>
+    <string name="style_tile_texture">Texture de tuile</string>
+    <string name="congrats">Félicitations</string>
+    <string name="daily_free_credits">Vous avez reçu des crédits gratuits ! Revenez demain pour plus.</string>
+    <string name="ok">OK</string>
+    <string name="sub_title">Plan Premium</string>
+    <string name="gpt_4_access">Accès à GPT-4</string>
+    <string name="no_ads">Expérience sans publicité</string>
+    <string name="unlimited_messages">Messages illimités</string>
+    <string name="unlimited_words">Aucune limite de mots</string>
+    <string name="unlimited_image">Générations d\'images illimitées</string>
+    <string name="weekly">Hebdomadaire</string>
+    <string name="monthly">Mensuel</string>
+    <string name="yearly">Annuel</string>
+    <string name="cancel_billing">Annulez la facturation récurrente à tout moment</string>
+    <string name="pro_title">Passer à la version Premium !</string>
+    <string name="pro_sub_title">Accès illimité à toutes les fonctionnalités</string>
+    <string name="manage_sub">Gérer l\'abonnement</string>
+    <string name="products_not_found">Produits non trouvés</string>
+    <string name="restore_purchase">Restaurer l\'achat</string>
+    <string name="welcome_pre">Bienvenue dans la version Premium !</string>
+    <string name="premium_not">Vous n\'avez aucune souscription active !</string>
+    <string name="usage_message">Utilisation des crédits : %1$s crédit / %2$s mots</string>
+    <string name="usage_image">Utilisation des crédits : %1$s crédit / image</string>
+    <string name="free_usage">Utilisation quotidienne gratuite</string>
+    <string name="watch_short_ad">Regarder une courte publicité</string>
+    <string name="upgrade_to_pre">Passer à la version Premium</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="no">Non</string>
+    <string name="yes">Oui</string>
+    <string name="no_chats">Commencez votre nouvelle conversation captivante maintenant.</string>
+    <string name="select_media_source">Sélectionner la source multimédia</string>
+    <string name="camera">Appareil photo</string>
+    <string name="gallery">Galerie</string>
+    <string name="image_input_p1">Rédigez une légende intrigante qui complète l\'image</string>
+    <string name="image_input_p2">Élaborez une histoire fascinante inspirée par l\'image</string>
+    <string name="image_input_p3">Générez un hashtag tendance pour cette image</string>
+    <string name="image_input_p4">Détectez et extrayez le texte de cette image</string>
+    <string name="image_input_prompt">Sélectionnez une suggestion</string>
+    <string name="image_url">Coller l\'URL de l\'image</string>
+    <string name="link">Lien</string>
+    <string name="url_error">Lien invalide</string>
+    <string name="image_load_failed">Échec du chargement de l\'image depuis le lien.</string>
+
+    <string name="continue_guest">Continuer en tant qu\'invité</string>
+    <string name="exit_guest">Quitter le mode invité</string>
+    <string name="are_you_sure_exit">Êtes-vous sûr de vouloir quitter ?</string>
+
+    <string name="delete_account">Supprimer le compte</string>
+    <string name="delete_account_error">Erreur de suppression du compte ! Veuillez réessayer plus tard</string>
+    <string name="are_you_sure_delete_account">Êtes-vous sûr de vouloir supprimer votre compte ? Cela supprimera toutes vos données, y compris les crédits et l\'abonnement.</string>
+
+    <string name="generate_anything">Générer n\'importe quoi...</string>
+    <string name="download">Télécharger</string>
+    <string name="image_detail">Image détaillée</string>
+    <string name="image_try">ESSAYEZ</string> Inspirations!
+    <string name="image_inspirations">Inspirations !</string>
+    <string name="image_inp_1">Un panda volant avec des ailes dorées, art fantastique</string>
+    <string name="image_inp_2">Portrait de la belle déesse de l\'amour, avec de beaux yeux verts, photographie incroyablement détaillée de Zhang Jingna, diadème orné et complexe</string>
+    <string name="image_inp_3">Une peinture d\'une chouette violette assise dans une forêt, tendance sur ArtStation, Pixiv, dramatique, cinématographique, 4k, très détaillée, mystique</string>
+    <string name="image_inp_4">Ombres monochromes, une séduisante femme punk métropolitaine aux cheveux noirs, tatouages et beauté sinistre, tonalité double, éclairage intense dans le style de la maîtrise du ton divisé, illustrations nettes de néo-pop, bleu-vert clair, blanc, saumon et blanc cassé, 32k UHD, art comique, steampunk, street pop, émotion, gros plan, vibrant, illustration, portant des écouteurs, fond abstrait, cinématographique</string>
+    <string name="image_inp_5">James Christensen, style, portrait d\'une déesse des neiges, détail exquis, 30 mégapixels, 4k, objectif 85 mm, mise au point nette, détail complexe, temps d\'exposition prolongé, f/8, ISO 100, vitesse d\'obturation 1/125, éclairage de fond diffus, photographie primée, face à la caméra, regardant dans la caméra, monovisions, elle, petite lumière de capture, faible contraste, haute netteté, symétrie, profondeur de champ, heure dorée, photographie ultra-détaillée, surface métallique brillante avec des incrustations nacrées tourbillonnantes complexes, suivi de rayons, illumination globale</string>
+    <string name="image_inp_6">Illustration ultra-minimaliste d\'un oiseau tropical aux couleurs vives perché sur une plante ramifiée devant un ruisseau de montagne avec une belle cascade, chaque surface est texturée de fines lignes créant des motifs complexes entrelacés, textures et motifs de haute résolution, 8k, gravure sur bois à quatre couleurs par Frankin Booth en style minimaliste</string>
+    <string name="image_inp_7">Une peinture d\'une femme avec des bijoux bleus et oranges, dans le style d\'une illustration fantastique, rendu réaliste hyper-détaillé, argent foncé et ambre foncé, yeux brillants, roman, gros plans intenses, illustration</string>
+    <string name="image_inp_8">Peinture numérique hautement détaillée, éclairage atmosphérique, rendu Octane, moteur Unreal, professionnel, bec métallique d\'une chouette aigle, mystère fantastique, cinématographique, couleurs dramatiques, gros plan, CGSociety, rendu informatique, par Mike Winkelmann, UHD, rendu dans Cinema4D, modélisation de surface dure, 8K, rendu Octane, inspiré par Beksinski</string>
+    <string name="image_inp_9">Erin Hanson &amp; Donato Giancola &amp; Nicolas de Stael, pleine lune, parking sablonneux, planches de surf, palmier, eau blanche, nuages, peinture saturée, vagues, 8k</string>
+    <string name="image_inp_10">Illustration d\'un ours psychédélique dans une forêt enchantée lumineuse, (((par l\'artiste Sam Bosma)))</string>
+
+    <string name="page_count">Pages : %1$s</string>
+    <string name="pdf_input_p1">Résumez le contenu de ce PDF</string>
+    <string name="pdf_question">Résumez le texte suivant copié d\'un PDF et formatez-le en conséquence. \n</string>
+    <string name="pdf_question_custom">Le texte suivant est copié d\'un PDF, %1$s \n</string>
+    <string name="pdf_max_pages">Échec !: Actuellement, un maximum de %1$s pages est pris en charge dans un fichier PDF</string>
+    <string name="language">Langue</string>
+    <string name="vision_limit">Limite quotidienne d\'utilisation de la vision atteinte</string>
+    <string name="generation_limit">Limite quotidienne de génération d\'images atteinte</string>
+    <string name="gpt4_limit">Limite quotidienne d\'utilisation de GPT-4 atteinte</string>
+
+
+
+</resources>

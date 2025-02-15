@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="conversations">Chats</string>
+    <string name="ai_assistants">AI-assistenter</string>
+    <string name="app_icon">Appikon</string>
+    <string name="ask_me_anything">Spør om hva som helst...</string>
+
+    <string name="share">Del</string>
+    <string name="write_article">Skriv artikler</string>
+    <string name="write_article_description">Generer velskrevne artikler om hvilket som helst emne du ønsker</string>
+
+    <string name="all">Alle</string>
+    <string name="examples">Assistenter</string>
+    <string name="examples_1">Anbefal aktiviteter \nFor en teambyggingsdag med eksterne ansatte</string>
+    <string name="examples_2">Fortell meg en morsom fakta om\n det romerske riket</string>
+    <string name="examples_3"> Forklar opsjonshandel\nHvis jeg er kjent med å være og selge aksjer</string>
+    <string name="examples_img_1">Generer bilde \nav en hvit siamesisk katt</string>
+    <string name="examples_img_2">Generer en moderne logo \nmed en sol for et markedsføringsselskap</string>
+    <string name="examples_img_3">Generer et funksjonsgrafikk \nav sosiale medier-app som Instagram</string>
+    <string name="examples_desc">Dette er bare noen få eksempler på hva jeg kan gjøre</string>
+    <string name="stop_generating">Stopp generering...</string>
+    <string name="copy">Kopier</string>
+    <string name="write_article_example1">Skriv en artikkel som diskuterer fordelene med å praktisere mindfulness i dagliglivet</string>
+    <string name="write_article_example2">Skriv en artikkel som diskuterer virkningen av klimaendringer på planeten.</string>
+    <string name="write_article_example3">Skriv en artikkel som diskuterer viktigheten av å opprettholde en sunn arbeidslivsbalanse.</string>
+    <string name="type_something_like">Prøv noe lignende:</string>
+    <string name="empty">Tom</string>
+    <string name="no_history">Du har ingen samtaler ennå.</string>
+    <string name="clear_all_history">Slett all historikk</string>
+    <string name="are_you_sure_delete_all_history">Er du sikker på at du vil slette all historikk?</string>
+    <string name="cancel">Avbryt</string>
+    <string name="yes_clear_all">Slett</string>
+    <string name="search_conversation">Søk…</string>
+    <string name="dark_theme">Mørkt tema</string>
+    <string name="privacy_policy">Personvernpolicy</string>
+    <string name="about_us">Om AskAI</string>
+    <string name="logout">Logg ut</string>
+    <string name="are_you_sure_logout">Er du sikker på at du vil logge ut?</string>
+    <string name="yes_logout">Logg ut</string>
+    <string name="settings">Innstillinger</string>
+    <string name="powered_by_chat_gpt">Drevet av ChatGPT 4</string>
+    <string name="watch_ad">Se annonse</string>
+    <string name="you_reach_free_message_limit">Ser ut som om du har brukt opp alle dine gratis kreditter! Kom tilbake i morgen for mer, eller oppgrader til premiumversjonen for ubegrenset tilgang!. Minimum antall kreditter som kreves for denne forespørselen: %1$d</string>
+
+    <string name="network_error">Nettverksfeil</string>
+    <string name="no_conection_try_again">Vennligst koble til internett og prøv igjen.</string>
+    <string name="save_to_gallery">Lagret! Vellykket</string>
+    <string name="sign_in_with_google">Logg inn med Google</string>
+    <string name="app_welcome">Velkommen til</string>
+    <string name="sign_in_api_key">Bruk OpenAI API-nøkkel</string>
+    <string name="user_continue">Fortsett</string>
+    <string name="api_key">API-nøkkel</string>
+    <string name="or">eller</string>
+    <string name="key_error">API-nøkkel er påkrevd</string>
+    <string name="google_signin_error">Noe gikk galt, prøv igjen senere</string>
+    <string name="credits_i_have">Kreditter jeg har</string>
+    <string name="recharge">Lad opp</string>
+    <string name="credits">Kreditter</string>
+    <string name="please_login_msg">Vennligst logg inn for å fylle på kredittlommeboken din.</string>
+    <string name="free_credits">Få 1 gratis kreditt</string>
+    <string name="generate_image">Generer bilde</string>
+    <string name="generate_text">Start Chat</string>
+    <string name="delete">Slett</string>
+
+    <string name="image_content">Bildegenerering</string>
+    <string name="image_content_logo">Generer Logo</string>
+    <string name="image_content_logo_description">Generer logoer for forskjellige merker</string>
+    <string name="image_content_logo_example1">Design en moderne logo med en sol for et markedsføringsselskap.</string>
+    <string name="image_content_logo_example2">bilde av en ekstremt søt utenomjordisk fisk som svømmer på en beboelig utenomjordisk undervannsplanet, korallrev, drømmeaktig atmosfære.</string>
+    <string name="image_content_logo_example3">Design en 3D-logo for [merkenavn]</string>
+
+    <string name="image_content_product">Produktbilder</string>
+    <string name="image_content_product_description">Generer bilder for forskjellige produkter</string>
+    <string name="image_content_product_example1">Generer et bilde for annonsering av [produkt eller tjeneste]</string>
+    <string name="image_content_product_example2">Generer bilde av [Produktnavn] for sosiale medier-innlegg.</string>
+    <string name="image_content_product_example3">  Generer en funksjonsgrafikk av sosiale medier-app som WhatsApp.</string>
+
+    <string name="image_content_art">AI-kunst</string>
+    <string name="image_content_art_description">Generer en iøynefallende kunst</string>
+    <string name="image_content_art_example1">Generer bilde av en hvit siamesisk katt.</string>
+    <string name="image_content_art_example2">en sint helkroppsulv i tåkeskogen.</string>
+    <string name="image_content_art_example3">Generer et portrett av en person med en drømmende, etere kvalitet, ved hjelp av myke pastellfarger og flytende linjer.</string>
+
+    <string name="social_media">Sosiale medier</string>
+    <string name="social_media_fb">Facebook</string>
+    <string name="social_media_fb_description">Lag iøynefallende Facebook-innlegg</string>
+    <string name="social_media_fb_example1">Kom opp med et energisk Facebook-innlegg for å promotere [produkt/tjeneste]</string>
+    <string name="social_media_fb_example2">Generer 3 ideer for Facebook-innlegg om emnet [legg til innholdsemne] som vil engasjere målgruppen [legg til målgruppe].</string>
+    <string name="social_media_fb_example3">Gi meg et interessant og engasjerende spørsmål å poste i Facebook-gruppen min om [tema]</string>
+
+    <string name="social_media_insta">Instagram</string>
+    <string name="social_media_insta_description">Skriv fengende Instagram-tekster</string>
+    <string name="social_media_insta_example1">Lag 3 bildetekster for et Instagram-innlegg relatert til [legg til innholdsemne] som vil engasjere målgruppen [legg til målgruppe]</string>
+    <string name="social_media_insta_example2">Gi idé om Instagram-innlegg for å markedsføre produktet mitt [navn].</string>
+    <string name="social_media_insta_example3">Generer et manus for en 15-sekunders Instagram-videoannonse for [legg til produkt eller tjeneste]</string>
+
+    <string name="social_media_tweet">Twitter</string>
+    <string name="social_media_tweet_description">Skriv oppsiktsvekkende tweets</string>
+    <string name="social_media_tweet_example1">Skriv en engasjerende tweet om [tema]</string>
+    <string name="social_media_tweet_example2">Lag en engasjerende og detaljert Twitter-tråd om [tema]. Pass på å inkludere relevante emneknagger.</string>
+    <string name="social_media_tweet_example3">Jeg trenger en tweet-idé for å promotere onlinekursproduktet mitt for den ideelle kunden på Twitter slik at de kjøper det.</string>
+
+    <string name="social_media_linkdin">LinkedIn</string>
+    <string name="social_media_linkdin_description">Lag fremtredende LinkedIn-innlegg</string>
+    <string name="social_media_linkdin_example1">Lag et promotert LinkedIn-innlegg om fordelene ved å bruke [produkt/tjeneste]</string>
+    <string name="social_media_linkdin_example2">Lag 5 overskrifter for LinkedIn-annonser for [nettsteds-URL]</string>
+    <string name="social_media_linkdin_example3">Kan du hjelpe med å utforme et LinkedIn-innlegg som fremhever en klients attester om hvordan produktet vårt løste deres unike utfordring?</string>
+
+    <string name="social_media_tiktok">TikTok</string>
+    <string name="social_media_tiktok_description">Lag fengende og delbare TikTok-bildetekster</string>
+    <string name="social_media_tiktok_example1">Del måter å få flere følgere på TikTok.</string>
+    <string name="social_media_tiktok_example2">Lag 3 bildetekster for et TikTok-innlegg relatert til [innholdsemne] som vil engasjere målgruppen [målgruppe]</string>
+    <string name="social_media_tiktok_example3">Trenger en TikTok-bildetekstidé som stiller følgerne mine et spørsmål og får dem til å snakke i kommentarene.</string>
+
+    <string name="business">Forretning</string>
+    <string name="business_marketing">Markedsføring</string>
+    <string name="business_marketing_description">Generer innhold for markedsføringskampanjer</string>
+    <string name="business_marketing_example1">Skriv et minutt-langt manus for en annonse om [produkt eller tjeneste eller selskap]</string>
+    <string name="business_marketing_example2">Skriv en produktbeskrivelse for [produkt eller tjeneste eller selskapet mitt]</string>
+    <string name="business_marketing_example3">Foreslå rimelige måter jeg kan markedsføre [selskapet mitt] med/uten bruk av [mediekanal]</string>
+
+    <string name="business_sales">Salg</string>
+    <string name="business_sales_description">Skriv plan for å øke salget</string>
+    <string name="business_sales_example1">Hva er noen kreative måter å generere leads for [niche] selskapet mitt?</string>
+    <string name="business_sales_example2">Hvilke mersalgsmuligheter vil du anbefale for lysproduktbedriften min?</string>
+    <string name="business_sales_example3">Lag en personlig salgsepost for en potensiell kunde for [niche] selskapet mitt som selger.</string>
+
+    <string name="business_email">E-postkampanjer</string>
+    <string name="business_email_description">Lag forretnings-e-poster</string>
+    <string name="business_email_example1">Gi meg 10 emne-linjer for [niche] nyhetsbrevet mitt.</string>
+    <string name="business_email_example2">Skriv en oppfølgings-e-post med emnelinjen: [Din emnelinje]</string>
+    <string name="business_email_example3">Hvordan kan jeg gjenengasjere inaktive abonnenter på e-postlisten min?</string>
+
+    <string name="business_cs">Kundeservice</string>
+    <string name="business_cs_description">Generer ideer for å forbedre kundeservice</string>
+    <string name="business_cs_example1">Vennligst gi en mal for å forklare den standard detaljhandelsreturpolitikken.</string>
+    <string name="business_cs_example2">Gi ideer for å få kunden min mottakelig for tilbudene fra selskapet mitt.</string>
+    <string name="business_cs_example3">Vennligst gi X eksempelsetninger som kundeservicemedarbeidere kan bruke for å vise empati.</string>
+
+    <string name="business_ec">Netthandel</string>
+    <string name="business_ec_description">Generer ideer for netthandel</string>
+    <string name="business_ec_example1">En kunde har nylig kjøpt joggesko, kan du gi meg anbefalinger for lignende eller komplementære produkter som kunden kan like.</string>
+    <string name="business_ec_example2">Skriv en JavaScript for Google Tag Manager som sender en Facebook Custom Conversion-hendelse når en tilbakeringing-knapp klikkes.</string>
+    <string name="business_ec_example3">Skriv en 50-ords produktbeskrivelse for [trader joes awake blend coffee beans]. [Skriv i en livlig, informativ tone.]</string>
+
+    <string name="writing">Skriving</string>
+    <string name="writing_article">Artikkelskriving</string>
+    <string name="writing_article_description">Skriv gode artikler om ditt valgte emne</string>
+    <string name="writing_article_example1">Skriv en artikkel om global oppvarming.</string>
+    <string name="writing_article_example2">Skriv et stykke som fremhever betydningen av å bevare en harmonisk arbeids- og livsbalanse.</string>
+    <string name="writing_article_example3">Utarbeid et forslag til et fellesskapsprosjekt som skal presenteres for lokalstyre. Inkluder prosjektets formål, forventede fordeler, trinn for gjennomføring og hvordan du planlegger å finansiere det.</string>
+    <string name="writing_blog">Bloggskriving</string>
+    <string name="writing_blog_description">Opprett en blogg for å vise frem produkter</string>
+    <string name="writing_blog_example1">Kan du gi meg noen ideer til blogginnlegg om [valgt emne]?</string>
+    <string name="writing_blog_example2">Skriv et blogginnlegg på 1500 ord sett fra perspektivet til en helsepersonell om viktigheten av en balansert kosthold og regelmessig trening.</string>
+    <string name="writing_blog_example3">Skriv en 100-tegn meta-beskrivelse for blogginnlegget mitt om [emne].</string>
+
+    <string name="writing_edu">Utdanning/akademisk</string>
+    <string name="writing_edu_description">Skriv pedagogiske tekster som essays og rapporter</string>
+    <string name="writing_edu_example1">Skriv en oppgave som beskriver emnet [Valgt emne] i kronologisk rekkefølge</string>
+    <string name="writing_edu_example2">Skriv en oppgave om hvordan teknologi påvirker dagens utdanning.</string>
+    <string name="writing_edu_example3">Kom opp med 10 måter å forbedre hukommelse og gjengivelse mens du studerer til eksamen.</string>
+
+    <string name="writing_email">E-postskriving</string>
+    <string name="writing_email_description">Skriv pedagogiske e-poster.</string>
+    <string name="writing_email_example1">Skriv oppfølgings-e-poster til personer som deltok på [webinartema] webinaret mitt.</string>
+    <string name="writing_email_example2">Opprett en personlig e-posthilsen for en VIP-kunde.</string>
+    <string name="writing_email_example3">Jeg må skrive en e-post til en klient angående endringer i prosjektets tidsplan. Kan du gi meg veiledning om hvordan jeg skal formulere det?</string>
+
+    <string name="programing">Programmering</string>
+    <string name="programing_mobile">Mobilutvikling</string>
+    <string name="programing_mobile_description">Generer kode for hvilken som helst mobil plattform.</string>
+    <string name="programing_mobile_example1">Skriv kotlin-kode for å konsumere Rest API.</string>
+    <string name="programing_mobile_example2">Skriv swift-kode for integrering av Facebook-pålogging</string>
+    <string name="programing_mobile_example3">Hjelp meg med å finne feil i følgende kode [lim inn kode nedenfor]</string>
+
+    <string name="programing_web">Webutvikling</string>
+    <string name="programing_web_description">Skriv HTML/CSS for hvilken som helst nettside.</string>
+    <string name="programing_web_example1">Utvikle arkitektur og kode for en [beskrivelse av nettstedet] nettside med JavaScript.</string>
+    <string name="programing_web_example2">Jeg vil implementere en fast toppmeny på nettsiden min. Kan du gi et eksempel på hvordan du gjør det med CSS og JavaScript?</string>
+    <string name="programing_web_example3">Finn feilen med denne koden: [post kode nedenfor]</string>
+
+    <string name="programing_server">Backend-server</string>
+    <string name="programing_server_description">Skriv kode for backend-server</string>
+    <string name="programing_server_example1">Skriv en kode for integrering av Firebase push-varsling i Node.js.</string>
+    <string name="programing_server_example2">Gi meg en CRUD-funksjon i Python-programmeringsspråket.</string>
+    <string name="programing_server_example3">Jeg vil implementere serverside rendering for React-applikasjonen min. Kan du gi et eksempel på hvordan du gjør det med Next.js?</string>
+
+    <string name="life_style">Livsstil</string>
+    <string name="life_style_health">Helse</string>
+    <string name="life_style_health_description">Finn helse-råd</string>
+    <string name="life_style_health_example1">Beskriv seks effektive yoga-poser eller strekk for rygg- og nakkesmerter.</string>
+    <string name="life_style_health_example2">Kom opp med 10 næringsrike måltider som kan tilberedes på en halvtime eller mindre.</string>
+    <string name="life_style_health_example3">Enkle og nybegynnervennlige treningsrutiner for en yrkesaktiv person</string>
+
+    <string name="life_style_cooking">Matlaging og mat</string>
+    <string name="life_style_cooking_description">Finn deilige matoppskrifter</string>
+    <string name="life_style_cooking_example1">Hva er en enkel måte å lage en pastarett med hvit saus og sopp?</string>
+    <string name="life_style_cooking_example2">Kom opp med 10 næringsrike måltider som kan tilberedes på en halvtime eller mindre.</string>
+    <string name="life_style_cooking_example3">Foreslå en meny for et middagsselskap med flere retter med vinteringredienser</string>
+
+    <string name="life_style_travel">Reise og turisme</string>
+    <string name="life_style_travel_description">Få verdens beste reisemål</string>
+    <string name="life_style_travel_example1">Hvor mye penger trenger jeg som turist i X dager i [sted]?</string>
+    <string name="life_style_travel_example2">Hva er det mest praktiske flyselskapet fra X til Y?</string>
+    <string name="life_style_travel_example3">Hva er de best vurderte restaurantene i Amsterdam med et budsjett på €100 per person?</string>
+
+    <string name="share_app">Del appen</string>
+    <string name="recharge_msg">Gratis kreditter kan ikke brukes til bildegenerering. Vennligst fyll på lommeboken din.</string>
+    <string name="usage_cost1">%1$s : %2$s kreditt / %3$s ord</string>
+    <string name="usage_cost2">%1$s : %2$s kreditter / %3$s ord</string>
+    <string name="image_generating">Genererer bilde…</string>
+    <string name="policy_text">Ved å logge inn godtar du våre </string>
+    <string name="terms_service">tjenestevilkår</string>
+    <string name="powered_by">Drevet av ChatGPT-4</string>
+    <string name="rate_change_info">Merk: Ordtelling inkluderer ord i spørsmålet pluss ord i svaret.</string>
+    <string name="pricing">Priser</string>
+
+    <string name="usage_cost_img">Bilde: %1$s kreditter / Bilde</string>
+    <string name="default_model">Standardmodell</string>
+    <string name="default_style">Stil: (%1$s)</string>
+    <string name="select_style">Velg stil</string>
+
+    <string name="style_no">Ingen stil</string>
+    <string name="style_enhance">Forbedre</string>
+    <string name="style_anime">Anime</string>
+    <string name="style_photographic">Fotografisk</string>
+    <string name="style_digital_art">Digital kunst</string>
+    <string name="style_comic_book">Tegneseriebok</string>
+    <string name="style_fantasy_art">Fantasikunst</string>
+    <string name="style_line_art">Linjekunst</string>
+    <string name="style_analog_film">Analog Film</string>
+    <string name="style_neon_punk">Neon Punk</string>
+    <string name="style_isometric">Isometrisk</string>
+    <string name="style_low_poly">Lavpoly</string>
+    <string name="style_origami">Origami</string>
+    <string name="style_modeling_compound">Modelleringsmasse</string>
+    <string name="style_cinematic">Kinematisk</string>
+    <string name="style_3d_model">3D-modell</string>
+    <string name="style_pixel_art">Pikselkunst</string>
+    <string name="style_tile_texture">Flise tekstur</string>
+    <string name="congrats">Gratulerer</string>
+    <string name="daily_free_credits">Du har mottatt gratis kreditter! Kom tilbake i morgen for mer.</string>
+    <string name="ok">OK</string>
+    <string name="sub_title">Premium Plan</string>
+    <string name="gpt_4_access">Tilgang til GPT-4</string>
+    <string name="no_ads">Opplevelse uten reklame</string>
+    <string name="unlimited_messages">Ubegrensede meldinger</string>
+    <string name="unlimited_words">Ingen ordgrense</string>
+    <string name="unlimited_image">Ubegrenset bildegenerering</string>
+    <string name="weekly">Ukentlig</string>
+    <string name="monthly">Månedlig</string>
+    <string name="yearly">Årlig</string>
+    <string name="cancel_billing">Avbryt gjentakende fakturering når som helst</string>
+    <string name="pro_title">Oppgrader til Premium!</string>
+    <string name="pro_sub_title">Ubegrenset tilgang til alle funksjoner</string>
+    <string name="manage_sub">Administrer abonnement</string>
+    <string name="products_not_found">Produkter ikke funnet</string>
+    <string name="restore_purchase">Gjenopprett kjøp</string>
+    <string name="welcome_pre">Velkommen til premiumversjonen!</string>
+    <string name="premium_not">Du har ingen aktivt abonnement!</string>
+    <string name="usage_message">Bruk av kreditter: %1$s kreditt / %2$s ord</string>
+    <string name="usage_image">Bruk av kreditter: %1$s kreditt / bilde</string>
+    <string name="free_usage">Daglig gratis bruk</string>
+    <string name="watch_short_ad">Se kort annonse</string>
+    <string name="upgrade_to_pre">Oppgrader til Premium</string>
+    <string name="confirmation">Bekreftelse</string>
+    <string name="no">Nei</string>
+    <string name="yes">Ja</string>
+    <string name="no_chats">Start din nye engasjerende samtale nå.</string>
+    <string name="select_media_source">Velg mediekilde</string>
+    <string name="camera">Kamera</string>
+    <string name="gallery">Galleri</string>
+    <string name="image_input_p1">Skriv en fascinerende bildetekst som komplementerer bildet</string>
+    <string name="image_input_p2">Lag en fascinerende historie inspirert av bildet</string>
+    <string name="image_input_p3">Generer en trendende emneknagg for dette bildet</string>
+    <string name="image_input_p4">Oppdag og ekstraher tekst fra dette bildet</string>
+    <string name="image_input_prompt">Velg en ledetekst</string>
+    <string name="image_url">Lim inn bildets URL</string>
+    <string name="link">Lenke</string>
+    <string name="url_error">Ugyldig lenke</string>
+    <string name="image_load_failed">Kunne ikke laste inn bilde fra lenken.</string>
+
+    <string name="continue_guest">Fortsett som gjest</string>
+    <string name="exit_guest">Avslutt gjestemodus</string>
+    <string name="are_you_sure_exit">Er du sikker på at du vil avslutte?</string>
+
+    <string name="delete_account">Slett konto</string>
+    <string name="delete_account_error">Feil ved sletting av konto!, prøv igjen senere</string>
+    <string name="are_you_sure_delete_account">Er du sikker på at du vil slette kontoen din? Dette vil slette all din data, inkludert kreditter og abonnement.</string>
+
+    <string name="generate_anything">Generer hva som helst...</string>
+    <string name="download">Last ned</string>
+    <string name="image_detail">Detaljert bilde</string>
+    <string name="image_try">PRØV</string>Inspirasjoner!
+    <string name="image_inspirations">Inspirasjoner!</string>
+    <string name="image_inp_1">En flyvende panda med gyldne vinger, fantasy-kunst</string>
+    <string name="image_inp_2">Portrett av vakker kjærlighetsgudinne, med vakre grønne øyne, Fantastisk ultra-detaljert fotografi av Zhang Jingna, intrikat juvelert diadem</string>
+    <string name="image_inp_3">Et maleri av en lilla ugle som sitter i en skog, trending på ArtStation, Pixiv, dramatisk, kinematisk, 4k, høyt detaljert, mystisk</string>
+    <string name="image_inp_4">Monokromatiske skygger, forlokkende metropolitansk punkkvinne med svart hår, tatoveringer og ond skjønnhet, tofarget, hard belysning i stil med splittetone mestring, skarpe neo-pop illustrasjoner, lys-teal, hvit, laks og off-white, 32k UHD, tegneseriekunst, steampunk, street pop, følelse, nærbilde, levende, illustrasjon, iført hodetelefoner, abstrakt bakgrunn, kinematisk</string>
+    <string name="image_inp_5">James Christensen, stil, portrett av en snøgudinne, utsøkt detalj, 30-megapiksler, 4k, 85 mm-objektiv, skarp fokus, intrikat detaljert, lang eksponeringstid, f/8, ISO 100, lukkerhastighet 1/125, diffus baklys, prisbelønt fotografi, mot kameraet, ser inn i kameraet, monovisjoner, elle, liten catchlight, lav kontrast, høy skarphet, symmetri, dybdeskarphet, den gyldne timen, ultra-detallert fotografi, blank metallisk overflate med intrikate hvirvlende innlegg av perlemor, raytraced, global belysning</string>
+    <string name="image_inp_6">Ultra-minimalistisk illustrasjon av en fargerik tropisk fugl som sitter på en grenende plante foran en fjellbekk med en vakker foss, hver overflate er teksturert med fine linjer som skaper intrikate sammenflettede mønstre, hires teksturer og mønstre, 8k, 4-fargers treblokkgraveringstrykk av Frankin Booth minimalisme</string>
+    <string name="image_inp_7">Et maleri av en kvinne i blått og oransje smykker, i fantasyillustrasjonens stil, realistisk hyperdetaljert gjengivelse, mørk sølv og mørk rav, blanke øyne, romansk, intense nærbilder, illustrasjon</string>
+    <string name="image_inp_8">Høyt detaljert, digitalt maleri, atmosfærisk belysning, octane-render, unreal engine, profesjonell, ørnugle med metallnebb, fantasy-mysterium, kinematisk, dramatiske farger, nærbilde, cgscociety, datagenerering, av Mike Winkelmann, uhd, rendret i Cinema4D, hard overflate modellering, 8k, rendret octane, inspirert av beksinski</string>
+    <string name="image_inp_9">Erin Hanson &amp; Donato Giancola &amp; Nicolas de Stael, fullmåne, sandparkering, surfebrett, palme, hvitvann, skyer, mettet, maleri, bølger, 8k</string>
+    <string name="image_inp_10">Illustrasjon av psykedelisk bjørn i en glødende fortryllet skog, (((av kunstneren Sam Bosma)))</string>
+
+    <string name="page_count">Sider: %1$s</string>
+    <string name="pdf_input_p1">Oppsummer innholdet i denne PDF-en</string>
+    <string name="pdf_question">Oppsummer teksten som er kopiert fra en PDF og formater den deretter. \n</string>
+    <string name="pdf_question_custom">Følgende tekst er kopiert fra en PDF, %1$s \n</string>
+    <string name="pdf_max_pages">Feil!: For øyeblikket støttes maksimalt %1$s sider i en PDF-fil</string>
+    <string name="language">Språk</string>
+    <string name="vision_limit">Daglig grense for bruk av visjon nådd</string>
+    <string name="generation_limit">Daglig grense for bildegenerering nådd</string>
+    <string name="gpt4_limit">Daglig grense for bruk av GPT-4 nådd</string>
+
+
+</resources>
