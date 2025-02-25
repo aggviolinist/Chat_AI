@@ -9,11 +9,6 @@ data class AIModel(
     val content: String
 )
 
-data class AIMessageRequest(
-    val model:String = "gpt-3.5-turbo",
-    val messages: List<AIModel> = arrayListOf()
-)
-
 data class AIChoice(@SerializedName("index") val index:Any,@SerializedName("message") val message: AIModel){
     override fun toString(): String {
         return "AIChoice(index=$index, message=$message)"

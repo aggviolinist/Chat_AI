@@ -2,7 +2,6 @@ package com.apps.aivision.data.repository
 
 import android.app.Application
 import android.content.SharedPreferences
-import com.apps.aivision.components.Constants
 import com.apps.aivision.components.PreferenceConstant
 import com.apps.aivision.data.model.GPTModel
 import java.util.Locale
@@ -58,7 +57,7 @@ class PreferenceRepositoryImpl @Inject constructor(
 
 
     override fun getGPTModel(): String {
-        return sharedPreferences.getString(PreferenceConstant.GPT_DEFAULT_MODEL,null)?: GPTModel.gpt35Turbo.name
+        return sharedPreferences.getString(PreferenceConstant.GPT_DEFAULT_MODEL,null)?: GPTModel.GPT_3_5_TURBO.name
     }
 
     override fun setGPTModel(modelName: String) {

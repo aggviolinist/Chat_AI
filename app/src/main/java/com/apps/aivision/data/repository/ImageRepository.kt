@@ -39,7 +39,7 @@ interface ImageRepository {
 private const val TAG ="ImageRepositoryImpl"
 class ImageRepositoryImpl @Inject constructor(@ApplicationContext val application: Context, private val aiVisionService: AIVisionService, private val apiKeyHelpers: ApiKeyHelpers,private val preferenceRepository: PreferenceRepository) :ImageRepository {
 
-     override  fun generateImageWithDalle(request: ImageRequest): Flow<ImageGenerationStatus> = callbackFlow<ImageGenerationStatus>{
+     override  fun generateImageWithDalle(request: ImageRequest): Flow<ImageGenerationStatus> = callbackFlow {
 
           var downloadId:Int?=null
           runCatching {
@@ -91,7 +91,7 @@ class ImageRepositoryImpl @Inject constructor(@ApplicationContext val applicatio
           }*/
      }.flowOn(Dispatchers.IO)
 
-     override fun generateImageWithStability(request: StabilityImageRequest): Flow<ImageGenerationStatus> = callbackFlow<ImageGenerationStatus> {
+     override fun generateImageWithStability(request: StabilityImageRequest): Flow<ImageGenerationStatus> = callbackFlow {
 
           runCatching {
 

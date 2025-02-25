@@ -115,42 +115,41 @@ fun RowToggleButtonGroup(
 ) {
   Row(modifier = modifier) {
     val squareCorner = CornerSize(0.dp)
-    val selectionIndex = primarySelection
-    //var selectionIndex by rememberSaveable { mutableStateOf(primarySelection) }
+      //var selectionIndex by rememberSaveable { mutableStateOf(primarySelection) }
 
     repeat(buttonCount) { index ->
-      val buttonShape = when (index) {
-        0 -> shape.copy(bottomEnd = squareCorner, topEnd = squareCorner)
-        buttonCount - 1 -> shape.copy(topStart = squareCorner, bottomStart = squareCorner)
-        else -> shape.copy(all = squareCorner)
-      }
-      val isButtonSelected = selectionIndex == index
-      val backgroundColor = if (isButtonSelected) selectedColor else unselectedColor
-      val contentColor = if (isButtonSelected) selectedContentColor else unselectedContentColor
-      val iconTintColor = if (isButtonSelected) buttonIconTint else unselectedButtonIconTint
-      val offset = borderSize * -index
+        val buttonShape = when (index) {
+            0 -> shape.copy(bottomEnd = squareCorner, topEnd = squareCorner)
+            buttonCount - 1 -> shape.copy(topStart = squareCorner, bottomStart = squareCorner)
+            else -> shape.copy(all = squareCorner)
+        }
+        val isButtonSelected = primarySelection == index
+        val backgroundColor = if (isButtonSelected) selectedColor else unselectedColor
+        val contentColor = if (isButtonSelected) selectedContentColor else unselectedContentColor
+        val iconTintColor = if (isButtonSelected) buttonIconTint else unselectedButtonIconTint
+        val offset = borderSize * -index
 
-      ToggleButton(
-        modifier = Modifier
-            /* .weight(weight = 1f)*/
-            .defaultMinSize(minHeight = buttonHeight)
-            .offset(x = offset),
-        buttonShape = buttonShape,
-        border = border,
-        backgroundColor = backgroundColor,
-        elevation = elevation,
-        enabled = enabled,
-        buttonTexts = buttonTexts,
-        buttonIcons = buttonIcons,
-        index = index,
-        contentColor = contentColor,
-        iconTintColor = iconTintColor,
-        iconPosition = iconPosition,
-        onClick = {
-         // selectionIndex = index
-          onButtonClick.invoke(index)
-        },
-      )
+        ToggleButton(
+            modifier = Modifier
+                /* .weight(weight = 1f)*/
+                .defaultMinSize(minHeight = buttonHeight)
+                .offset(x = offset),
+            buttonShape = buttonShape,
+            border = border,
+            backgroundColor = backgroundColor,
+            elevation = elevation,
+            enabled = enabled,
+            buttonTexts = buttonTexts,
+            buttonIcons = buttonIcons,
+            index = index,
+            contentColor = contentColor,
+            iconTintColor = iconTintColor,
+            iconPosition = iconPosition,
+            onClick = {
+                // selectionIndex = index
+                onButtonClick.invoke(index)
+            },
+        )
     }
   }
 }

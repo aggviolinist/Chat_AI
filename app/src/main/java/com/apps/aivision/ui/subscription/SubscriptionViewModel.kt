@@ -1,6 +1,5 @@
 package com.apps.aivision.ui.subscription
 
-import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import com.apps.aivision.data.repository.PreferenceRepository
 import dagger.hilt.android.lifecycle.HiltViewModel

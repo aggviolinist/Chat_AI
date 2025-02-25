@@ -9,7 +9,6 @@ import com.apps.aivision.components.AppLogger
 import com.apps.aivision.components.Constants
 import com.apps.aivision.components.CreditHelpers
 import com.apps.aivision.components.JavaUtils
-import com.apps.aivision.components.Utils
 import com.apps.aivision.data.repository.FirebaseRepository
 import com.apps.aivision.data.repository.PreferenceRepository
 import dagger.hilt.android.lifecycle.HiltViewModel

@@ -188,7 +188,7 @@ class ChatRepositoryImpl @Inject constructor(private val aiVisionService: AIVisi
 
     override fun textCompletionsWithVision(request: AsticaVisionRequest): Flow<String> = flow {
         runCatching {
-            Log.e("Request","${request.visionParams}")
+            Log.e("Request", request.visionParams)
             aiVisionService.askAsticaVisionAI(request)
         }.onSuccess {
             Log.e("REsponse","$it")
@@ -218,7 +218,7 @@ class ChatRepositoryImpl @Inject constructor(private val aiVisionService: AIVisi
                         var tags =""
                         result.objects.forEach {
                             tags += if (tags.isEmpty())
-                                "${it.name}"
+                                it.name
                             else
                                 ", ${it.name}"
                         }

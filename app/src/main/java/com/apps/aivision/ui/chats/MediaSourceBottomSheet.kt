@@ -16,8 +16,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.CameraAlt
 import androidx.compose.material.icons.outlined.Image
 import androidx.compose.material.icons.outlined.Link
-import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
@@ -118,13 +118,13 @@ fun MediaSourceUI(onCameraAction:()->Unit,onGalleryAction:()->Unit,onLink:()->Un
                     )
             }
 
-            Divider(
+            HorizontalDivider(
                 Modifier
                     .width(1.dp)
                     .height(40.dp)
                     .align(Alignment.CenterVertically),
-                color = MaterialTheme.colorScheme.onTertiary,
-                thickness = 2.dp
+                thickness = 2.dp,
+                color = MaterialTheme.colorScheme.onTertiary
             )
 
             Column (modifier = Modifier.click { onGalleryAction() }, horizontalAlignment = Alignment.CenterHorizontally) {
@@ -142,13 +142,13 @@ fun MediaSourceUI(onCameraAction:()->Unit,onGalleryAction:()->Unit,onLink:()->Un
                     )
             }
 
-            Divider(
+            HorizontalDivider(
                 Modifier
                     .width(1.dp)
                     .height(40.dp)
                     .align(Alignment.CenterVertically),
-                color = MaterialTheme.colorScheme.onTertiary,
-                thickness = 2.dp
+                thickness = 2.dp,
+                color = MaterialTheme.colorScheme.onTertiary
             )
 
             Column (modifier = Modifier.click { onLink() }, horizontalAlignment = Alignment.CenterHorizontally) {

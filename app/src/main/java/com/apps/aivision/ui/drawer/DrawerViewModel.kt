@@ -18,14 +18,14 @@ class DrawerViewModel @Inject constructor(
 ) :
     ViewModel() {
 
-    private val _currentGptModel = MutableStateFlow (GPTModel.gpt35Turbo)
+    private val _currentGptModel = MutableStateFlow (GPTModel.GPT_3_5_TURBO)
     val currentGptModel get() = _currentGptModel.asStateFlow()
     val isCreditsPurchased get() = creditHelpers.isCreditsPurchased
-    private val _currentLanguage = MutableStateFlow<String>("")
+    private val _currentLanguage = MutableStateFlow("")
     val currentLanguage get() = _currentLanguage.asStateFlow()
 
     fun getCurrentGptModel() = viewModelScope.launch {
-        _currentGptModel.value =  if (preferenceRepository.getGPTModel().contentEquals(GPTModel.gpt4.name)) GPTModel.gpt4 else GPTModel.gpt35Turbo
+        (if (preferenceRepository.getGPTModel().contentEquals(GPTModel.GPT_4.name)) GPTModel.GPT_4 else GPTModel.GPT_3_5_TURBO).also { _currentGptModel.value = it }
         //Log.e("Settings","value:${_currentGptModel.value.name}")
     }
 

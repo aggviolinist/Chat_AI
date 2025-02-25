@@ -1,10 +1,9 @@
 package com.apps.aivision.di
 
-import android.content.Context
 import com.apps.aivision.components.ApiKeyHelpers
-import com.google.gson.GsonBuilder
 import com.apps.aivision.components.Constants
 import com.apps.aivision.data.source.remote.AIVisionService
+import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

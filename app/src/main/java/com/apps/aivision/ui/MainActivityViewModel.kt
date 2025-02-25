@@ -1,10 +1,8 @@
 package com.apps.aivision.ui
 
 import android.util.Log
-import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.apps.aivision.components.AppLogger
 import com.apps.aivision.data.repository.PreferenceRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay
@@ -28,7 +26,7 @@ class MainActivityViewModel @Inject constructor(
     private val _isImageGeneration = MutableStateFlow (false)
     val isImageGeneration get() = _isImageGeneration.asStateFlow()
 
-    private val _currentLanguageCode = MutableStateFlow<String>("en")
+    private val _currentLanguageCode = MutableStateFlow("en")
     val currentLanguageCode get() = _currentLanguageCode.asStateFlow()
     init {
         viewModelScope.launch {

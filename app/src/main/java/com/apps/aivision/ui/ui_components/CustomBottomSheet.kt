@@ -6,8 +6,8 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -44,7 +44,7 @@ fun CustomBottomSheetContainer() {
         Column {
             Text(text = "Theme", modifier = Modifier.height(75.dp)
                 .padding(start = 29.dp, top = 26.dp),fontSize = 23.sp)
-            Divider(color = Color.Black, thickness = 1.dp)
+            HorizontalDivider(thickness = 1.dp, color = Color.Black)
         }
     }) {
         Column(modifier = Modifier.padding(it)) {

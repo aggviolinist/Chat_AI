@@ -9,7 +9,6 @@ import android.net.NetworkCapabilities
 import android.net.Uri
 import android.os.Environment
 import android.provider.MediaStore
-import android.provider.Settings
 import android.util.Log
 import kotlinx.coroutines.suspendCancellableCoroutine
 import java.io.File
@@ -73,7 +72,7 @@ class Utils {
             outputStream.flush()
             copyFileIntoGallery(Uri.parse(file.absolutePath),context =context)
         }
-        suspend fun saveBitmapToExternalDir(bitmap: Bitmap,context: Context):String{
+        fun saveBitmapToExternalDir(bitmap: Bitmap,context: Context):String{
 
             val file = File(context.getExternalFilesDir(Environment.DIRECTORY_PICTURES),"IMG_${System.currentTimeMillis()}.jpg")
             if (file.exists()){

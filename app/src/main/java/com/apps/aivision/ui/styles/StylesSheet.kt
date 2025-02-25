@@ -17,8 +17,8 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
@@ -89,9 +89,9 @@ fun StylesSheet(selectedId:String,showSheet:Boolean,onDismiss:()->Unit, onSelect
                     modifier = Modifier.padding(vertical = 16.dp)
                 )
 
-                Divider(
-                    color = MaterialTheme.colorScheme.tertiary,
-                    thickness = 1.dp
+                HorizontalDivider(
+                    thickness = 1.dp,
+                    color = MaterialTheme.colorScheme.tertiary
                 )
 
                 LazyVerticalGrid(modifier = Modifier.padding(top = 5.dp, bottom = 50.dp),

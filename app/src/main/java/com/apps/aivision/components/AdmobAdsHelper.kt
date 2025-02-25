@@ -118,7 +118,3 @@ fun displayIntersAd(context: Context){
 
 }
 
-fun destroyIntersAd()
-{
-    interstitialAd = null
-}

@@ -249,7 +249,7 @@ class ChatBoardViewModel @Inject constructor(@ApplicationContext val application
         )
         if (history.isNotEmpty()){
             history.reversed().forEach { obj->
-                reqMessages.add(GPTMessage(obj.content,GPTRole.values().first { it.value == obj.role }.value))
+                reqMessages.add(GPTMessage(obj.content, GPTRole.entries.first { it.value == obj.role }.value))
             }
         }
 
@@ -257,7 +257,7 @@ class ChatBoardViewModel @Inject constructor(@ApplicationContext val application
             scope = apiScope,
             GPTRequestParam(
                 messages = reqMessages.toList(),
-                model = if (isCreditsPurchased.value.not() || getGPTModel()== GPTModel.gpt35Turbo) GPTModel.gpt35Turbo.model else GPTModel.gpt4Turbo.model
+                model = if (isCreditsPurchased.value.not() || getGPTModel()== GPTModel.GPT_3_5_TURBO) GPTModel.GPT_3_5_TURBO.modelName else GPTModel.GPT_4_TURBO.modelName
             )
         )
         content = ""
@@ -277,7 +277,7 @@ class ChatBoardViewModel @Inject constructor(@ApplicationContext val application
                 if (isSubscriptionMode && isCreditsPurchased.value)
                 {
                     Log.e(TAG,"Ignore pro")
-                    if (getGPTModel()== GPTModel.gpt4)
+                    if (getGPTModel()== GPTModel.GPT_4)
                     {
                         incrementGPT4Count()
                     }
@@ -353,7 +353,7 @@ class ChatBoardViewModel @Inject constructor(@ApplicationContext val application
         _isAiProcessing.value = false
         if (isSubscriptionMode && isCreditsPurchased.value)
         {
-            if (getGPTModel()== GPTModel.gpt4)
+            if (getGPTModel()== GPTModel.GPT_4)
             {
                 incrementGPT4Count()
             }
@@ -374,15 +374,15 @@ class ChatBoardViewModel @Inject constructor(@ApplicationContext val application
     }
 
 
-    fun getGPTModel() = if (preferenceRepository.getGPTModel().contentEquals(GPTModel.gpt4.name)) GPTModel.gpt4 else GPTModel.gpt35Turbo
+    fun getGPTModel() = if (preferenceRepository.getGPTModel().contentEquals(GPTModel.GPT_4.modelName)) GPTModel.GPT_4 else GPTModel.GPT_3_5_TURBO
 
     private fun getMinRequiredCredits(input:String):Int {
         val words = input.split("\\s+".toRegex())
         val count = words.count()
         var credits = 1
 
-        when (if (preferenceRepository.getGPTModel().contentEquals(GPTModel.gpt4.name)) GPTModel.gpt4 else GPTModel.gpt35Turbo){
-            GPTModel.gpt4 -> {
+        when (if (preferenceRepository.getGPTModel().contentEquals(GPTModel.GPT_4.name)) GPTModel.GPT_4 else GPTModel.GPT_3_5_TURBO){
+            GPTModel.GPT_4 -> {
                 credits = (count * 2) / Constants.MESSAGES_WORDS_GPT4
                 if (((count * 2) % Constants.MESSAGES_WORDS_GPT4) > 0) {
                     credits += 1
@@ -390,7 +390,7 @@ class ChatBoardViewModel @Inject constructor(@ApplicationContext val application
                 credits *= Constants.CHAT_MESSAGE_GPT4_COST
 
             }
-            GPTModel.gpt35Turbo -> {
+            GPTModel.GPT_3_5_TURBO -> {
                 credits = (count * 2) / Constants.MESSAGES_WORDS_TURBO
                 if (((count * 2) % Constants.MESSAGES_WORDS_TURBO) > 0) {
                     credits += 1
@@ -410,8 +410,8 @@ class ChatBoardViewModel @Inject constructor(@ApplicationContext val application
         val count = words.count()
         var credits = 1
 
-        when (if (preferenceRepository.getGPTModel().contentEquals(GPTModel.gpt4.name)) GPTModel.gpt4 else GPTModel.gpt35Turbo){
-            GPTModel.gpt4 -> {
+        when (if (preferenceRepository.getGPTModel().contentEquals(GPTModel.GPT_4.name)) GPTModel.GPT_4 else GPTModel.GPT_3_5_TURBO){
+            GPTModel.GPT_4 -> {
                 credits = count / Constants.MESSAGES_WORDS_GPT4
                 if ((count % Constants.MESSAGES_WORDS_GPT4) > 0) {
                     credits += 1
@@ -419,7 +419,7 @@ class ChatBoardViewModel @Inject constructor(@ApplicationContext val application
                 credits *= Constants.CHAT_MESSAGE_GPT4_COST
 
             }
-            GPTModel.gpt35Turbo -> {
+            GPTModel.GPT_3_5_TURBO -> {
                 credits = count / Constants.MESSAGES_WORDS_TURBO
                 if ((count % Constants.MESSAGES_WORDS_TURBO) > 0) {
                     credits += 1
@@ -579,7 +579,7 @@ class ChatBoardViewModel @Inject constructor(@ApplicationContext val application
             scope = apiScope,
             GPTRequestParam(
                 messages = reqMessages.toList(),
-                model = GPTModel.gpt35Turbo.model
+                model = GPTModel.GPT_3_5_TURBO.modelName
             )
         )
         var content = ""
@@ -599,7 +599,7 @@ class ChatBoardViewModel @Inject constructor(@ApplicationContext val application
                 if (isSubscriptionMode && isCreditsPurchased.value)
                 {
                     Log.e(TAG,"Ignore pro")
-                    if (getGPTModel()== GPTModel.gpt4)
+                    if (getGPTModel()== GPTModel.GPT_4)
                     {
                         incrementGPT4Count()
                     }
@@ -644,7 +644,7 @@ class ChatBoardViewModel @Inject constructor(@ApplicationContext val application
             messages.add(VisionMessage(GPTRole.USER.value, contentList))
             val maxToken = if (isCreditPurchased) 150 else 35
 
-            val visionRequest = VisionRequest(model = GPTModel.gpt4Vision.model, messages,maxToken)
+            val visionRequest = VisionRequest(model = GPTModel.GPT_4_VISION.modelName, messages,maxToken)
 
             return chatRepository.textCompletionsWithVision(visionRequest)
         }else{

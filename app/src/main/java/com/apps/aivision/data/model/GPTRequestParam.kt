@@ -9,7 +9,7 @@ data class GPTRequestParam(
     /* @SerializedName("max_tokens")
      val maxTokens: Int = 4000,*/
     @SerializedName("model")
-    val model: String = GPTModel.gpt4.model,
+    val model: String = GPTModel.GPT_4.modelName,
     @SerializedName("messages")
     val messages: List<GPTMessage> = emptyList(),
 )

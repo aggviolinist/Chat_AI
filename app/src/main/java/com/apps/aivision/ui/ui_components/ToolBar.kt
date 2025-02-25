@@ -2,11 +2,18 @@ package com.apps.aivision.ui.ui_components
 
 import android.content.res.Configuration
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.ArrowDropDown
-import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -23,11 +30,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.apps.aivision.R
 import com.apps.aivision.components.click
+import com.apps.aivision.ui.theme.AIVisionTheme
 import com.apps.aivision.ui.theme.Barlow
 import com.apps.aivision.ui.theme.CreditsTint
-import com.apps.aivision.R
-import com.apps.aivision.ui.theme.AIVisionTheme
 
 @Composable
 fun ToolBar(
@@ -90,7 +97,7 @@ fun ToolBar(
         }
 
         if (showDivider)
-        {   Divider(
+        {   HorizontalDivider(
             color = MaterialTheme.colorScheme.tertiary, thickness = 0.8.dp, modifier = Modifier.align(
                 Alignment.BottomEnd)
         )
@@ -248,7 +255,7 @@ fun ToolBarChat(
         }
 
         if (showDivider)
-        {   Divider(
+        {   HorizontalDivider(
             color = MaterialTheme.colorScheme.tertiary, thickness = 0.8.dp, modifier = Modifier.align(
                 Alignment.BottomEnd)
         )

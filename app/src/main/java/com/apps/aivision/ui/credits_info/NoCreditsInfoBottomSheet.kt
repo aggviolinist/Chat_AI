@@ -51,7 +51,7 @@ import com.apps.aivision.ui.ui_components.NoCreditsErrorMessage
 import kotlinx.coroutines.launch
 
 
-@OptIn(ExperimentalComposeUiApi::class, ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun NoCreditsInfoBottomSheet(showSheet:Boolean,minCreditsRequired:Int,onDismiss:()->Unit,onUpgrade:()->Unit,viewModel:NoCreditsInfoViewModel = hiltViewModel())
 {
@@ -97,7 +97,7 @@ fun NoCreditsInfoUI(modifier: Modifier,minCreditsRequired:Int,creditCount:Int,on
     var isAdLoading by remember { mutableStateOf(false) }
     val isSubMode = true
     val context = LocalContext.current
-    BackHandler() {
+    BackHandler {
         // your action
         onCross()
     }
@@ -142,7 +142,7 @@ fun NoCreditsInfoUI(modifier: Modifier,minCreditsRequired:Int,creditCount:Int,on
                         .padding(end = 3.dp)
                 )
                 Text(
-                    text = " ${creditCount}",
+                    text = " $creditCount",
                     color = MaterialTheme.colorScheme.primary,
                     style = MaterialTheme.typography.headlineMedium.copy(fontWeight = FontWeight.W600),
                     textAlign = TextAlign.Center

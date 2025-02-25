@@ -1,10 +1,8 @@
 package com.apps.aivision.ui.prompts
 
 import androidx.compose.runtime.mutableStateListOf
-import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.apps.aivision.data.model.AiPromptModel
 import com.apps.aivision.data.model.AiPromptsCategoryModel
 import com.apps.aivision.data.repository.LocalResourceRepository
 import dagger.hilt.android.lifecycle.HiltViewModel

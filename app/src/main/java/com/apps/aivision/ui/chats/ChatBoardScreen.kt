@@ -183,7 +183,7 @@ fun ChatBoardScreen(navigateToBack: () -> Unit,
         }
     }
 
-    BackHandler() {
+    BackHandler {
         if (viewModel.showAds.value && isPremium.not())
         {
             displayIntersAd(context)
@@ -450,7 +450,7 @@ fun ChatBoardScreen(navigateToBack: () -> Unit,
                             return@EditTextField
                         }
 
-                        if (conversationType==ConversationType.TEXT && isImageInput.not() && viewModel.getGPTModel() == GPTModel.gpt4 && viewModel.isGpt4DailyLimitReach())
+                        if (conversationType==ConversationType.TEXT && isImageInput.not() && viewModel.getGPTModel() == GPTModel.GPT_4 && viewModel.isGpt4DailyLimitReach())
                         {
                             Toast.makeText(context,context.getString(R.string.gpt4_limit),Toast.LENGTH_LONG).show()
                             return@EditTextField

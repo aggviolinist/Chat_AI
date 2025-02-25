@@ -1,12 +1,11 @@
 package com.apps.aivision.ui.recents
 
-import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.apps.aivision.components.CreditHelpers
-import com.apps.aivision.data.repository.RecentChatRepository
 import com.apps.aivision.data.model.RecentChat
 import com.apps.aivision.data.repository.PreferenceRepository
+import com.apps.aivision.data.repository.RecentChatRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

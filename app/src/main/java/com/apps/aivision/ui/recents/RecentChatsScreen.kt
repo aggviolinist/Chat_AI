@@ -18,6 +18,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.rounded.ArrowForwardIos
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.outlined.Delete
@@ -441,7 +442,7 @@ fun RecentItem(recentItem : RecentChat, onItemClick:(RecentChat)->Unit, onDelete
             }
         }
         Icon(
-            imageVector = Icons.Rounded.ArrowForwardIos,
+            imageVector = Icons.AutoMirrored.Rounded.ArrowForwardIos,
             contentDescription = null,
             tint = MaterialTheme.colorScheme.onBackground,
             modifier = Modifier

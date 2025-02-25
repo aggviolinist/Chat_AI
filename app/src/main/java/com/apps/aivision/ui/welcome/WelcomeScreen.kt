@@ -22,13 +22,16 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Bolt
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.ColorFilter
@@ -48,9 +51,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.apps.aivision.R
-import com.apps.aivision.components.AuthResultContract
 import com.apps.aivision.components.Constants
-import com.apps.aivision.components.GoogleClient
+import com.apps.aivision.components.CredentialManagerResultContract
+import com.apps.aivision.components.GoogleAuthClient
+import com.apps.aivision.components.GoogleAuthHelper
 import com.apps.aivision.components.SignInType
 import com.apps.aivision.ui.theme.AIVisionTheme
 import com.apps.aivision.ui.theme.Barlow
@@ -58,35 +62,37 @@ import com.apps.aivision.ui.theme.Montserrat
 import com.apps.aivision.ui.theme.stronglyDeemphasizedAlpha
 import com.apps.aivision.ui.ui_components.GoogleLoginButton
 import com.apps.aivision.ui.ui_components.NormalLoginButton
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
-import com.google.android.gms.common.api.ApiException
+import com.google.android.libraries.identity.googleid.GoogleIdTokenParsingException
 
 private const val TAG ="WelcomeScreen"
 @Composable
-fun WelcomeScreen(navigateToRecentChat: () -> Unit,viewModel: WelcomeViewModel = hiltViewModel())
-{
-    var loginError = viewModel.authError
-    val googleClient: GoogleSignInClient = GoogleClient.get(context = LocalContext.current)
-   // val coroutineScope = rememberCoroutineScope()
-    val signInRequestCode = 1
-    val authResultLauncher =
-        rememberLauncherForActivityResult(contract = AuthResultContract(googleClient)) {
+fun WelcomeScreen(navigateToRecentChat: () -> Unit, viewModel: WelcomeViewModel = hiltViewModel()) {
+    var loginError by remember { mutableStateOf(viewModel.authError) }
+    val context = LocalContext.current
+    val credentialsManager = GoogleAuthClient.getCredentialManager(context)
+    val googleAuthHelper = remember { GoogleAuthHelper(context) }
+
+    val authResultLauncher = rememberLauncherForActivityResult(contract = CredentialManagerResultContract()) { credential ->
+        if (credential != null) {
             try {
-                val account = it?.getResult(ApiException::class.java)
-                if (account == null) {
+                val googleIdTokenCredential = GoogleAuthClient.parseGoogleIdToken(credential)
+                val idToken = googleIdTokenCredential.idToken
+                if (idToken != null) {
+                    viewModel.authenticateWithToken(idToken)
+                } else {
                     loginError = true
                     viewModel.updateProcessingState(false)
-
-                } else {
-                    viewModel.authenticateWithToken(account.idToken!!)
                 }
-
-            } catch (e: ApiException) {
+            } catch (e: GoogleIdTokenParsingException) {
                 e.printStackTrace()
-                loginError=true
+                loginError = true
                 viewModel.updateProcessingState(false)
             }
+        } else {
+            loginError = true
+            viewModel.updateProcessingState(false)
         }
+    }
 
     val signInResult by viewModel.loginSuccess.collectAsState()
 
@@ -101,11 +107,22 @@ fun WelcomeScreen(navigateToRecentChat: () -> Unit,viewModel: WelcomeViewModel =
     }
 
     WelcomeUI(onGoogleButtonClick = {
-        if (!viewModel.isProcessing)
-        {
+        if (!viewModel.isProcessing) {
             loginError = false
             viewModel.updateProcessingState(true)
-            authResultLauncher.launch(signInRequestCode)
+            googleAuthHelper.signIn(
+                onSuccess = { googleIdTokenCredential ->
+                    viewModel.authenticateWithToken(googleIdTokenCredential.idToken ?: "")
+                },
+                onGetIntentSender = { intentSenderRequest ->
+                    authResultLauncher.launch(intentSenderRequest)
+                },
+                onError = { exception ->
+                    exception.printStackTrace()
+                    loginError = true
+                    viewModel.updateProcessingState(false)
+                }
+            )
         }
     }, onNormalButtonClick = {
                              if (!viewModel.isProcessing)
@@ -219,7 +236,7 @@ fun WelcomeUI(onGoogleButtonClick:()->Unit,onNormalButtonClick:()->Unit,isProces
         }
 
         Column(Modifier.align(Alignment.BottomEnd)) {
-        Divider( modifier = Modifier
+            HorizontalDivider( modifier = Modifier
             .padding(start = 4.dp)
             .padding(end = 4.dp),
             color = MaterialTheme.colorScheme.tertiary, thickness = 1.dp,

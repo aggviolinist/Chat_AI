@@ -11,5 +11,4 @@ data class RecentChat(
     val title: String = "",
     val type: String = "",
     val content:String="",
-    @ColumnInfo(name = "created_at") val createdAt: String = Calendar.getInstance().time.toString()) {
-}
+    @ColumnInfo(name = "created_at") val createdAt: String = Calendar.getInstance().time.toString())

@@ -18,7 +18,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -80,10 +80,10 @@ fun DeleteAccountDialog(onCancel:()->Unit,onConfirmed:()->Unit,viewModel: Delete
                 modifier = Modifier.padding(top = 8.dp, bottom = 12.dp)
             )
 
-            Divider(
-                color = MaterialTheme.colorScheme.tertiary,
+            HorizontalDivider(
+                modifier = Modifier.padding(5.dp),
                 thickness = 1.dp,
-                modifier = Modifier.padding(5.dp)
+                color = MaterialTheme.colorScheme.tertiary
             )
 
             Text(

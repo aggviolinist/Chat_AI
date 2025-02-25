@@ -19,7 +19,7 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -65,10 +65,10 @@ fun FreeCreditsDialog(creditsCount:Int=3,onDismiss:()->Unit)
                 modifier = Modifier.padding(vertical = 20.dp)
             )
 
-            Divider(
-                color = MaterialTheme.colorScheme.tertiary,
+            HorizontalDivider(
+                modifier = Modifier.padding(8.dp),
                 thickness = 1.dp,
-                modifier = Modifier.padding(8.dp)
+                color = MaterialTheme.colorScheme.tertiary
             )
 
             Row (verticalAlignment = Alignment.CenterVertically){

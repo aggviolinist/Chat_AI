@@ -2,10 +2,16 @@ package com.apps.aivision.ui.language
 
 import android.content.Context
 import android.content.res.Configuration
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -20,12 +26,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.apps.aivision.data.model.LanguageModel
-import com.apps.aivision.ui.ui_components.ToolBar
-import java.util.*
 import com.apps.aivision.R
 import com.apps.aivision.components.click
+import com.apps.aivision.data.model.LanguageModel
 import com.apps.aivision.ui.theme.Barlow
+import com.apps.aivision.ui.ui_components.ToolBar
+import java.util.Locale
 
 
 @Composable
@@ -63,7 +69,7 @@ fun LanguageScreen(
     Column(modifier = Modifier.fillMaxSize()) {
         ToolBar(
             onClickAction = navigateToBack,
-            image = com.apps.aivision.R.drawable.round_arrow_back_24,
+            image = R.drawable.round_arrow_back_24,
             text = stringResource(R.string.language),
             MaterialTheme.colorScheme.onSurface
         )
@@ -116,8 +122,9 @@ fun LanguageScreen(
 
                 }
 
-                Divider(
-                    color = MaterialTheme.colorScheme.secondary, thickness = 1.dp,
+                HorizontalDivider(
+                    thickness = 1.dp,
+                    color = MaterialTheme.colorScheme.secondary
                 )
             }
         }

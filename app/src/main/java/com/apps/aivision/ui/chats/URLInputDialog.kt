@@ -56,7 +56,6 @@ import com.apps.aivision.ui.theme.White
 import com.apps.aivision.ui.welcome.TextFieldError
 
 
-@OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun URLInputDialog(onContinue:(String)->Unit, onCancel:()->Unit)
 {

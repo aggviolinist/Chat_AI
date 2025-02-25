@@ -18,7 +18,7 @@ class LanguageViewModel @Inject constructor(
 
     val selectedValue = mutableStateOf("")
 
-    private val _currentLanguage = MutableStateFlow<String>("")
+    private val _currentLanguage = MutableStateFlow("")
     val currentLanguage get() = _currentLanguage.asStateFlow()
 
 

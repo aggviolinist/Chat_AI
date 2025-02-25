@@ -17,9 +17,9 @@ import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.outlined.FileDownload
 import androidx.compose.material.icons.outlined.ZoomIn
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.Divider
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.LocalTextStyle
@@ -330,7 +330,7 @@ fun MessageBubble(message: ChatMessage,onImage:(String)->Unit) {
                             )
                         }
                     )
-                    Divider(
+                    HorizontalDivider(
                         color = MaterialTheme.colorScheme.tertiary, thickness = 1.dp,
                     )
                     DropdownMenuItem(
@@ -396,7 +396,7 @@ private val LocalMaterialThemingApplied = compositionLocalOf { false }
 
 @Preview(widthDp = 300, showBackground = true, uiMode =  Configuration.UI_MODE_NIGHT_YES )
 @Composable
-fun messagePreview(){
+fun MessagePreview(){
     AIVisionTheme {
  val messages = mutableListOf<MessageModel>()
        /* for (i in 1..5)

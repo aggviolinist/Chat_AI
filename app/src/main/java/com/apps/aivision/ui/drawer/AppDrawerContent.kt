@@ -1,14 +1,13 @@
 package com.apps.aivision.ui.drawer
 
+import android.annotation.SuppressLint
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -19,12 +18,12 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.DarkMode
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Image
 import androidx.compose.material.icons.outlined.Language
-import androidx.compose.material.icons.outlined.Logout
 import androidx.compose.material.icons.outlined.PrivacyTip
 import androidx.compose.material.icons.outlined.Restore
 import androidx.compose.material.icons.outlined.Share
@@ -60,7 +59,6 @@ import androidx.core.app.ShareCompat
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.apps.aivision.BuildConfig
 import com.apps.aivision.R
-import com.apps.aivision.components.AppLogger
 import com.apps.aivision.components.Constants
 import com.apps.aivision.components.InAppPurchaseHelper
 import com.apps.aivision.components.SignInType
@@ -68,16 +66,13 @@ import com.apps.aivision.data.model.GPTModel
 import com.apps.aivision.ui.MainActivityViewModel
 import com.apps.aivision.ui.dialogs.ConfirmationDialog
 import com.apps.aivision.ui.dialogs.DeleteAccountDialog
+import com.apps.aivision.ui.theme.Barlow
 import com.apps.aivision.ui.ui_components.PremiumButton
 import com.apps.aivision.ui.ui_components.RowToggleButtonGroup
-import com.apps.aivision.ui.theme.Background
-import com.apps.aivision.ui.theme.Barlow
-import com.apps.aivision.ui.theme.OnSurfaceDark
 
-private const val TAG ="AppDrawerContent"
 @Composable
-fun AppDrawerContent( navigateLanguages: () -> Unit,navigateSubscription: () -> Unit,onLogout: ()->Unit,onCloseAction: ()->Unit,inAppPurchaseHelper: InAppPurchaseHelper,
-                     drawerViewModel:DrawerViewModel = hiltViewModel() , mainActivityViewModel: MainActivityViewModel = hiltViewModel(viewModelStoreOwner = LocalContext.current as ComponentActivity)
+fun AppDrawerContent(navigateLanguages: () -> Unit, navigateSubscription: () -> Unit, onLogout: ()->Unit, onCloseAction: ()->Unit, inAppPurchaseHelper: InAppPurchaseHelper,
+                     drawerViewModel:DrawerViewModel = hiltViewModel(), @SuppressLint("ContextCastToActivity") mainActivityViewModel: MainActivityViewModel = hiltViewModel(viewModelStoreOwner = LocalContext.current as ComponentActivity)
 ){
     val darkTheme by mainActivityViewModel.darkMode.collectAsState()
     val gptModel by drawerViewModel.currentGptModel.collectAsState()
@@ -249,7 +244,7 @@ fun SettingsUI(language:String,isSubscribed:Boolean, darkMode: Boolean,isGuest:B
             )
             Spacer(modifier = Modifier.width(20.dp))
 
-            val selection = if (gptModel == GPTModel.gpt4) 1 else 0
+            val selection = if (gptModel == GPTModel.GPT_4) 1 else 0
             RowToggleButtonGroup(
                 modifier = Modifier.height(30.dp),
                 primarySelection = selection,
@@ -268,7 +263,7 @@ fun SettingsUI(language:String,isSubscribed:Boolean, darkMode: Boolean,isGuest:B
                     navigateSubscription()
                     return@RowToggleButtonGroup
                 }
-                onGptModel(if (index == 1) GPTModel.gpt4 else GPTModel.gpt35Turbo)
+                onGptModel(if (index == 1) GPTModel.GPT_4 else GPTModel.GPT_3_5_TURBO)
             }
 
 
@@ -633,7 +628,7 @@ fun SettingsUI(language:String,isSubscribed:Boolean, darkMode: Boolean,isGuest:B
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Icon(
-                    imageVector = Icons.Outlined.Logout,
+                    imageVector = Icons.AutoMirrored.Outlined.Logout,
                     tint = MaterialTheme.colorScheme.onSurface,
                     contentDescription = stringResource(R.string.app_name),
                     modifier = Modifier

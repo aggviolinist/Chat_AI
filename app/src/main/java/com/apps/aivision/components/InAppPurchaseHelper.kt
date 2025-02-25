@@ -8,15 +8,12 @@ import com.android.billingclient.api.BillingClient
 import com.android.billingclient.api.BillingClientStateListener
 import com.android.billingclient.api.BillingFlowParams
 import com.android.billingclient.api.BillingResult
-import com.android.billingclient.api.ConsumeParams
 import com.android.billingclient.api.ProductDetails
 import com.android.billingclient.api.Purchase
 import com.android.billingclient.api.PurchasesUpdatedListener
 import com.android.billingclient.api.QueryProductDetailsParams
 import com.android.billingclient.api.QueryPurchasesParams
 import com.android.billingclient.api.acknowledgePurchase
-import com.android.billingclient.api.consumePurchase
-import com.apps.aivision.components.Constants
 import com.apps.aivision.data.model.CreditModel
 import com.apps.aivision.data.model.GPTModel
 import com.apps.aivision.data.repository.FirebaseRepository
@@ -29,7 +26,6 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import java.util.stream.Collectors
 import javax.inject.Inject
 
 
@@ -164,7 +160,7 @@ class InAppPurchaseHelperImpl @Inject constructor(@ActivityContext private val c
                         preferenceRepository.updateCreditPurchasedStatus(false)
                     }*/
 
-                    preferenceRepository.setGPTModel(GPTModel.gpt35Turbo.name)
+                    preferenceRepository.setGPTModel(GPTModel.GPT_3_5_TURBO.name)
                 }
 
             }
@@ -324,8 +320,8 @@ enum class BillingClientStatus {
 }
 sealed class PurchaseStatus
 {
-    object None:PurchaseStatus()
-    object Started:PurchaseStatus()
-    object Success:PurchaseStatus()
+    data object None:PurchaseStatus()
+    data object Started:PurchaseStatus()
+    data object Success:PurchaseStatus()
     data class Error(val message:String):PurchaseStatus()
 }
