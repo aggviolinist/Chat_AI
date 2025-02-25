@@ -5,15 +5,15 @@ plugins {
     alias(libs.plugins.daggerHilt)
     alias(libs.plugins.kotlinKapt)
     alias(libs.plugins.playServices)
+    alias(libs.plugins.compose.compiler)
 
-    // Ensure you have the Compose plugin applied and enabled correctly
-    id("org.jetbrains.compose") version "1.5.11" apply false  // Compose Plugin for Kotlin 2.0+
-    // Ensure you also apply the Compose Compiler plugin when needed
+
+    // JetBrains Compose Plugin (For Compose UI)
 }
 
 android {
     namespace = "com.apps.aivision"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.apps.aivision"
@@ -53,7 +53,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.11" // Ensure this matches your Compose version
+        kotlinCompilerExtensionVersion = "1.5.11" // Ensure it matches Compose BOM
     }
 
     kapt {
@@ -74,7 +74,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
     implementation(libs.activity.compose)
@@ -85,10 +84,16 @@ dependencies {
     implementation(libs.material3)
     implementation(libs.material.icons)
     implementation(libs.appcompat)
-    // navigation
+
+    // Google Guava for Android
+    implementation(libs.guava)
+
+    // Navigation
     implementation(libs.navigation.compose)
-    // hilt
+
+    // Hilt
     implementation(libs.hilt.android)
+    implementation(libs.googleid)
     kapt(libs.hilt.compiler)
     implementation(libs.navigation.hilt)
 
@@ -96,7 +101,6 @@ dependencies {
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
     kapt(libs.room.compiler)
-    annotationProcessor(libs.room.compiler)
 
     // JSON Parsing
     implementation(libs.google.gson)
@@ -112,13 +116,12 @@ dependencies {
     implementation(libs.coroutines.android)
     implementation(libs.coroutines.play.service)
 
-    // ViewModel
+    // ViewModel & LiveData
     implementation(libs.lifecycle.viewmodel)
+    implementation(libs.lifecycle.livedata)
     implementation(libs.activity.compose.ktx)
 
-    // LiveData
-    implementation(libs.lifecycle.livedata)
-
+    // Rich Text UI
     implementation(libs.ritchtext.common)
     implementation(libs.ritchtext.ui.material)
     implementation(libs.ritchtext.ui.material3)
@@ -130,8 +133,12 @@ dependencies {
     // AdMob
     implementation(libs.play.services.admob)
     implementation(libs.play.services.admob.lite)
+
     // Glide
     implementation(libs.glide)
+
+    // Credential Manager
+//    implementation(libs.credential.manager)
 
     // Firebase
     implementation(platform(libs.firebase.bom))
@@ -141,7 +148,7 @@ dependencies {
     implementation(libs.firebase.firestore)
     implementation(libs.play.services.auth)
 
-    // Splash
+    // Splash API
     implementation(libs.splash.api)
 
     // PDF
@@ -150,6 +157,7 @@ dependencies {
     // Root detection
     implementation(libs.rootbeer.lib)
 
+    // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
@@ -157,4 +165,5 @@ dependencies {
     androidTestImplementation(libs.ui.test.junit4)
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.ui.test.manifest)
+
 }

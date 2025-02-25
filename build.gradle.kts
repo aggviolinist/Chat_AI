@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.daggerHilt) apply false
     alias(libs.plugins.kotlinKapt) apply false
     alias(libs.plugins.playServices) apply false
-
+    //id("org.jetbrains.kotlin.plugin.compose") version "2.0.0"
+    alias(libs.plugins.compose.compiler) apply false
 }
 true // Needed to make the Suppress annotation work for the plugins block
