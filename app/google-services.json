@@ -1,26 +1,44 @@
 {
   "project_info": {
-    "project_number": "185864616111",
-    "project_id": "ai-vision-8f111",
-    "storage_bucket": "ai-vision-8f111.appspot.com"
+    "project_number": "430708282995",
+    "project_id": "chatai-93d7c",
+    "storage_bucket": "chatai-93d7c.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:185864616892:android:52a33fcafb9b8710111111",
+        "mobilesdk_app_id": "1:430708282995:android:4d73166ca4ba2c3ea4fc06",
         "android_client_info": {
-          "package_name": "com.apps.aivision"
+          "package_name": "com.apps.imageAI"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "430708282995-2mtn7u5gtdhe2g16scv4r6on0ihi0gc7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.apps.imageAI",
+            "certificate_hash": "27fb84b1403725dc0e4084f7315e4ee3bed44e81"
+          }
+        },
+        {
+          "client_id": "430708282995-jiuk43lpurc6s8h4tk3nr5k7sodmpmsu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyChAetaswEoXAN4OdGjADf0aXoK1111"
+          "current_key": "AIzaSyBV-VIBLfHsHajP-Q4iOUZDFkP1IorvXNs"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "430708282995-jiuk43lpurc6s8h4tk3nr5k7sodmpmsu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

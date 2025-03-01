@@ -12,11 +12,11 @@ plugins {
 }
 
 android {
-    namespace = "com.apps.aivision"
+    namespace = "com.apps.imageAI"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.apps.aivision"
+        applicationId = "com.apps.imageAI"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -84,6 +84,8 @@ dependencies {
     implementation(libs.material3)
     implementation(libs.material.icons)
     implementation(libs.appcompat)
+    implementation("androidx.credentials:credentials:1.2.0")
+
 
     // Google Guava for Android
     implementation(libs.guava)

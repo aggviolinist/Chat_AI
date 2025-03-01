@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">AiVision</string>
+    <string name="app_name" translatable="false">ImageAI</string>
     <string name="conversations">Chats</string>
     <string name="ai_assistants">KI-Assistenten</string>
     <string name="app_icon">App-Symbol</string>

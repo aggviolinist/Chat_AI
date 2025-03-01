@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">AiVision</string>
+    <string name="app_name" translatable="false">imageAI</string>
     <string name="conversations">Chats</string>
     <string name="ai_assistants">AI Assistants</string>
     <string name="app_icon">App Icon</string>

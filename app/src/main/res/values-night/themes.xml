@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.AIVision" parent="android:Theme.Material.Light.NoActionBar">
+    <style name="Theme.imageAI" parent="android:Theme.Material.Light.NoActionBar">
         <item name="android:statusBarColor">@color/background_night</item>
         <item name="android:windowBackground">#FF181A20</item>
     </style>
