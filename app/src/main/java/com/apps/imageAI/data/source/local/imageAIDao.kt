@@ -48,7 +48,7 @@ interface imageAIDao {
     @Query("UPDATE tbl_messages SET content = :content,url=:url WHERE id = :id")
     fun updateMessageContent(id:Long,content: String,url:String): Int
 
-    @Query("SELECT * FROM tbl_messages WHERE chat_id = :chatId ORDER BY id DESC limit:limit")
+    @Query("SELECT * FROM tbl_messages WHERE chat_id = :chatId ORDER BY id DESC LIMIT:limit")
      fun getMessages(chatId: Long,limit:Int): List<ChatMessage>
 
 }

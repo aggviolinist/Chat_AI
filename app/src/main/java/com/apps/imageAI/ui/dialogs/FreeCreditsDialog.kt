@@ -1,5 +1,6 @@
 package com.apps.imageAI.ui.dialogs
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -40,8 +41,9 @@ import com.apps.imageAI.ui.theme.Barlow
 import com.apps.imageAI.ui.theme.CreditsTint
 
 
+@SuppressLint("DefaultLocale")
 @Composable
-fun FreeCreditsDialog(creditsCount:Int=3,onDismiss:()->Unit)
+fun FreeCreditsDialog(creditsCount:Int=5,onDismiss:()->Unit)
 {
     Dialog(
         onDismissRequest = onDismiss

@@ -28,8 +28,6 @@ interface ChatRepository {
     fun textCompletionsWithVision(request: AsticaVisionRequest): Flow<String>
 
 }
-
-
 private const val MATCH_STRING = "\"text\":"
 class ChatRepositoryImpl @Inject constructor(private val ImageAIService: imageAIService, private val apiKeyHelpers: ApiKeyHelpers) :
     ChatRepository {
@@ -81,6 +79,8 @@ class ChatRepositoryImpl @Inject constructor(private val ImageAIService: imageAI
                                             } catch (e: Exception) {
 
                                                 e.printStackTrace()
+                                                //Log.e("VisionException", "Error analyzing image: ${e.message}", e)
+
                                             }
                                         }
                                         if (!scope.isActive) {
@@ -104,6 +104,8 @@ class ChatRepositoryImpl @Inject constructor(private val ImageAIService: imageAI
                                         println(jsonObject)
                                     } catch (e: JSONException) {
                                         e.printStackTrace()
+                                       //Log.e("VisionException", "Error analyzing image: ${e.message}", e)
+
                                     }
                                 }
                                 trySend("Failure!:Try again later.")
@@ -140,8 +142,8 @@ class ChatRepositoryImpl @Inject constructor(private val ImageAIService: imageAI
             }
         } catch (e: JSONException) {
             e.printStackTrace()
+          //  Log.e("VisionException", "Error analyzing image: ${e.message}", e)
         }
-
         return ""
     }
 
@@ -162,15 +164,14 @@ class ChatRepositoryImpl @Inject constructor(private val ImageAIService: imageAI
 
         }.onFailure { it.printStackTrace()
             emit("Failure! Try again later.")
+            Log.e("Error", "Error in textCompletionsWithVision: ${it.message}", it)
 
         }
-
-
     }
 
     override fun textCompletionsWithVision(request: VisionRequest): Flow<String> = flow{
         runCatching {
-            ImageAIService.askimageAI(request,"Bearer ${apiKeyHelpers.getApiKey()}")
+            ImageAIService.askVisionAI(request,"Bearer ${apiKeyHelpers.getApiKey()}")
         }.onSuccess {
             Log.e("Response","$it")
             it.choices?.let { choice ->
@@ -182,8 +183,9 @@ class ChatRepositoryImpl @Inject constructor(private val ImageAIService: imageAI
 
         }.onFailure { it.printStackTrace()
             emit("Failure! Try again later.")
-        }
+            Log.e("Error", "Error in textCompletionsWithVision: ${it.message}", it)
 
+        }
     }
 
     override fun textCompletionsWithVision(request: AsticaVisionRequest): Flow<String> = flow {
@@ -235,6 +237,7 @@ class ChatRepositoryImpl @Inject constructor(private val ImageAIService: imageAI
             }
 
         }.onFailure { it.printStackTrace()
+            Log.e("Error", "Error in textCompletionsWithVision: ${it.message}", it)
             emit("Failure! Try again later.")
         }
 

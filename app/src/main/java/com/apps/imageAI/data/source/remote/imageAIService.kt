@@ -46,7 +46,7 @@ interface imageAIService {
     suspend fun generateImagesWithStability(@Path("engine_id") engineId: String, @Body body: StabilityImageRequest, @Header("Authorization") authHeader: String): StabilityImageGenerationResponse
 
     @POST("chat/completions")
-    suspend fun askimageAI(@Body body: VisionRequest, @Header("Authorization") authHeader: String): AIMessageResponse
+    suspend fun askVisionAI(@Body body: VisionRequest, @Header("Authorization") authHeader: String): AIMessageResponse
 
     @Headers("Accept: application/json")
     @POST("https://vision.astica.ai/describe")

@@ -310,7 +310,6 @@
     <string name="pdf_question_custom">以下文本是从 PDF 复制的，%1$s\n</string>
     <string name="pdf_max_pages">失败！：目前 PDF 文件最多支持 %1$s 页</string>
     <string name="language">语言</string>
-
     <string name="vision_limit">已达到视觉每日使用限额</string>
     <string name="generation_limit">已达到图像生成每日使用限额</string>
     <string name="gpt4_limit">已达到GPT-4每日使用限额</string>
