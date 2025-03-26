@@ -65,7 +65,7 @@ class FirebaseRepositoryImpl @Inject constructor(private val firestore: Firebase
                         it.resume(false)
                     }
                 }
-                // it.resume(false)
+
             }
         }
 
@@ -81,9 +81,7 @@ class FirebaseRepositoryImpl @Inject constructor(private val firestore: Firebase
             val snapshot = docRef.get().await()
             if (snapshot != null && snapshot.exists()) {
                 val balance = snapshot.data?.get(FirebaseConstant.CREDIT_BALANCE_NODE)
-                //Log.e("Balance", "$balance")
-            } else { // give free credits
-                //Log.e("Give Balance", "giving")
+            } else {
                 var date ="${System.currentTimeMillis()}"
                 runCatching {
                     val time = Calendar.getInstance().time
@@ -161,22 +159,14 @@ class FirebaseRepositoryImpl @Inject constructor(private val firestore: Firebase
 
     override suspend fun updateServerTS() {
         val sdf = SimpleDateFormat("yyyy-MM-dd")
-      // var currentDate = sdf.format(Calendar.getInstance().time)
         runCatching {
             val uid = Firebase.auth.currentUser!!.uid
             val docRef = firestore.collection(FirebaseConstant.USERS_COLLECTION).document(uid)
             docRef.update(FirebaseConstant.SEVER_TIME_STAMP,FieldValue.serverTimestamp()).await()
-            /*val snapshot = docRef.get().await()
-            if (snapshot != null && snapshot.exists())
-            {
-                currentDate = snapshot.data?.get(FirebaseConstant.SEVER_TIME_STAMP).toString()
-            }*/
-
         }.onFailure {
             it.printStackTrace()
 
         }
 
-        //return currentDate
     }
 }

@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.ClickableText
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
@@ -34,6 +35,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalUriHandler
@@ -58,7 +61,7 @@ import com.apps.imageAI.components.GoogleAuthClient
 import com.apps.imageAI.components.GoogleAuthHelper
 import com.apps.imageAI.components.SignInType
 import com.apps.imageAI.ui.theme.ImageAITheme
-import com.apps.imageAI.ui.theme.Barlow
+import com.apps.imageAI.ui.theme.Labrada
 import com.apps.imageAI.ui.theme.stronglyDeemphasizedAlpha
 import com.apps.imageAI.ui.ui_components.GoogleLoginButton
 import com.apps.imageAI.ui.ui_components.NormalLoginButton
@@ -130,7 +133,6 @@ fun WelcomeScreen(navigateToRecentChat: () -> Unit, viewModel: WelcomeViewModel 
             loginError = false
             viewModel.updateProcessingState(true)
             viewModel.loginWithEmailAndPass()
-            //viewModel.continueWithGuest()
         }
     },viewModel.isProcessing,loginError)
 }
@@ -159,6 +161,7 @@ fun WelcomeUI(onGoogleButtonClick:()->Unit,onNormalButtonClick:()->Unit,isProces
                 modifier = Modifier
                     .padding(top = 20.dp)
                     .size(180.dp)
+                    .clip(RoundedCornerShape(20.dp))
             )
             Spacer(modifier = Modifier.height(3.dp))
 
@@ -178,20 +181,17 @@ fun WelcomeUI(onGoogleButtonClick:()->Unit,onNormalButtonClick:()->Unit,isProces
                 horizontalArrangement = Arrangement.Center
             ) {
                 Image(imageVector = Icons.Outlined.Bolt, contentDescription ="powered by icon",colorFilter = ColorFilter.tint(
-                    MaterialTheme.colorScheme.onBackground
+                    Color.Green
                 ) )
                 Text(
                     text = stringResource(R.string.powered_by),
-                    color = MaterialTheme.colorScheme.onBackground,
+                    color = Color.Green,
                     style = MaterialTheme.typography.bodyLarge,
                     textAlign = TextAlign.Center,
-                    fontSize = 16.sp
+                    fontSize = 20.sp
                 )
 
             }
-
-
-
             Spacer(modifier = Modifier.height(40.dp))
             Column(modifier = Modifier
                 .fillMaxSize()
@@ -265,12 +265,12 @@ fun PolicyText() {
         }
     }
     ClickableText(text = annotatedString,style = TextStyle(
-        fontFamily = Barlow,
+        fontFamily = Labrada,
         fontWeight = FontWeight.W400,
         fontSize = 14.sp,
         color = MaterialTheme.colorScheme.onSurface,
         textAlign = TextAlign.Center
-    ), modifier = Modifier.padding(5.dp), onClick ={ offset->
+    ), modifier = Modifier.padding(start = 55.dp,5.dp), onClick ={ offset->
         annotatedString.getStringAnnotations(offset, offset)
             .firstOrNull()?.let { span ->
                 if (span.item.contentEquals(terms))
@@ -287,12 +287,7 @@ fun PolicyText() {
                 }
             }
     } )
-
-    // Text(text = annotatedString,style = MaterialTheme.typography.body1, textAlign = TextAlign.Center, modifier = Modifier.padding(top = 16.dp, bottom = 16.dp))
 }
-
-
-
 @Composable
 fun TextFieldError(textError: String) {
     Row(modifier = Modifier.fillMaxWidth()) {

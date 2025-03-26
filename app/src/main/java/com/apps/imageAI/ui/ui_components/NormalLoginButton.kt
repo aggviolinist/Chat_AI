@@ -28,7 +28,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.apps.imageAI.ui.theme.ImageAITheme
-import com.apps.imageAI.ui.theme.Barlow
+import com.apps.imageAI.ui.theme.Labrada
 
 @Composable
 fun NormalLoginButton(modifier: Modifier = Modifier, text: String,onClick:()->Unit){
@@ -45,7 +45,6 @@ fun NormalLoginButton(modifier: Modifier = Modifier, text: String,onClick:()->Un
                 onClick()
             }),
         elevation = CardDefaults.elevatedCardElevation(defaultElevation = 0.dp),
-       /* border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),*/
         colors = CardDefaults.cardColors(MaterialTheme.colorScheme.primary),
         shape = RoundedCornerShape(30.dp),
     ) {
@@ -61,7 +60,7 @@ fun NormalLoginButton(modifier: Modifier = Modifier, text: String,onClick:()->Un
                 style = TextStyle(
                     fontSize = 15.sp,
                     fontWeight = FontWeight.W700,
-                    fontFamily = Barlow
+                    fontFamily = Labrada
                 ),
                 textAlign = TextAlign.Center,
                 modifier = Modifier.align(Alignment.Center)

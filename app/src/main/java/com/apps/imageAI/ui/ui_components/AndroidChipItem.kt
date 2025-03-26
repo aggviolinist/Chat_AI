@@ -15,7 +15,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.apps.imageAI.ui.theme.Barlow
+import com.apps.imageAI.ui.theme.Labrada
 import com.apps.imageAI.ui.theme.White
 
 @Composable
@@ -30,7 +30,7 @@ fun ChipItem(
         style = TextStyle(
             fontSize = 14.sp,
             fontWeight = FontWeight.W600,
-            fontFamily = Barlow,
+            fontFamily = Labrada,
             lineHeight = 25.sp
         ), modifier = Modifier
             .padding(5.dp)

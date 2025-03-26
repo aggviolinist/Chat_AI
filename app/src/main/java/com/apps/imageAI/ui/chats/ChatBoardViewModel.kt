@@ -70,7 +70,7 @@ import java.util.Objects
 import javax.inject.Inject
 
 private const val DEFAULT_AI_CONTENT =
-    "You are an AI bot created by AskAI."
+    "You are an AI bot created by ImageAI."
 private const val TAG = "ChatBoardViewModel"
 @HiltViewModel
 class ChatBoardViewModel @Inject constructor(@ApplicationContext val application: Context,
@@ -120,7 +120,7 @@ class ChatBoardViewModel @Inject constructor(@ApplicationContext val application
 
 
     private var styles = listOf<StyleModel>()
-    private val _selectedStyle = MutableStateFlow(StyleModel(application.getString(R.string.style_no),"none", R.drawable.baseline_do_disturb_alt_24))
+    private val _selectedStyle = MutableStateFlow(StyleModel(application.getString(R.string.stylez_no),"none", R.drawable.baseline_do_disturb_alt_24))
     val selectedStyle get() = _selectedStyle
 
     private val coroutineExceptionHandler = CoroutineExceptionHandler{ _, throwable ->
@@ -139,7 +139,7 @@ class ChatBoardViewModel @Inject constructor(@ApplicationContext val application
 
         if (data.examples.isEmpty())
         {
-            _examples.value =   /*if (_currentConversationType.value == ConversationType.TEXT) */ localResourceRepository.getTextExamples()
+            _examples.value = localResourceRepository.getTextExamples()
         }else{
             _examples.value = data.examples
         }
@@ -154,9 +154,8 @@ class ChatBoardViewModel @Inject constructor(@ApplicationContext val application
             {
                 _minCreditsRequired.value = -10000 //
             } else {
-               // _minCreditsRequired.value = getMinRequiredCredits("Text") // init with dummy
                 if (_currentConversationType.value == ConversationType.TEXT) {
-                    _minCreditsRequired.value = getMinRequiredCredits("Text") // init with dummy
+                    _minCreditsRequired.value = getMinRequiredCredits("Text")
                 } else {
                     _minCreditsRequired.value = BASE_IMAGE_GEN_COST
                 }
@@ -191,26 +190,14 @@ class ChatBoardViewModel @Inject constructor(@ApplicationContext val application
     private fun decreaseTextChatCredits(wordsStr:String){
         viewModelScope.launch {
             firebaseRepository.decrementCredits(getCreditsCostForMessage(wordsStr))
-            /*if (firebaseRepository.isLoggedIn().not())
-            {
-                preferenceRepository.updateCredits(creditsCount.value-getCreditsCostForMessage(wordsStr))
-            }
-            else{
-                firebaseRepository.decrementCredits(getCreditsCostForMessage(wordsStr))
-            }*/
+
         }
     }
 
     private fun decreaseImageCredits() {
         viewModelScope.launch {
             firebaseRepository.decrementCredits(minCreditsRequired.value)
-           /* if (firebaseRepository.isLoggedIn().not())
-            {
-                preferenceRepository.updateCredits(creditsCount.value- minCreditsRequired.value)
-            }
-            else{
-                firebaseRepository.decrementCredits(minCreditsRequired.value)
-            }*/
+
         }
     }
 
@@ -227,7 +214,6 @@ class ChatBoardViewModel @Inject constructor(@ApplicationContext val application
 
             prompt = text
             recentMessageId =0
-            //runChatAIApi(text)
             if (_currentConversationType.value == ConversationType.TEXT)
             {
                 runChatAIApi(text)
@@ -429,8 +415,6 @@ class ChatBoardViewModel @Inject constructor(@ApplicationContext val application
             }
             else -> {}
         }
-        //Log.e("Credits ACT","Min Req:${credits} count:${count}")
-
         return credits
     }
 
@@ -556,7 +540,6 @@ class ChatBoardViewModel @Inject constructor(@ApplicationContext val application
                 extractedText+"\n"
             }
         }
-        //AppLogger.logE("PDF","content: ${extractedText}")
         if (extractedText.trim().length<2)
         {
             val errorMsg = "Failure!:Could not read this file"
@@ -620,7 +603,6 @@ class ChatBoardViewModel @Inject constructor(@ApplicationContext val application
         val base64:String? = if (isLink.not()) {
             val file = File(imagePath)
             var bitmap = file.decodeSampledBitmap(512, 512)
-            //AppLogger.logE(TAG,"bitmap: ${bitmap.width}x${bitmap.height}")
             if (generationType == VisionGenerationType.OPENAI)
             {
                 bitmap = Utils.resizeBitmap(bitmap,512,512)
@@ -661,7 +643,7 @@ class ChatBoardViewModel @Inject constructor(@ApplicationContext val application
                     }
                 }
                 ImagePromptType.Tags -> "tags"
-                ImagePromptType.Objects -> "text_read" //text_read,objects
+                ImagePromptType.Objects -> "text_read"
                 ImagePromptType.Custom -> {
                     if (isCreditPurchased)
                     {  reqPrompt = prompt
@@ -732,12 +714,7 @@ class ChatBoardViewModel @Inject constructor(@ApplicationContext val application
     }
 
 }
-
-
-
-
 enum class DisplayType {
     EXAMPLE,MESSAGE
 }
-
 data class ChatData(val chatId:Long?=null,val title:String?=null,val conversationType: String = ConversationType.TEXT.name, val examples:List<String> = mutableListOf())

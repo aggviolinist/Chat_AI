@@ -115,7 +115,6 @@ fun RowToggleButtonGroup(
 ) {
   Row(modifier = modifier) {
     val squareCorner = CornerSize(0.dp)
-      //var selectionIndex by rememberSaveable { mutableStateOf(primarySelection) }
 
     repeat(buttonCount) { index ->
         val buttonShape = when (index) {
@@ -146,7 +145,6 @@ fun RowToggleButtonGroup(
             iconTintColor = iconTintColor,
             iconPosition = iconPosition,
             onClick = {
-                // selectionIndex = index
                 onButtonClick.invoke(index)
             },
         )

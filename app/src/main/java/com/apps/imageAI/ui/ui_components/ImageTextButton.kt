@@ -47,9 +47,6 @@ fun ImageTextButton(modifier: Modifier = Modifier, text: String, imageId: Int= R
             verticalAlignment = Alignment.CenterVertically
         ) {
 
-           /* Image(
-                painterResource(id = imageId), contentDescription ="login", modifier = Modifier.padding(top = 5.dp), colorFilter = ColorFilter.tint(Color.White) )
-            Spacer(modifier = Modifier.width(4.dp))*/
             Text(
                 text = text,
                 color = Color.White,
@@ -68,7 +65,7 @@ fun ImageTextButton(modifier: Modifier = Modifier, text: String, imageId: Int= R
 @Composable
 fun ImageTextButtonPreview(){
     ImageAITheme {
-        ImageTextButton(text = "Signin") {
+        ImageTextButton(text = "Sign in") {
             
         }
     }

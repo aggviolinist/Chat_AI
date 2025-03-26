@@ -4,8 +4,8 @@ import androidx.compose.ui.graphics.Color
 
 
 // Light Colors
-val Primary = Color(0xFF00ACC1)
-val PrimaryVariant = Color(0x3300ACC1)
+val Primary = Color(0xFF0AB0F7)
+val PrimaryVariant = Color(0xFF334C52)
 val Secondary = Color(0xFFEFEFEF)
 val SecondaryVariant = Color(0xFFFAFAFA)
 val Background = Color(0xFFFFFFFF)
@@ -19,14 +19,14 @@ val outline = Color(0xFF747775)
 
 
 // Dark Colors
-val BackgroundDark = Color(0xFF181A20)//0xFF001f25
+val BackgroundDark = Color(0xFF1E1E1E)//0xFF001f25
 val SecondaryDark = Color(0xFF35383F)
 val SurfaceDark = Color(0xFF212121)//0xFF001f25
 val SecondaryVariantDark = Color(0xFF1F222A)
-val OnPrimaryDark = Color(0xFF36383F)
-val OnSecondaryDark = Color(0xFF1F222A)
+val OnPrimaryDark = Color(0xFF36383F) //credits area color
+val OnSecondaryDark = Color(0xFF181A20) //text area
 val OnSurfaceDark = Color(0xFFE0E0E0)
-val OnBackgroundDark = Color(0xFF35383F)
+val OnBackgroundDark = Color(0xFF1E1E1E)
 val outlineDark = Color(0xFF8E918F)
 
 val CreditsTint = Color(0xFFFFCA28)

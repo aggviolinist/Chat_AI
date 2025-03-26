@@ -29,12 +29,6 @@ private val DarkColorScheme = darkColorScheme(
     onSurface = OnSurfaceDark,
     onSurfaceVariant = OnBackgroundDark,
     outline = outlineDark
-
-    /*  ,
-      onSurface = OnSurfaceDark,
-      onBackground = OnBackgroundDark
-      error = ErrorColor,
-      */
 )
 
 private val LightColorScheme = lightColorScheme(
@@ -50,14 +44,10 @@ private val LightColorScheme = lightColorScheme(
     onSurface = OnSurface,
     onSurfaceVariant = OnBackground,
     outline = outline
-  /*  onBackground = OnBackground,
-    onSurface = OnSurface,
-    error = ErrorColor*/
 )
 @Composable
 fun ImageAITheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
     dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
@@ -81,8 +71,6 @@ fun ImageAITheme(
             WindowCompat.getInsetsController(window, view).isAppearanceLightNavigationBars = darkTheme.not()
         }
     }
-
-
     MaterialTheme(
         colorScheme = colorScheme,
         typography = Typography,

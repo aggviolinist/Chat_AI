@@ -7,62 +7,64 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.apps.imageAI.R
+import com.apps.imageAI.R.font.labrada_font_family
 
-val Barlow = FontFamily(
-    Font(R.font.barlow_font_family)
+
+val Labrada = FontFamily(
+    Font(labrada_font_family)
 )
 val Montserrat = FontFamily(
-    Font(R.font.varela_round, FontWeight.Medium)
+    Font(R.font.clarendon_regular, FontWeight.SemiBold)
 )
 // Set of Material typography styles to start with
 
 val Typography = Typography(
     bodyLarge = TextStyle(
-        fontFamily = Barlow,
+        fontFamily = Labrada,
         fontWeight = FontWeight.W400,
-        fontSize = 16.sp,
+        fontSize = 16.5.sp,
         lineHeight = 25.sp,
         color = Surface
     ),
 
     bodySmall = TextStyle(
-        fontFamily = Barlow,
+        fontFamily = Labrada,
         fontWeight = FontWeight.W400,
         color = Surface
     ),
 
     displayLarge = TextStyle(
-        fontFamily = Barlow,
+        fontFamily = Labrada,
         fontWeight = FontWeight.Normal,
         fontSize = 32.sp
     ),
 
     displayMedium = TextStyle(
-        fontFamily = Barlow,
+        fontFamily = Labrada,
         fontWeight = FontWeight.Normal,
         fontSize = 28.sp
     ),
 
     displaySmall = TextStyle(
-        fontFamily = Barlow,
+        fontFamily = Labrada,
         fontWeight = FontWeight.Normal,
         fontSize = 24.sp
     ),
 
     headlineMedium = TextStyle(
-        fontFamily = Barlow,
+        fontFamily = Labrada,
         fontWeight = FontWeight.Normal,
         fontSize = 20.sp
     ),
 
     headlineSmall = TextStyle(
-        fontFamily = Barlow,
+        fontFamily = Labrada,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp
     ),
 
     titleLarge = TextStyle(
-        fontFamily = Barlow,
+        fontFamily = Labrada,
         fontWeight = FontWeight.Normal,
         fontSize = 12.sp
     ),

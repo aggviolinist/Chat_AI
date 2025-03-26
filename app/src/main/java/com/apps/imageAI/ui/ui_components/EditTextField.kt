@@ -57,7 +57,7 @@ import androidx.compose.ui.unit.sp
 import com.apps.imageAI.R
 import com.apps.imageAI.components.Constants
 import com.apps.imageAI.components.ConversationType
-import com.apps.imageAI.ui.theme.Barlow
+import com.apps.imageAI.ui.theme.Labrada
 import com.apps.imageAI.ui.theme.White
 import kotlinx.coroutines.launch
 import java.util.Locale
@@ -74,11 +74,6 @@ fun EditTextField(
     val isKeyBoardVisible = WindowInsets.ime.getBottom(LocalDensity.current) > 0
     LaunchedEffect(key1 = isKeyBoardVisible) {
         Log.e("ChatScreen", "iskeyBoard:${isKeyBoardVisible}")
-        if (isKeyBoardVisible) {
-            //hide fab button
-        } else {
-            //show fab button
-        }
     }
     val scope = rememberCoroutineScope()
     var text by remember { mutableStateOf("") }
@@ -138,14 +133,14 @@ fun EditTextField(
                                    if (isImageGen) stringResource(R.string.generate_anything) else stringResource(R.string.ask_me_anything),
                                     fontSize = 16.sp,
                                     color = MaterialTheme.colorScheme.onSurface,
-                                    fontFamily = Barlow,
+                                    fontFamily = Labrada,
                                     fontWeight = FontWeight.W600
                                 )
                             },
                             textStyle = TextStyle(
                                 color = MaterialTheme.colorScheme.onBackground,
                                 fontSize = 16.sp,
-                                fontFamily = Barlow,
+                                fontFamily = Labrada,
                                 fontWeight = FontWeight.W600
                             ),
                             modifier = Modifier
@@ -154,11 +149,6 @@ fun EditTextField(
                                 .heightIn(max = 120.dp)
                                 .padding(end = 5.dp)
                                 .weight(1f)
-                                /*.border(
-                                    1.dp,
-                                    if (hasFocus) MaterialTheme.colorScheme.primary else Color.Transparent,
-                                    RoundedCornerShape(25.dp)
-                                )*/
                                 .onFocusChanged { focusState -> hasFocus = focusState.hasFocus },
                             shape = RoundedCornerShape(25.dp),
                             colors = OutlinedTextFieldDefaults.colors(

@@ -25,13 +25,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.apps.imageAI.R
 import com.apps.imageAI.ui.theme.ImageAITheme
-import com.apps.imageAI.ui.theme.Barlow
+import com.apps.imageAI.ui.theme.Labrada
 
 @Composable
 fun GoogleLoginButton(modifier: Modifier = Modifier, text: String,onClick:()->Unit){
-
-
-
     Card(
         modifier = modifier
             .fillMaxWidth()
@@ -58,7 +55,7 @@ fun GoogleLoginButton(modifier: Modifier = Modifier, text: String,onClick:()->Un
                 style = TextStyle(
                     fontSize = 15.sp,
                     fontWeight = FontWeight.W700,
-                    fontFamily = Barlow
+                    fontFamily = Labrada
                 ),
                 textAlign = TextAlign.Center,
                 modifier = Modifier.align(Alignment.Center)
@@ -68,13 +65,11 @@ fun GoogleLoginButton(modifier: Modifier = Modifier, text: String,onClick:()->Un
         }
     }
 }
-
-
 @Preview
 @Composable
 fun ButtonPreview(){
     ImageAITheme {
-        GoogleLoginButton(text = "Signin") {
+        GoogleLoginButton(text = "Sign in") {
             
         }
     }

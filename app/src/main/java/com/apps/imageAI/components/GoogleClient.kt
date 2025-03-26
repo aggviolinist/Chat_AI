@@ -9,6 +9,7 @@ import androidx.credentials.Credential
 import androidx.credentials.CredentialManager
 import androidx.credentials.GetCredentialRequest
 import androidx.credentials.exceptions.GetCredentialException
+import androidx.credentials.exceptions.NoCredentialException
 import com.google.android.libraries.identity.googleid.GetGoogleIdOption
 import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
 import com.google.android.libraries.identity.googleid.GoogleIdTokenParsingException
@@ -133,4 +134,46 @@ class GoogleAuthHelper(private val context: Context) {
             }
         }
     }
+
 }
+
+
+//fun signIn(
+//    onSuccess: (GoogleIdTokenCredential) -> Unit,
+//    onGetIntentSender: (IntentSenderRequest) -> Unit,
+//    onError: (Exception) -> Unit
+//) {
+//    val request = GoogleAuthClient.createGoogleAuthRequest(context)
+//
+//    CoroutineScope(Dispatchers.IO).launch {
+//        try {
+//            // Try to get credentials
+//            val result = credentialManager.getCredential(
+//                request = request,
+//                context = context
+//            )
+//
+//            // The result contains a credential that we can parse
+//            val googleIdTokenCredential = GoogleAuthClient.parseGoogleIdToken(result.credential)
+//
+//            withContext(Dispatchers.Main) {
+//                onSuccess(googleIdTokenCredential)
+//            }
+//        } catch (e: NoCredentialException) {
+//            AppLogger.logE(tag = "GoogleAuthHelper", msg = "No credentials available")
+//            withContext(Dispatchers.Main) {
+//                onError(e)
+//            }
+//        } catch (e: GetCredentialException) {
+//            // Check if user interaction is required
+//            AppLogger.logE(tag = "GoogleAuthHelper", msg = "Couldn't retrieve user's credentials: ${e.localizedMessage}")
+//            withContext(Dispatchers.Main) {
+//                onError(e)
+//            }
+//        } catch (e: Exception) {
+//            withContext(Dispatchers.Main) {
+//                onError(e)
+//            }
+//        }
+//    }
+//}

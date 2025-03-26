@@ -4,6 +4,7 @@ import android.app.Application
 import android.app.UiModeManager
 import android.content.Context
 import androidx.appcompat.app.AppCompatDelegate
+import com.facebook.ads.AudienceNetworkAds
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
@@ -19,5 +20,6 @@ class imageAIApp: Application() {
         else{
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         }
+        AudienceNetworkAds.initialize(this)
     }
 }

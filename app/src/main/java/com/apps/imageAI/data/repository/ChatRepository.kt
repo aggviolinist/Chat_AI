@@ -37,19 +37,112 @@ class ChatRepositoryImpl @Inject constructor(private val ImageAIService: imageAI
     ): Flow<String> =
         callbackFlow {
             withContext(Dispatchers.IO) {
-                runCatching {
+//                runCatching {
+//
+//                    val moderationResult = ImageAIService.inputModerations(ModerationRequest(request.messages.last().content),"Bearer ${apiKeyHelpers.getApiKey()}").execute()
+//                    if (moderationResult.isSuccessful && moderationResult.body() != null) {
+//                        val bodyResult = moderationResult.body()!!.results
+//                        if (bodyResult != null && bodyResult[0].flagged) {
+//                            trySend("Failure! Your request is flagged as inappropriate and Its against our privacy policy. Please try again with some different context.")
+//                            close()
+//                        } else {
+//                            val auth = "Bearer ${apiKeyHelpers.getApiKey()}"
+//
+//                            val response = ImageAIService.textCompletionsWithStream(
+//                                request,auth).execute()
+//                            if (response.isSuccessful) {
+//                                val inputStream =
+//                                    response.body()?.byteStream()?.bufferedReader()
+//                                        ?: throw Exception()
+//                                try {
+//                                    var ts = System.currentTimeMillis()
+//                                    while (true) {
+//                                        val line = withContext(Dispatchers.IO) {
+//                                            inputStream.readLine()
+//                                        } ?: continue
+//                                        if (line == "data: [DONE]") {
+//                                            close()
+//                                        } else if (line.startsWith("data:")) {
+//                                            try {
+//                                                val value = parseResponse(
+//                                                    line
+//                                                )
+//
+//                                                val currentTS = System.currentTimeMillis()
+//                                                if (value.isNotEmpty()) {
+//                                                    trySend(value)
+//                                                    if ((currentTS - ts) < 30) {
+//                                                        delay(30 - (currentTS - ts))
+//                                                    }
+//                                                    ts = currentTS
+//                                                }
+//                                            } catch (e: Exception) {
+//
+//                                                e.printStackTrace()
+//                                                //Log.e("VisionException", "Error analyzing image: ${e.message}", e)
+//
+//                                            }
+//                                        }
+//                                        if (!scope.isActive) {
+//                                            break
+//                                        }
+//                                    }
+//                                } catch (e: IOException) {
+//                                    throw Exception(e)
+//                                } finally {
+//                                    withContext(Dispatchers.IO) {
+//                                        inputStream.close()
+//                                    }
+//
+//                                    close()
+//                                }
+//                            } else {
+//                                if (!response.isSuccessful) {
+//                                    var jsonObject: JSONObject? = null
+//                                    try {
+//                                        jsonObject = JSONObject(response.errorBody()!!.string())
+//                                        println(jsonObject)
+//                                    } catch (e: JSONException) {
+//                                        e.printStackTrace()
+//                                       //Log.e("VisionException", "Error analyzing image: ${e.message}", e)
+//
+//                                    }
+//                                }
+//                                trySend("Failure!:Try again later.")
+//                                close()
+//                            }
+//                        }
+//                    } else {
+//
+//                        trySend("Failure!:Try again later.")
+//                        close()
+//                    }
+//
+//                }.onFailure {
+//                    it.printStackTrace()
+//                    trySend("Network Failure! Try again.")
+//                    close()
+//                }
+//            }
+//
+//            close()
 
-                    val moderationResult = ImageAIService.inputModerations(ModerationRequest(request.messages.last().content),"Bearer ${apiKeyHelpers.getApiKey()}").execute()
+                runCatching {
+                    val moderationResult = ImageAIService.inputModerations(
+                        ModerationRequest(request.messages.last().content),
+                        "Bearer ${apiKeyHelpers.getApiKey()}"
+                    ).execute()
+
                     if (moderationResult.isSuccessful && moderationResult.body() != null) {
                         val bodyResult = moderationResult.body()!!.results
                         if (bodyResult != null && bodyResult[0].flagged) {
-                            trySend("Failure! Your request is flagged as inappropriate and Its against our privacy policy. Please try again with some different context.")
+                            trySend("Failure! Your request is flagged as inappropriate and It's against our privacy policy. Please try again with some different context.")
                             close()
                         } else {
                             val auth = "Bearer ${apiKeyHelpers.getApiKey()}"
 
-                            val response = ImageAIService.textCompletionsWithStream(
-                                request,auth).execute()
+                            val response =
+                                ImageAIService.textCompletionsWithStream(request, auth).execute()
                             if (response.isSuccessful) {
                                 val inputStream =
                                     response.body()?.byteStream()?.bufferedReader()
@@ -57,16 +150,14 @@ class ChatRepositoryImpl @Inject constructor(private val ImageAIService: imageAI
                                 try {
                                     var ts = System.currentTimeMillis()
                                     while (true) {
-                                        val line = withContext(Dispatchers.IO) {
-                                            inputStream.readLine()
-                                        } ?: continue
+                                        val line =
+                                            withContext(Dispatchers.IO) { inputStream.readLine() }
+                                                ?: continue
                                         if (line == "data: [DONE]") {
                                             close()
                                         } else if (line.startsWith("data:")) {
                                             try {
-                                                val value = parseResponse(
-                                                    line
-                                                )
+                                                val value = parseResponse(line)
 
                                                 val currentTS = System.currentTimeMillis()
                                                 if (value.isNotEmpty()) {
@@ -77,10 +168,8 @@ class ChatRepositoryImpl @Inject constructor(private val ImageAIService: imageAI
                                                     ts = currentTS
                                                 }
                                             } catch (e: Exception) {
-
                                                 e.printStackTrace()
-                                                //Log.e("VisionException", "Error analyzing image: ${e.message}", e)
-
+                                                // Log.e("VisionException", "Error analyzing image: ${e.message}", e)
                                             }
                                         }
                                         if (!scope.isActive) {
@@ -90,42 +179,60 @@ class ChatRepositoryImpl @Inject constructor(private val ImageAIService: imageAI
                                 } catch (e: IOException) {
                                     throw Exception(e)
                                 } finally {
-                                    withContext(Dispatchers.IO) {
-                                        inputStream.close()
-                                    }
-
+                                    withContext(Dispatchers.IO) { inputStream.close() }
                                     close()
                                 }
                             } else {
-                                if (!response.isSuccessful) {
-                                    var jsonObject: JSONObject? = null
+                                // Log error specific to "Failure!:Try again later."
+                                Log.e(
+                                    "VisionException",
+                                    "Response failed with code: ${response.code()} and message: ${response.message()}"
+                                )
+                                response.errorBody()?.let { errorBody ->
                                     try {
-                                        jsonObject = JSONObject(response.errorBody()!!.string())
-                                        println(jsonObject)
+                                        val jsonObject = JSONObject(errorBody.string())
+                                        Log.e("VisionException", "Error details: $jsonObject")
                                     } catch (e: JSONException) {
                                         e.printStackTrace()
-                                       //Log.e("VisionException", "Error analyzing image: ${e.message}", e)
-
+                                        Log.e("VisionException", "Error parsing JSON: ${e.message}")
                                     }
                                 }
+
                                 trySend("Failure!:Try again later.")
                                 close()
                             }
                         }
                     } else {
+                        // Log error specific to "Failure!:Try again later."
+                        Log.e(
+                            "VisionException",
+                            "Moderation result failed with code: ${moderationResult.code()} and message: ${moderationResult.message()}"
+                        )
+                        moderationResult.errorBody()?.let { errorBody ->
+                            try {
+                                val errorJson = errorBody.string()
+                                Log.e("VisionException", "Error details: $errorJson")
+                            } catch (e: Exception) {
+                                e.printStackTrace()
+                                Log.e(
+                                    "VisionException",
+                                    "Error parsing JSON from moderation result: ${e.message}"
+                                )
+                            }
+                        }
+
                         trySend("Failure!:Try again later.")
                         close()
                     }
-
-                }.onFailure {
-                    it.printStackTrace()
+                }.onFailure { exception ->
+                    exception.printStackTrace()
                     trySend("Network Failure! Try again.")
                     close()
                 }
-            }
 
-            close()
-        }.flowOn(Dispatchers.IO)
+                close()
+            }
+            }.flowOn(Dispatchers.IO)
 
     private fun parseResponse(jsonString: String): String {
         try {

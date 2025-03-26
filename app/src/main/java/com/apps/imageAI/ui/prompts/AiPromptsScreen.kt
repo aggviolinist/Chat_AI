@@ -41,7 +41,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.apps.imageAI.R
-import com.apps.imageAI.ui.theme.Barlow
+import com.apps.imageAI.ui.theme.Labrada
 import com.apps.imageAI.ui.ui_components.ChipItem
 import com.apps.imageAI.ui.ui_components.PromptCard
 
@@ -54,10 +54,6 @@ fun AiPromptsSheet(showSheet:Boolean, onDismiss:()->Unit,
     val coroutineScope = rememberCoroutineScope()
     val prompts by viewModel.promptsList.collectAsState()
     val categories by viewModel.categories.collectAsState()
-    /*LaunchedEffect(Unit){
-        delay(300)
-        viewModel.loadPrompts()
-    }*/
     val scope = rememberCoroutineScope()
     val sheetState = rememberModalBottomSheetState(
         skipPartiallyExpanded = false)
@@ -96,7 +92,7 @@ if (showSheet)
                     style = TextStyle(
                         fontWeight = FontWeight.W600,
                         fontSize = 18.sp,
-                        fontFamily = Barlow,
+                        fontFamily = Labrada,
                         textAlign = TextAlign.Center, platformStyle = PlatformTextStyle(includeFontPadding = false)
                     )
                 )
@@ -159,30 +155,10 @@ if (showSheet)
                                     style = TextStyle(
                                         fontSize = 25.sp,
                                         fontWeight = FontWeight.W700,
-                                        fontFamily = Barlow,
+                                        fontFamily = Labrada,
                                         lineHeight = 25.sp
                                     ), modifier = Modifier.weight(1f)
                                 )
-
-                             /*   IconButton(
-                                    onClick = {
-                                        viewModel.filterByCategory(aiAssistantList.categoryTitle)
-                                        coroutineScope.launch {
-                                            lazyListState.animateScrollToItem(viewModel.selectedIndex)
-                                        }
-                                    },
-                                    modifier = Modifier
-                                        .padding(end = 10.dp)
-                                        .size(30.dp)
-                                ) {
-
-                                    Icon(
-                                        imageVector = Icons.Rounded.East,
-                                        contentDescription = null,
-                                        tint = MaterialTheme.colorScheme.primary
-                                    )
-                                }*/
-
 
                             }
 

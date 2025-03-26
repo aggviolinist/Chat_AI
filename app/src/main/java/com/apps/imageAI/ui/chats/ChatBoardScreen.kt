@@ -57,11 +57,11 @@ import com.apps.imageAI.data.model.ImageUri
 import com.apps.imageAI.ui.credits_info.NoCreditsInfoBottomSheet
 import com.apps.imageAI.ui.prompts.AiPromptsSheet
 import com.apps.imageAI.ui.styles.StylesSheet
-import com.apps.imageAI.ui.theme.Barlow
+import com.apps.imageAI.ui.theme.Labrada
 import com.apps.imageAI.ui.theme.CreditsTint
-import com.apps.imageAI.ui.ui_components.BannerAdView
 import com.apps.imageAI.ui.ui_components.EditTextField
 import com.apps.imageAI.ui.ui_components.Examples
+import com.apps.imageAI.ui.ui_components.BannerAdView
 import com.apps.imageAI.ui.ui_components.ImageExamples
 import com.apps.imageAI.ui.ui_components.ImageInputCard
 import com.apps.imageAI.ui.ui_components.MessageBubble
@@ -69,6 +69,7 @@ import com.apps.imageAI.ui.ui_components.PDFInputCard
 import com.apps.imageAI.ui.ui_components.StopGenerateButton
 import com.apps.imageAI.ui.ui_components.ToolBarChat
 import kotlinx.coroutines.launch
+
 
 private const  val ANIMATION_DURATION = 50
 @Composable
@@ -130,31 +131,6 @@ fun ChatBoardScreen(navigateToBack: () -> Unit,
     ) { pdfUri ->
         if (pdfUri != null) {
             viewModel.setInputPDF(ImageUri(pdfUri))
-            /*scope.launch {
-                var extractedText = ""
-                val pdfReader = PdfReader(context.contentResolver.openInputStream(pdfUri))
-                val document = PdfDocument(pdfReader)
-                val n = document.numberOfPages
-                val strategy = SimpleTextExtractionStrategy()
-                // on below line we are running a for loop.
-                AppLogger.logE("PDF","uri: ${pdfUri} pages:${n}")
-                for (i in 0 until n) {
-
-                    // on below line we are appending our data to
-                    // extracted text from our pdf file using pdf reader.
-                    extractedText += PdfTextExtractor.getTextFromPage(document.getPage( i + 1),strategy).trim()
-                  *//*  extractedText =
-                        """
-                 $extractedText${
-                            PdfTextExtractor.getTextFromPage(document.getPage( i + 1),strategy).trim { it <= ' ' }
-                        }
-                 
-                 """.trimIndent()*//*
-                    // to extract the PDF content from the different pages
-                }
-                AppLogger.logE("PDF","content: ${extractedText}")
-            }*/
-
         }
     }
 
@@ -202,7 +178,6 @@ fun ChatBoardScreen(navigateToBack: () -> Unit,
     ) {
         // toolbar
         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
-            //val isStyleMode = viewModel.generationModel == GenerationModel.STABILITY && conversationType == ConversationType.IMAGE
             ToolBarChat(
                 onClickAction = {
                     viewModel.cancelMessageJob()
@@ -247,13 +222,13 @@ fun ChatBoardScreen(navigateToBack: () -> Unit,
                                 .padding(horizontal = 16.dp),
                             examples = examples,
                             image = viewModel.examplesImage,
-                            inputText = if (title.isEmpty()) stringResource(id = R.string.examples) else title,
+                            inputText = if (title.isEmpty()) stringResource(id = R.string.samples) else title,
                             onInput = { inputText = it }) {
                             showPromptSheet = true
                         }
                     } else {
 
-                        ImageExamples(inputText = stringResource(id = R.string.image_inspirations), onInput ={inputText=it} )
+                        ImageExamples(inputText = stringResource(id = R.string.image_suggestion), onInput ={inputText=it} )
                     }
                 } else {
 
@@ -329,11 +304,6 @@ fun ChatBoardScreen(navigateToBack: () -> Unit,
 
             ImageInputCard( modifier = Modifier
                 .weight(1f),imageUri = imageUri.uri,isPremium,isImageLoadingFailed, onPromptSelected ={
-               /* if (it.contentEquals(context.getString(R.string.image_input_p2), ignoreCase = true) && isPremium.not())
-                {
-                    navigateToPremium()
-                    return@ImageInputCard
-                }*/
                 inputText = it
             } , onCancel = {
                 isImageLoadingFailed.value = false
@@ -341,10 +311,6 @@ fun ChatBoardScreen(navigateToBack: () -> Unit,
             })
 
         }
-
-
-
-
         NoCreditsInfoBottomSheet(
                     showSheet = showNoCreditsBottomSheet ,
                     minCreditsRequired = minCreditsRequired ,
@@ -397,7 +363,7 @@ fun ChatBoardScreen(navigateToBack: () -> Unit,
                 style = TextStyle(
                     fontSize = 14.sp,
                     fontWeight = FontWeight.W500,
-                    fontFamily = Barlow,
+                    fontFamily = Labrada,
                 ),
                 textAlign = TextAlign.Center,
                 modifier = Modifier
@@ -412,7 +378,7 @@ fun ChatBoardScreen(navigateToBack: () -> Unit,
             if (userText.isNotEmpty()) {
 
                 if (Utils.isConnectedToNetwork(context).not()) {
-                    Toast.makeText(context,context.getString(R.string.no_conection_try_again),
+                    Toast.makeText(context,context.getString(R.string.no_connection_try_again),
                         Toast.LENGTH_LONG).show()
                     return@EditTextField
                 }
@@ -434,13 +400,13 @@ fun ChatBoardScreen(navigateToBack: () -> Unit,
                     {
                         if (isImageInput && viewModel.isVisionDailyLimitReach())
                         {
-                            Toast.makeText(context,context.getString(R.string.vision_limit),Toast.LENGTH_LONG).show()
+                            Toast.makeText(context,context.getString(R.string.ImageAI_limit),Toast.LENGTH_LONG).show()
                             return@EditTextField
                         }
 
                         if (conversationType==ConversationType.IMAGE && viewModel.isGenerationDailyLimitReach())
                         {
-                            Toast.makeText(context,context.getString(R.string.generation_limit),Toast.LENGTH_LONG).show()
+                            Toast.makeText(context,context.getString(R.string.gen_limit),Toast.LENGTH_LONG).show()
                             return@EditTextField
                         }
 
@@ -458,12 +424,6 @@ fun ChatBoardScreen(navigateToBack: () -> Unit,
 
                         if (creditsCount < minCreditsRequired) {
                             val minCred = minCreditsRequired
-
-                           // navigateToPremium(minCred)
-                            if (isImageInput)
-                            {
-                                //viewModel.resetImageInput()
-                            }
                             showNoCreditsBottomSheet = true
 
                             return@EditTextField
@@ -472,10 +432,10 @@ fun ChatBoardScreen(navigateToBack: () -> Unit,
                         if (isImageInput)
                         {
                             val promptType = when(userText){
-                                context.getString(R.string.image_input_p1)-> ImagePromptType.Caption
-                                context.getString(R.string.image_input_p2)-> ImagePromptType.Describe
-                                context.getString(R.string.image_input_p3)-> ImagePromptType.Tags
-                                context.getString(R.string.image_input_p4)-> ImagePromptType.Objects
+                                context.getString(R.string.picha_input_p1)-> ImagePromptType.Caption
+                                context.getString(R.string.picha_input_p2)-> ImagePromptType.Describe
+                                context.getString(R.string.picha_input_p3)-> ImagePromptType.Tags
+                                context.getString(R.string.picha_input_p4)-> ImagePromptType.Objects
                                 else -> ImagePromptType.Custom
                             }
                             viewModel.sendImagePrompt(userText,promptType)

@@ -1,5 +1,7 @@
 package com.apps.imageAI.ui.credits_info
 
+import android.util.Log
+import android.widget.Toast
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -86,7 +88,6 @@ if (showSheet) {
             onGiveReward = { viewModel.giveAdReward() })
     }
 }
-   // NoCreditsInfoUI(modifier = modifier, minCreditsRequired =minCreditsRequired,creditsCount, onCross = onNavigateBack,onUpgrade=onUpgrade, onGiveReward = {viewModel.giveAdReward()} )
 }
 
 @Composable
@@ -96,7 +97,6 @@ fun NoCreditsInfoUI(modifier: Modifier,minCreditsRequired:Int,creditCount:Int,on
     val isSubMode = true
     val context = LocalContext.current
     BackHandler {
-        // your action
         onCross()
     }
 
@@ -116,9 +116,6 @@ fun NoCreditsInfoUI(modifier: Modifier,minCreditsRequired:Int,creditCount:Int,on
                     imageVector = Icons.Default.Close,
                     contentDescription = "image",
                     tint = MaterialTheme.colorScheme.onBackground,
-                    /*modifier = Modifier
-                        .width(25.dp)
-                        .height(25.dp)*/
                 )
             }
             Text(
@@ -163,7 +160,7 @@ fun NoCreditsInfoUI(modifier: Modifier,minCreditsRequired:Int,creditCount:Int,on
                         .weight(1f)
                         .padding(5.dp),
                     resourceId = R.drawable.ic_crown,
-                    buttonText = stringResource(id = R.string.upgrade_to_pre),
+                    buttonText = stringResource(id = R.string.upgrade_premium),
                     isAdLoading = false,
                     showCreditText = false
                 ) {
@@ -177,11 +174,22 @@ fun NoCreditsInfoUI(modifier: Modifier,minCreditsRequired:Int,creditCount:Int,on
             .padding(horizontal = if (isSubMode) 5.dp else 50.dp, vertical = 5.dp), resourceId = R.drawable.video, buttonText = stringResource(id = R.string.watch_short_ad),isAdLoading= isAdLoading,showCreditText = false) {
             if (isAdLoading.not()) {
                 isAdLoading = true
+//                loadRewarded(context, { errorMsg ->
+//                    isAdLoading = false
+//                }, {
+//                    onGiveReward()
+//                })
                 loadRewarded(context, { errorMsg ->
+                    if (errorMsg != null) {
+                        Log.d("TAG", "Error loading ad: $errorMsg")
+                        // Optionally, display an error message to the user
+                        Toast.makeText(context, "Error loading ad: $errorMsg", Toast.LENGTH_SHORT).show()
+                    }
                     isAdLoading = false
                 }, {
                     onGiveReward()
                 })
+
             }
         }
 

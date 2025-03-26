@@ -19,12 +19,9 @@ public class JavaUtils {
             androidDeviceId = "" + Build.ID + Build.MANUFACTURER + Build.MODEL + Build.PRODUCT;
         } catch (Exception var4) {
             var4.printStackTrace();
-            //Lo.g(!TextUtils.isEmpty(var4.getMessage()) ? var4.getMessage() : "Error generating device id");
         }
-        //AppLogger.Companion.logE("Device Info",deviceSerialNumber+" Name:"+deviceIndustrialName+" Id:"+androidDeviceId);
 
         UUID deviceUuid = new UUID((long)androidDeviceId.hashCode(), (long)deviceIndustrialName.hashCode() << 32 | (long)deviceSerialNumber.hashCode());
-        // Lo.g("DEVICE_ID = " + deviceUuid);
         return deviceUuid.toString();
     }
 

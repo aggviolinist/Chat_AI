@@ -66,7 +66,7 @@ import com.apps.imageAI.data.model.GPTModel
 import com.apps.imageAI.ui.MainActivityViewModel
 import com.apps.imageAI.ui.dialogs.ConfirmationDialog
 import com.apps.imageAI.ui.dialogs.DeleteAccountDialog
-import com.apps.imageAI.ui.theme.Barlow
+import com.apps.imageAI.ui.theme.Labrada
 import com.apps.imageAI.ui.ui_components.PremiumButton
 import com.apps.imageAI.ui.ui_components.RowToggleButtonGroup
 
@@ -169,16 +169,18 @@ fun SettingsUI(language:String,isSubscribed:Boolean, darkMode: Boolean,isGuest:B
         ) {
             Icon(
                 painter = painterResource(R.drawable.app_icon),
-                tint = MaterialTheme.colorScheme.primary,
                 contentDescription = stringResource(R.string.app_name),
+                tint = Color.Unspecified,
                 modifier = Modifier
-                    .size(width = 50.dp, height = 50.dp)
+                    .size(50.dp)
+                    .clip(RoundedCornerShape(12.dp))
             )
+
+
             Spacer(modifier = Modifier.width(12.dp))
             Text(
                 modifier = Modifier.weight(1f),
                 text = stringResource(id = R.string.app_name),
-                /*  color =  MaterialTheme.colorScheme.onSurface,*/
                 style = MaterialTheme.typography.displaySmall.copy(fontWeight = FontWeight.W700)
             )
 
@@ -187,7 +189,6 @@ fun SettingsUI(language:String,isSubscribed:Boolean, darkMode: Boolean,isGuest:B
                 contentDescription = null,
                 tint = MaterialTheme.colorScheme.onBackground,
                 modifier = Modifier
-                    /*.padding(16.dp)*/
                     .size(30.dp)
                     .align(Alignment.Top)
                     .background(
@@ -231,11 +232,10 @@ fun SettingsUI(language:String,isSubscribed:Boolean, darkMode: Boolean,isGuest:B
             Spacer(modifier = Modifier.width(20.dp))
             Text(
                 text = stringResource(id = R.string.default_model),
-                /*color = MaterialTheme.colorScheme.surface,*/
                 style = TextStyle(
                     fontSize = 16.sp,
                     fontWeight = FontWeight.W600,
-                    fontFamily = Barlow,
+                    fontFamily = Labrada,
                     platformStyle = PlatformTextStyle(
                         includeFontPadding = false
                     )
@@ -265,14 +265,7 @@ fun SettingsUI(language:String,isSubscribed:Boolean, darkMode: Boolean,isGuest:B
                 }
                 onGptModel(if (index == 1) GPTModel.GPT_4 else GPTModel.GPT_3_5_TURBO)
             }
-
-
         }
-        /*  Divider( modifier = Modifier
-            .padding(start = 63.dp),
-            color = MaterialTheme.colorScheme.tertiary,
-        )*/
-
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -295,11 +288,10 @@ fun SettingsUI(language:String,isSubscribed:Boolean, darkMode: Boolean,isGuest:B
             Spacer(modifier = Modifier.width(20.dp))
             Text(
                 text = stringResource(id = R.string.language),
-                /*  color = MaterialTheme.colorScheme.surface,*/
                 style = TextStyle(
                     fontSize = 16.sp,
                     fontWeight = FontWeight.W600,
-                    fontFamily = Barlow,
+                    fontFamily = Labrada,
                     platformStyle = PlatformTextStyle(
                         includeFontPadding = false
                     )
@@ -308,19 +300,15 @@ fun SettingsUI(language:String,isSubscribed:Boolean, darkMode: Boolean,isGuest:B
             )
             Text(
                 text = language,
-                /* color = MaterialTheme.colorScheme.surface,*/
                 style = TextStyle(
                     fontSize = 16.sp,
                     fontWeight = FontWeight.W700,
-                    fontFamily = Barlow,
+                    fontFamily = Labrada,
                     lineHeight = 25.sp
                 )
             )
-
             Spacer(modifier = Modifier.width(15.dp))
         }
-
-
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -339,11 +327,10 @@ fun SettingsUI(language:String,isSubscribed:Boolean, darkMode: Boolean,isGuest:B
             Spacer(modifier = Modifier.width(20.dp))
             Text(
                 text = stringResource(id = R.string.dark_theme),
-                /*color = MaterialTheme.colorScheme.surface,*/
                 style = TextStyle(
                     fontSize = 16.sp,
                     fontWeight = FontWeight.W600,
-                    fontFamily = Barlow,
+                    fontFamily = Labrada,
                     platformStyle = PlatformTextStyle(
                         includeFontPadding = false
                     )
@@ -387,12 +374,11 @@ fun SettingsUI(language:String,isSubscribed:Boolean, darkMode: Boolean,isGuest:B
             )
             Spacer(modifier = Modifier.width(20.dp))
             Text(
-                text = stringResource(id = R.string.image_content),
-                /*color = MaterialTheme.colors.surface,*/
+                text = stringResource(id = R.string.img_content),
                 style = TextStyle(
                     fontSize = 16.sp,
                     fontWeight = FontWeight.W600,
-                    fontFamily = Barlow,
+                    fontFamily = Labrada,
                     platformStyle = PlatformTextStyle(
                         includeFontPadding = false
                     )
@@ -405,9 +391,6 @@ fun SettingsUI(language:String,isSubscribed:Boolean, darkMode: Boolean,isGuest:B
                 checked = isImageGen, onCheckedChange = {
                     onImageGeneration(it)
                     //onDarkMode(it)
-                    // switchOn = !switchOn
-                    //darkMode.value = !darkMode.value
-                    //onDarkMode(darkMode.value)
                 },
                 colors = SwitchDefaults.colors(
                     checkedThumbColor = MaterialTheme.colorScheme.primary,
@@ -418,14 +401,8 @@ fun SettingsUI(language:String,isSubscribed:Boolean, darkMode: Boolean,isGuest:B
 
 
             )
-            //SwitchButton(darkMode){ onDarkMode(it) }
-        }
-        /* Divider( modifier = Modifier
-            .padding(start = 63.dp)
-            ,
-            color = MaterialTheme.colorScheme.tertiary,
-        )*/
 
+        }
         if (isSubMode) {
 
             if (isSubscribed) {
@@ -454,11 +431,10 @@ fun SettingsUI(language:String,isSubscribed:Boolean, darkMode: Boolean,isGuest:B
                     Spacer(modifier = Modifier.width(20.dp))
                     Text(
                         text = stringResource(id = R.string.manage_sub),
-                        /* color = MaterialTheme.colorScheme.surface,*/
                         style = TextStyle(
                             fontSize = 16.sp,
                             fontWeight = FontWeight.W600,
-                            fontFamily = Barlow,
+                            fontFamily = Labrada,
                             platformStyle = PlatformTextStyle(
                                 includeFontPadding = false
                             )
@@ -491,11 +467,10 @@ fun SettingsUI(language:String,isSubscribed:Boolean, darkMode: Boolean,isGuest:B
                     Spacer(modifier = Modifier.width(20.dp))
                     Text(
                         text = stringResource(id = R.string.restore_purchase),
-                        /* color = MaterialTheme.colorScheme.onSurface,*/
                         style = TextStyle(
                             fontSize = 16.sp,
                             fontWeight = FontWeight.W600,
-                            fontFamily = Barlow,
+                            fontFamily = Labrada,
                             platformStyle = PlatformTextStyle(
                                 includeFontPadding = false
                             )
@@ -507,10 +482,6 @@ fun SettingsUI(language:String,isSubscribed:Boolean, darkMode: Boolean,isGuest:B
                 }
             }
 
-            /* Divider( modifier = Modifier
-                .padding(start = 63.dp),
-                color = MaterialTheme.colorScheme.tertiary
-            )*/
         }
 
 
@@ -525,7 +496,7 @@ fun SettingsUI(language:String,isSubscribed:Boolean, darkMode: Boolean,isGuest:B
                             ShareCompat
                                 .IntentBuilder(context)
                                 .setType("text/plain")
-                                .setChooserTitle(context.getString(R.string.share_app))
+                                .setChooserTitle(context.getString(R.string.share_application))
                                 .setText("https://play.google.com/store/apps/details?id=${BuildConfig.APPLICATION_ID}")
                                 .startChooser()
                         }
@@ -546,11 +517,10 @@ fun SettingsUI(language:String,isSubscribed:Boolean, darkMode: Boolean,isGuest:B
             Spacer(modifier = Modifier.width(20.dp))
             Text(
                 text = stringResource(id = R.string.share),
-                /* color = MaterialTheme.colorScheme.onSurface,*/
                 style = TextStyle(
                     fontSize = 16.sp,
                     fontWeight = FontWeight.W600,
-                    fontFamily = Barlow,
+                    fontFamily = Labrada,
                     platformStyle = PlatformTextStyle(
                         includeFontPadding = false
                     )
@@ -559,11 +529,6 @@ fun SettingsUI(language:String,isSubscribed:Boolean, darkMode: Boolean,isGuest:B
             )
             Spacer(modifier = Modifier.width(15.dp))
         }
-
-        /* Divider( modifier = Modifier
-            .padding(start = 63.dp),
-            color = MaterialTheme.colorScheme.tertiary
-        )*/
 
         Row(
             modifier = Modifier
@@ -589,11 +554,10 @@ fun SettingsUI(language:String,isSubscribed:Boolean, darkMode: Boolean,isGuest:B
             Spacer(modifier = Modifier.width(20.dp))
             Text(
                 text = stringResource(id = R.string.privacy_policy),
-                /* color = MaterialTheme.colorScheme.onSurface,*/
                 style = TextStyle(
                     fontSize = 16.sp,
                     fontWeight = FontWeight.W600,
-                    fontFamily = Barlow,
+                    fontFamily = Labrada,
                     platformStyle = PlatformTextStyle(
                         includeFontPadding = false
                     )
@@ -601,27 +565,15 @@ fun SettingsUI(language:String,isSubscribed:Boolean, darkMode: Boolean,isGuest:B
                 modifier = Modifier.weight(1f)
             )
             Spacer(modifier = Modifier.width(15.dp))
-            /* Icon(
-                 imageVector = Icons.Default.ArrowForwardIos,
-                 contentDescription = null,
-                 tint = MaterialTheme.colorScheme.surface,
-                 modifier = Modifier
-                     .size(25.dp)
-             )*/
+
         }
 
-        /*  Divider( modifier = Modifier
-            .padding(start = 63.dp),
-            color = MaterialTheme.colorScheme.tertiary, thickness = 1.dp,
-        )*/
         if (Constants.SignInMode != SignInType.Guest) {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clickable {
-                        //onCloseAction()
                         logoutDialog = true
-                        //navigateToLogout()
                     }
                     .padding(top = 18.dp, bottom = 18.dp)
                     .padding(horizontal = 16.dp),
@@ -642,7 +594,7 @@ fun SettingsUI(language:String,isSubscribed:Boolean, darkMode: Boolean,isGuest:B
                     style = TextStyle(
                         fontSize = 16.sp,
                         fontWeight = FontWeight.W600,
-                        fontFamily = Barlow,
+                        fontFamily = Labrada,
                         platformStyle = PlatformTextStyle(
                             includeFontPadding = false
                         )
@@ -679,7 +631,7 @@ fun SettingsUI(language:String,isSubscribed:Boolean, darkMode: Boolean,isGuest:B
                         style = TextStyle(
                             fontSize = 16.sp,
                             fontWeight = FontWeight.W600,
-                            fontFamily = Barlow,
+                            fontFamily = Labrada,
                             platformStyle = PlatformTextStyle(
                                 includeFontPadding = false
                             )
@@ -687,11 +639,9 @@ fun SettingsUI(language:String,isSubscribed:Boolean, darkMode: Boolean,isGuest:B
                         modifier = Modifier.weight(1f)
                     )
                     Spacer(modifier = Modifier.width(15.dp))
-
                 }
             }
-
         }
-        //}
+
     }
 }

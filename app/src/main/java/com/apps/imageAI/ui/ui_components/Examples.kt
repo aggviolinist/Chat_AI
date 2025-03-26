@@ -15,7 +15,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.Send
@@ -28,22 +28,23 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.PlatformTextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.apps.imageAI.R
-import com.apps.imageAI.ui.theme.ImageAITheme
 
 @Composable
 fun Examples(
     modifier: Modifier = Modifier,
     examples: List<String>,
-    image:Int?=null,
-    inputText: String, onInput: (String)->Unit,onAssistants:()->Unit
+    image: Int? = null,
+    inputText: String,
+    onInput: (String) -> Unit,
+    onAssistants: () -> Unit
 ) {
     Box(modifier = modifier) {
         Column(
@@ -54,34 +55,51 @@ fun Examples(
             verticalArrangement = Arrangement.Bottom
         ) {
 
-         Row(modifier = Modifier.clip(RoundedCornerShape(20.dp)).clickable { onAssistants() }.background(color = MaterialTheme.colorScheme.onSecondary,
-             shape = RoundedCornerShape(20.dp)).padding(horizontal = 12.dp, vertical = 6.dp)) {
-             if (image!=null){
-                 Image(
-                     painter = painterResource(image),
-                     contentDescription = stringResource(R.string.app_name),
-                     modifier = Modifier
-                         .size(28.dp).padding(3.dp)
-                 )
-             }
-             else{
-                 Icon(imageVector =Icons.Default.LightMode , contentDescription ="",modifier=Modifier.size(28.dp), tint = MaterialTheme.colorScheme.onSurface )
-             }
+            Row(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(20.dp))
+                    .clickable { onAssistants() }
+                    .background(
+                        color = Color(0xFF6495ED), // Blue background
+                        shape = RoundedCornerShape(20.dp)
+                    )
+                    .padding(horizontal = 12.dp, vertical = 6.dp)
+            ) {
+                if (image != null) {
+                    Image(
+                        painter = painterResource(image),
+                        contentDescription = stringResource(R.string.app_name),
+                        modifier = Modifier
+                            .size(28.dp)
+                            .padding(3.dp)
+                    )
+                } else {
+                    Icon(
+                        imageVector = Icons.Default.LightMode,
+                        contentDescription = "",
+                        modifier = Modifier.size(28.dp),
+                        tint = Color(0xFFADD8E6) // Light blue text color
+                    )
+                }
 
-             Spacer(modifier = Modifier.width(8.dp))
-          Text(
-                text = inputText,
-                color = MaterialTheme.colorScheme.onSurface,
-                style = MaterialTheme.typography.headlineMedium.copy(
-                    fontWeight = FontWeight.W700, platformStyle = PlatformTextStyle(includeFontPadding = false)
-                ),
-                textAlign = TextAlign.Center
-            )
-             Spacer(modifier = Modifier.width(8.dp))
-             Icon(imageVector =Icons.Default.ArrowDropDown , contentDescription ="",modifier=Modifier.size(28.dp), tint = MaterialTheme.colorScheme.onSurface )
-
-         }
-
+                Spacer(modifier = Modifier.width(8.dp))
+                Text(
+                    text = inputText,
+                    color = Color(0xFFADD8E6), // Light blue text color
+                    style = MaterialTheme.typography.headlineMedium.copy(
+                        fontWeight = FontWeight.W700,
+                        platformStyle = PlatformTextStyle(includeFontPadding = false)
+                    ),
+                    textAlign = TextAlign.Center
+                )
+                Spacer(modifier = Modifier.width(8.dp))
+                Icon(
+                    imageVector = Icons.Default.ArrowDropDown,
+                    contentDescription = "",
+                    modifier = Modifier.size(28.dp),
+                    tint = Color(0xFFADD8E6) // Light blue text color
+                )
+            }
 
             LazyColumn(
                 modifier = Modifier
@@ -89,43 +107,52 @@ fun Examples(
                     .padding(top = 16.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                items(examples) { example ->
+                itemsIndexed(examples) { index, example ->
+                    val backgroundColor = when (index % 3) {
+                        0 -> Color(0xFF808080).copy(alpha = 0.05f) // Very light grey background
+                        1 -> Color(0xFFFFA07A).copy(alpha = 0.05f) // Very light orange background
+                        else -> Color(0xFF00695C).copy(alpha = 0.05f) // Very light brown background
+                    }
+                    val textColor = when (index % 3) {
+                        0 -> Color(0xFF808080) // Grey text
+                        1 -> Color(0xFFFFA07A) // Orange text
+                        else -> Color(0xFF00695C) // Brown text
+                    }
 
-                    Row(verticalAlignment = Alignment.CenterVertically,modifier = Modifier
-                        .clip(RoundedCornerShape(12.dp))
-                        .clickable(
-                            onClick = {
-                                onInput(example.replace("\n", ""))
-                            })
-                        .background(
-                            color = MaterialTheme.colorScheme.onSecondary,
-                            shape = RoundedCornerShape(12.dp)
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(12.dp))
+                            .clickable(
+                                onClick = {
+                                    onInput(example.replace("\n", ""))
+                                }
+                            )
+                            .background(
+                                color = backgroundColor,
+                                shape = RoundedCornerShape(12.dp)
+                            )
+                            .padding(12.dp)
+                    ) {
+                        Text(
+                            text = example,
+                            color = textColor,
+                            style = MaterialTheme.typography.bodyLarge.copy(
+                                fontWeight = FontWeight.Bold // Make text bold
+                            ),
+                            textAlign = TextAlign.Start,
+                            modifier = Modifier.weight(1f)
                         )
-                        .padding(12.dp)) {
-                    Text(
-                        text = example,
-                        color = MaterialTheme.colorScheme.onSurface,
-                        style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.W600),
-                        textAlign = TextAlign.Start,
-                         modifier= Modifier.weight(1f)
-
-                    )
                         Spacer(modifier = Modifier.width(8.dp))
-                        Icon(imageVector = Icons.AutoMirrored.Rounded.Send, contentDescription = "", tint = MaterialTheme.colorScheme.onSurface)
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Rounded.Send,
+                            contentDescription = "",
+                            tint = textColor
+                        )
                     }
                     Spacer(modifier = Modifier.height(12.dp))
                 }
             }
-
-
         }
-    }
-}
-
-@Preview
-@Composable
-fun exemplePreview(){
-    ImageAITheme {
-        Examples(examples = mutableListOf("Example 1 Example 1 Example 1 Example 1 Example 1","Example 2","Example 3"), inputText = "Assistants", onInput = {}, onAssistants = {})
     }
 }

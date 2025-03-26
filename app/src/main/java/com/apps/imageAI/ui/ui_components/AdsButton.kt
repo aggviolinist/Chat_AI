@@ -33,12 +33,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.apps.imageAI.R
 import com.apps.imageAI.ui.theme.ImageAITheme
-import com.apps.imageAI.ui.theme.Barlow
+import com.apps.imageAI.ui.theme.Labrada
 
 @Composable
 fun AdsButton(modifier: Modifier = Modifier,resourceId:Int=R.drawable.video,buttonText:String =stringResource(id = R.string.watch_ad), isAdLoading:Boolean,showCreditText:Boolean=true, onClickWatchAd: () -> Unit){
-
-
     Column(
         modifier = modifier
             .fillMaxWidth()
@@ -46,7 +44,6 @@ fun AdsButton(modifier: Modifier = Modifier,resourceId:Int=R.drawable.video,butt
         horizontalAlignment = Alignment.End
     ) {
 
-        //Spacer(modifier = Modifier.width(10.dp))
         Box (modifier = Modifier
             .fillMaxWidth()
             .align(Alignment.CenterHorizontally)) {
@@ -77,7 +74,6 @@ fun AdsButton(modifier: Modifier = Modifier,resourceId:Int=R.drawable.video,butt
                     modifier = Modifier
                         .size(width = 16.dp, height = 16.dp)
 
-
                 )
                 Spacer(modifier = Modifier.width(8.dp))
 
@@ -87,7 +83,7 @@ fun AdsButton(modifier: Modifier = Modifier,resourceId:Int=R.drawable.video,butt
                     style = TextStyle(
                         fontSize = 13.sp,
                         fontWeight = FontWeight.W600,
-                        fontFamily = Barlow,
+                        fontFamily = Labrada,
                         lineHeight = 20.sp
                     ), maxLines = 1,overflow = TextOverflow.Ellipsis
                 )
@@ -109,7 +105,7 @@ fun AdsButton(modifier: Modifier = Modifier,resourceId:Int=R.drawable.video,butt
             style = TextStyle(
                 fontSize = 13.sp,
                 fontWeight = FontWeight.W500,
-                fontFamily = Barlow,
+                fontFamily = Labrada,
                 lineHeight = 20.sp
             ),
             textAlign = TextAlign.Center,
@@ -124,7 +120,7 @@ fun AdsButton(modifier: Modifier = Modifier,resourceId:Int=R.drawable.video,butt
 fun adsPreview(){
     ImageAITheme {
         AdsButton(isAdLoading = false, resourceId = R.drawable.video) {
-            
+
         }
     }
 }

@@ -42,11 +42,6 @@ fun NavigationGraph (navController:NavHostController, startDestination:String, d
         }
 
         composable(route = Screen.RecentChats.route){
-           /* RecentChats(openDrawer = {scope.launch {
-                drawerState.open()
-            }}){
-                navController.navigate(Screen.Chat.route)
-            }*/
             RecentChatsScreen(
                 navigateToChat = {id,type->
                     val data = ChatData(chatId =  id, conversationType = type)
@@ -71,9 +66,6 @@ fun NavigationGraph (navController:NavHostController, startDestination:String, d
                 slideOutOfContainer(towards = AnimatedContentTransitionScope.SlideDirection.Companion.Down, animationSpec = tween(ANIM_DUR))
             })
         {
-            /*ChatBoard(){
-                naveController.popBackStack()
-            }*/
             var data = ChatData()
             it.arguments?.getString("data")?.let {json->
                 if (json.isNotEmpty())

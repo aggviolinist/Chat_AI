@@ -42,7 +42,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.apps.imageAI.R
 import com.apps.imageAI.components.Utils
-import com.apps.imageAI.ui.theme.Barlow
+import com.apps.imageAI.ui.theme.Labrada
 import com.apps.imageAI.ui.theme.White
 import com.skydoves.landscapist.ImageOptions
 import com.skydoves.landscapist.glide.GlideImage
@@ -84,12 +84,12 @@ fun ImageDetailSheet(mediaPath:String,showSheet:Boolean,onDismiss:()->Unit)
 
             Column(
                 modifier = Modifier
-                    .padding(12.dp)/*.border(1.dp, MaterialTheme.colors.onPrimary, RoundedCornerShape(35.dp))*/,
+                    .padding(12.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
 
                 Text(
-                    text = stringResource(R.string.image_detail),
+                    text = stringResource(R.string.image_details),
                     color = MaterialTheme.colorScheme.onBackground,
                     style = TextStyle(
                         fontSize = 16.sp,
@@ -111,19 +111,10 @@ fun ImageDetailSheet(mediaPath:String,showSheet:Boolean,onDismiss:()->Unit)
                     ),
                     modifier = Modifier
                         .fillMaxWidth()
-                        /* .padding(2.dp)
-                        .clip(RoundedCornerShape(topStart = 16.dp, topEnd = 16.dp))*/
                         .aspectRatio(ratio = 1f / 1f)
                     ,
                 )
-
-                /* Image(painter = painterResource(id = R.drawable.fantasy_art), contentDescription =null,
-                     modifier = Modifier
-                         .fillMaxWidth()
-                         *//*.clip(RoundedCornerShape(topStart = 16.dp, topEnd = 16.dp))*//*
-                .aspectRatio(ratio = 1f / 1f) )*/
-
-                Row(modifier = Modifier.padding(top = 20.dp, bottom = 50.dp/*, start = 16.dp, end = 16.dp*/)) {
+                Row(modifier = Modifier.padding(top = 20.dp, bottom = 50.dp)) {
                     Card(
                         modifier = Modifier
                             .height(55.dp)
@@ -148,11 +139,10 @@ fun ImageDetailSheet(mediaPath:String,showSheet:Boolean,onDismiss:()->Unit)
                                 style = TextStyle(
                                     fontSize = 16.sp,
                                     fontWeight = FontWeight.W700,
-                                    fontFamily = Barlow
+                                    fontFamily = Labrada
                                 ),
                                 textAlign = TextAlign.Center
                             )
-
                         }
                     }
 
@@ -163,7 +153,6 @@ fun ImageDetailSheet(mediaPath:String,showSheet:Boolean,onDismiss:()->Unit)
                             .height(55.dp)
                             .clip(RoundedCornerShape(90.dp))
                             .clickable {
-                                // download code
                                 isDownloaded = true
                                 CoroutineScope(Dispatchers.Default).launch {
 
@@ -194,7 +183,7 @@ fun ImageDetailSheet(mediaPath:String,showSheet:Boolean,onDismiss:()->Unit)
                                 style = TextStyle(
                                     fontSize = 16.sp,
                                     fontWeight = FontWeight.W700,
-                                    fontFamily = Barlow
+                                    fontFamily = Labrada
                                 ),
                                 textAlign = TextAlign.Center
                             )
@@ -202,8 +191,6 @@ fun ImageDetailSheet(mediaPath:String,showSheet:Boolean,onDismiss:()->Unit)
                         }
                     }
                 }
-
-
             }
 
         }

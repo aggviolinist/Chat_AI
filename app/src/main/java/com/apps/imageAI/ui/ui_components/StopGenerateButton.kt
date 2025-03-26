@@ -25,7 +25,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.apps.imageAI.R
-import com.apps.imageAI.ui.theme.Barlow
+import com.apps.imageAI.ui.theme.Labrada
 @Composable
 fun StopGenerateButton(modifier: Modifier, isImageGen: Boolean=false, onClick: () -> Unit) {
     Box(modifier = modifier, contentAlignment = Alignment.Center) {
@@ -64,12 +64,12 @@ fun StopGenerateButton(modifier: Modifier, isImageGen: Boolean=false, onClick: (
                 Spacer(modifier = Modifier.width(10.dp))
             }
             Text(
-                text = if (isImageGen) stringResource(id = R.string.image_generating) else stringResource(id = R.string.stop_generating),
+                text = if (isImageGen) stringResource(id = R.string.image_gen) else stringResource(id = R.string.stop_generating),
                 color = MaterialTheme.colorScheme.onSurface,
                 style = TextStyle(
                     fontSize = 16.sp,
                     fontWeight = FontWeight.W600,
-                    fontFamily = Barlow,
+                    fontFamily = Labrada,
                     lineHeight = 25.sp
                 )
             )

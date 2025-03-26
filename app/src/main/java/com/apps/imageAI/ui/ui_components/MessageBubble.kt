@@ -53,7 +53,7 @@ import com.apps.imageAI.components.click
 import com.apps.imageAI.data.model.GPTRole
 import com.apps.imageAI.data.model.MessageModel
 import com.apps.imageAI.ui.theme.ImageAITheme
-import com.apps.imageAI.ui.theme.Barlow
+import com.apps.imageAI.ui.theme.Labrada
 import com.apps.imageAI.ui.theme.CodeBackground
 import com.apps.imageAI.ui.theme.OnSurfaceDark
 import com.apps.imageAI.ui.theme.White
@@ -145,7 +145,7 @@ fun MessageBubble(message: ChatMessage,onImage:(String)->Unit) {
                                         style = TextStyle(
                                             fontSize = 20.sp,
                                             fontWeight = FontWeight.W500,
-                                            fontFamily = Barlow
+                                            fontFamily = Labrada
                                         ),
                                         overflow = TextOverflow.Ellipsis
                                         ,
@@ -164,7 +164,7 @@ fun MessageBubble(message: ChatMessage,onImage:(String)->Unit) {
                                         style = TextStyle(
                                             fontSize = 20.sp,
                                             fontWeight = FontWeight.W500,
-                                            fontFamily = Barlow
+                                            fontFamily = Labrada
                                         ),
                                         overflow = TextOverflow.Ellipsis,
                                         maxLines = 1,
@@ -198,7 +198,6 @@ fun MessageBubble(message: ChatMessage,onImage:(String)->Unit) {
                                     )
                             )
                         }
-                        //Spacer(modifier = Modifier.height(2.dp))
                     }
                     Text(
                         text = message.content,
@@ -217,7 +216,7 @@ fun MessageBubble(message: ChatMessage,onImage:(String)->Unit) {
                         style = RichTextStyle(
                             codeBlockStyle = CodeBlockStyle(
                                 textStyle = TextStyle(
-                                    fontFamily = Barlow,
+                                    fontFamily = Labrada,
                                     fontSize = 14.sp,
                                     color = White
                                 ),
@@ -370,14 +369,12 @@ fun MessageBubble(message: ChatMessage,onImage:(String)->Unit) {
                 ProvideTextStyle(textStyle, content)
             },
             ProvideContentColor = { color, content ->
-                //CompositionLocalProvider(LocalContentColor provides androidx.compose.ui.graphics.Color.Red) {
                     content()
-                //}
+
             }
         ) {
-            //CompositionLocalProvider(LocalMaterialThemingApplied provides true) {
                 child()
-            //}
+
         }
     } else {
         child()
@@ -391,15 +388,10 @@ private val LocalMaterialThemingApplied = compositionLocalOf { false }
 fun MessagePreview(){
     ImageAITheme {
  val messages = mutableListOf<MessageModel>()
-       /* for (i in 1..5)
-        {
 
-            messages.add(MessageModel(conversationId = Date().time.toString(), question = "Question ${i}", createdAt = Date().time.toString()))
-        }*/
 
-        val chatMessage = ChatMessage(recentChatId = 1, role = "user", content = "Hello, today wather forcast ")
-        //MessageList(messages = messages)
-        val message = MessageModel(conversationId = Date().time.toString(), question = "Hello, today wather forcast ", createdAt = Date().time.toString())
+        val chatMessage = ChatMessage(recentChatId = 1, role = "user", content = "Hello, today weather forecast ")
+        val message = MessageModel(conversationId = Date().time.toString(), question = "Hello, today weather forecast ", createdAt = Date().time.toString())
         Column {
 
             MessageBubble(message = chatMessage){}

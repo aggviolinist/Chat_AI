@@ -37,7 +37,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import com.apps.imageAI.R
 import com.apps.imageAI.ui.theme.ImageAITheme
-import com.apps.imageAI.ui.theme.Barlow
+import com.apps.imageAI.ui.theme.Labrada
 import com.apps.imageAI.ui.theme.CreditsTint
 
 
@@ -60,7 +60,7 @@ fun FreeCreditsDialog(creditsCount:Int=5,onDismiss:()->Unit)
             Text(
                 text = stringResource(R.string.congrats),
                 color = MaterialTheme.colorScheme.onBackground,
-                style = MaterialTheme.typography.displayMedium.copy(fontWeight = FontWeight.W600, fontFamily = Barlow),
+                style = MaterialTheme.typography.displayMedium.copy(fontWeight = FontWeight.W600, fontFamily = Labrada),
                 textAlign = TextAlign.Center,
                 modifier = Modifier.padding(vertical = 20.dp)
             )
@@ -82,7 +82,7 @@ fun FreeCreditsDialog(creditsCount:Int=5,onDismiss:()->Unit)
                 Text(
                     text = String.format("%02d", creditsCount),
                     fontWeight = FontWeight.SemiBold,
-                    style = MaterialTheme.typography.displayMedium.copy(color = MaterialTheme.colorScheme.onBackground, fontFamily = Barlow)
+                    style = MaterialTheme.typography.displayMedium.copy(color = MaterialTheme.colorScheme.onBackground, fontFamily = Labrada)
                 )
             }
 
@@ -90,7 +90,7 @@ fun FreeCreditsDialog(creditsCount:Int=5,onDismiss:()->Unit)
             Text(
                 text = stringResource(R.string.daily_free_credits),
                 color = MaterialTheme.colorScheme.onBackground,
-                style = MaterialTheme.typography.headlineMedium.copy(fontWeight = FontWeight.W600, fontFamily = Barlow, fontSize = 20.sp),
+                style = MaterialTheme.typography.headlineMedium.copy(fontWeight = FontWeight.W600, fontFamily = Labrada, fontSize = 20.sp),
                 textAlign = TextAlign.Center,
                 modifier = Modifier.padding(vertical = 16.dp)
             )

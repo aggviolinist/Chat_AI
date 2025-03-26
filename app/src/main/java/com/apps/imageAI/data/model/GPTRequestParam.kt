@@ -6,8 +6,6 @@ data class GPTRequestParam(
     val temperature: Double = 0.9,
     @SerializedName("stream")
     var stream: Boolean = true,
-    /* @SerializedName("max_tokens")
-     val maxTokens: Int = 4000,*/
     @SerializedName("model")
     val model: String = GPTModel.GPT_4.modelName,
     @SerializedName("messages")

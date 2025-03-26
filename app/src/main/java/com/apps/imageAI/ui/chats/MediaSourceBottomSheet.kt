@@ -72,17 +72,9 @@ fun MediaSourceUI(onCameraAction:()->Unit,onGalleryAction:()->Unit,onLink:()->Un
 
     Column(
         modifier = Modifier
-            .background(MaterialTheme.colorScheme.onSecondary)
-        /*.border(1.dp, MaterialTheme.colors.onPrimary, RoundedCornerShape(35.dp))*/,
+            .background(MaterialTheme.colorScheme.onSecondary),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        /*Box(
-            modifier = Modifier
-                .padding(top = 12.dp)
-                .width(25.dp)
-                .height(3.dp)
-                .background(MaterialTheme.colorScheme.onTertiary, RoundedCornerShape(90.dp))
-        )*/
 
         Text(
             text = stringResource(R.string.select_media_source),

@@ -20,7 +20,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.apps.imageAI.ui.theme.Barlow
+import com.apps.imageAI.ui.theme.Labrada
 import com.apps.imageAI.R
 
 @Composable
@@ -60,7 +60,7 @@ fun PromptCard(
             style = TextStyle(
                 fontSize = 18.sp,
                 fontWeight = FontWeight.W700,
-                fontFamily = Barlow,
+                fontFamily = Labrada,
                 lineHeight = 25.sp
             )
         )
@@ -71,7 +71,7 @@ fun PromptCard(
             style = TextStyle(
                 fontSize = 14.sp,
                 fontWeight = FontWeight.W500,
-                fontFamily = Barlow,
+                fontFamily = Labrada,
                 lineHeight = 20.sp
             )
         )

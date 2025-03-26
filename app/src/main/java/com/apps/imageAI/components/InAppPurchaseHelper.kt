@@ -49,15 +49,13 @@ class InAppPurchaseHelperImpl @Inject constructor(@ActivityContext private val c
     private val _bundles = MutableStateFlow<List<CreditModel>>(mutableListOf())
     override val bundles = _bundles.asStateFlow()
 
-    //private val _statusText = MutableStateFlow("Initializing...")
-    //val statusText = _statusText.asStateFlow()
+
     private val coroutineScope = CoroutineScope(Dispatchers.IO)
     private val _productDetails = mutableListOf<ProductDetails>()
 
     private val _processingPurchase = MutableStateFlow(false)
     override val processingPurchase = _processingPurchase.asStateFlow()
 
-    //private val isSubscriptionMode = true
     private var clientStatus:BillingClientStatus = BillingClientStatus.DISCONNECTED
     private val _purchaseStatus = MutableStateFlow<PurchaseStatus>(PurchaseStatus.None)
     override val purchaseStatus = _purchaseStatus.asStateFlow()
@@ -135,30 +133,23 @@ class InAppPurchaseHelperImpl @Inject constructor(@ActivityContext private val c
 
         billingClient.queryPurchasesAsync(queryPurchasesParams) { _, purchases ->
             if (purchases.isNotEmpty() && purchases[0].purchaseState == Purchase.PurchaseState.PURCHASED) {
-                //Log.e(TAG,"Subscription found size:${purchases.size} state:${purchases[0].purchaseState}")
-                //Log.e(TAG,"Subscription obj:${purchases[0]}")
                 if (creditHelpers.isCreditsPurchased.value.not()) {
                     CoroutineScope(Dispatchers.IO).launch {
                         if (firebaseRepo.isLoggedIn())
                         {
                             firebaseRepo.updateCreditPurchasedStatus(true)
-                        }/*else{
-                            preferenceRepository.updateCreditPurchasedStatus(true)
-                        }*/
+                        }
                     }
                 }
                 isPurchased = true
             } else {
-                //Log.e(TAG,"Subscription not found-- ${creditHelpers.isCreditsPurchased.value}")
                 isPurchased = false
 
                 CoroutineScope(Dispatchers.IO).launch {
                     if (firebaseRepo.isLoggedIn())
                     {
                         firebaseRepo.updateCreditPurchasedStatus(false)
-                    }/*else{
-                        preferenceRepository.updateCreditPurchasedStatus(false)
-                    }*/
+                    }
 
                     preferenceRepository.setGPTModel(GPTModel.GPT_3_5_TURBO.name)
                 }
@@ -171,7 +162,6 @@ class InAppPurchaseHelperImpl @Inject constructor(@ActivityContext private val c
     private suspend fun completePurchase(purchase: Purchase) {
 
         if (purchase.purchaseState == Purchase.PurchaseState.PURCHASED) {
-            //AppLogger.logE(TAG, "Purchased Acknowledged :${purchase.isAcknowledged}")
             if (!purchase.isAcknowledged) {
                 val acknowledgePurchaseParams = AcknowledgePurchaseParams
                     .newBuilder()
@@ -182,9 +172,7 @@ class InAppPurchaseHelperImpl @Inject constructor(@ActivityContext private val c
                     if (firebaseRepo.isLoggedIn())
                     {
                         firebaseRepo.updateCreditPurchasedStatus(true)
-                    }/*else {
-                        preferenceRepository.updateCreditPurchasedStatus(true)
-                    }*/
+                    }
                     _purchaseStatus.value = PurchaseStatus.Success
                 } else {
                     AppLogger.logE(TAG, " Acknowledged failed")
@@ -219,9 +207,7 @@ class InAppPurchaseHelperImpl @Inject constructor(@ActivityContext private val c
         billingClient.queryProductDetailsAsync(
             queryProductDetailsParams
         ) { billingResult, productDetailsList ->
-            //Log.e(TAG,"billingResult code:${billingResult.responseCode} ${billingResult.debugMessage}")
             if (productDetailsList.isNotEmpty()) {
-                //Log.e(TAG,"product: ${productDetailsList.size} ${productDetailsList}")
                 _productDetails.add(productDetailsList[0])
                 val productDetail = productDetailsList[0]
                 val list = mutableListOf<CreditModel>()
@@ -290,7 +276,6 @@ class InAppPurchaseHelperImpl @Inject constructor(@ActivityContext private val c
 
             _purchaseStatus.value = PurchaseStatus.Started
             billingClient.launchBillingFlow(context as Activity, billingFlowParams)
-
     }
 
     private fun queryPendingPurchases(){
@@ -312,9 +297,6 @@ class InAppPurchaseHelperImpl @Inject constructor(@ActivityContext private val c
         billingClient.endConnection()
     }
 }
-
-
-
 enum class BillingClientStatus {
     CONNECTED,DISCONNECTED,CONNECTION_ERROR
 }

@@ -36,7 +36,7 @@ import androidx.compose.ui.unit.sp
 import com.apps.imageAI.R
 import com.apps.imageAI.components.click
 import com.apps.imageAI.ui.theme.ImageAITheme
-import com.apps.imageAI.ui.theme.Barlow
+import com.apps.imageAI.ui.theme.Labrada
 
 
 @Composable
@@ -84,7 +84,7 @@ fun TopBarSearch(onSearchText:(String)->Unit, onBackClick:()-> Unit)
                     stringResource(R.string.search_conversation),
                     fontSize = 15.sp,
                     color = MaterialTheme.colorScheme.onSurface,
-                    fontFamily = Barlow,
+                    fontFamily = Labrada,
                     fontWeight = FontWeight.W500
                 )
             },

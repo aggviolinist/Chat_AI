@@ -53,11 +53,13 @@ import com.apps.imageAI.components.Utils
 import com.apps.imageAI.components.click
 import com.apps.imageAI.data.model.CreditModel
 import com.apps.imageAI.ui.theme.ImageAITheme
-import com.apps.imageAI.ui.theme.Barlow
+import com.apps.imageAI.ui.theme.Labrada
 import com.apps.imageAI.ui.theme.CreditsTint
 import kotlinx.coroutines.delay
+import androidx.compose.ui.graphics.Color as ComposeColor
 
 
+val customColor = ComposeColor(0xFFFFC0CB)
 @Composable
 fun SubscriptionScreen(inAppPurchaseHelper: InAppPurchaseHelper, navigateBack:()->Unit,subscriptionViewModel: SubscriptionViewModel = hiltViewModel())
 {
@@ -104,7 +106,6 @@ fun SubscriptionScreenUI(bundleList:List<CreditModel>,isPaymentProcessing:Boolea
         mutableStateOf(false)
     }
     LaunchedEffect(Unit) {
-        //inAppPurchaseHelper.fetchProductsDetails()
         delay(1500)
         isCrossVisble = true
     }
@@ -176,7 +177,7 @@ fun SubscriptionScreenUI(bundleList:List<CreditModel>,isPaymentProcessing:Boolea
             Column(
                 modifier = Modifier
                     .background(
-                        color = MaterialTheme.colorScheme.onSecondary,
+                        color = customColor.copy(alpha = 0.2f),
                         shape = RoundedCornerShape(15.dp)
                     )
                     .padding(12.dp)
@@ -187,7 +188,7 @@ fun SubscriptionScreenUI(bundleList:List<CreditModel>,isPaymentProcessing:Boolea
                     modifier = Modifier.padding(all = 5.dp)
                 ) {
                     Icon(
-                        painter = painterResource(id = R.drawable.done),
+                        painter = painterResource(id = R.drawable.key),
                         contentDescription = null,
                         tint = MaterialTheme.colorScheme.primary,
                         modifier = Modifier
@@ -200,10 +201,11 @@ fun SubscriptionScreenUI(bundleList:List<CreditModel>,isPaymentProcessing:Boolea
                     )
                     Text(
                         text = stringResource(R.string.gpt_4_access),
-                        color = MaterialTheme.colorScheme.onBackground,
+                        color = customColor,
                         style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.W700),
                         textAlign = TextAlign.Center,
                         modifier = Modifier.padding(start = 8.dp)
+
                     )
                 }
 
@@ -212,7 +214,7 @@ fun SubscriptionScreenUI(bundleList:List<CreditModel>,isPaymentProcessing:Boolea
                     modifier = Modifier.padding(all = 5.dp)
                 ) {
                     Icon(
-                        painter = painterResource(id = R.drawable.done),
+                        painter = painterResource(id = R.drawable.unlimited_images),
                         contentDescription = null,
                         tint = MaterialTheme.colorScheme.primary,
                         modifier = Modifier
@@ -225,7 +227,7 @@ fun SubscriptionScreenUI(bundleList:List<CreditModel>,isPaymentProcessing:Boolea
                     )
                     Text(
                         text = stringResource(R.string.unlimited_image),
-                        color = MaterialTheme.colorScheme.onBackground,
+                        color = customColor,
                         style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.W700),
                         textAlign = TextAlign.Center,
                         modifier = Modifier.padding(start = 8.dp)
@@ -237,7 +239,7 @@ fun SubscriptionScreenUI(bundleList:List<CreditModel>,isPaymentProcessing:Boolea
                     modifier = Modifier.padding(all = 5.dp)
                 ) {
                     Icon(
-                        painter = painterResource(id = R.drawable.done),
+                        painter = painterResource(id = R.drawable.unlimited_messages),
                         contentDescription = null,
                         tint = MaterialTheme.colorScheme.primary,
                         modifier = Modifier
@@ -250,7 +252,7 @@ fun SubscriptionScreenUI(bundleList:List<CreditModel>,isPaymentProcessing:Boolea
                     )
                     Text(
                         text = stringResource(R.string.unlimited_messages),
-                        color = MaterialTheme.colorScheme.onBackground,
+                        color = customColor,
                         style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.W700),
                         textAlign = TextAlign.Center,
                         modifier = Modifier.padding(start = 8.dp)
@@ -262,7 +264,7 @@ fun SubscriptionScreenUI(bundleList:List<CreditModel>,isPaymentProcessing:Boolea
                     modifier = Modifier.padding(all = 5.dp)
                 ) {
                     Icon(
-                        painter = painterResource(id = R.drawable.done),
+                        painter = painterResource(id = R.drawable.book),
                         contentDescription = null,
                         tint = MaterialTheme.colorScheme.primary,
                         modifier = Modifier
@@ -275,7 +277,7 @@ fun SubscriptionScreenUI(bundleList:List<CreditModel>,isPaymentProcessing:Boolea
                     )
                     Text(
                         text = stringResource(R.string.unlimited_words),
-                        color = MaterialTheme.colorScheme.onBackground,
+                        color = customColor,
                         style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.W700),
                         textAlign = TextAlign.Center,
                         modifier = Modifier.padding(start = 8.dp)
@@ -286,7 +288,7 @@ fun SubscriptionScreenUI(bundleList:List<CreditModel>,isPaymentProcessing:Boolea
                     modifier = Modifier.padding(all = 5.dp)
                 ) {
                     Icon(
-                        painter = painterResource(id = R.drawable.done),
+                        painter = painterResource(id = R.drawable.ad_free),
                         contentDescription = null,
                         tint = MaterialTheme.colorScheme.primary,
                         modifier = Modifier
@@ -299,7 +301,7 @@ fun SubscriptionScreenUI(bundleList:List<CreditModel>,isPaymentProcessing:Boolea
                     )
                     Text(
                         text = stringResource(R.string.no_ads),
-                        color = MaterialTheme.colorScheme.onBackground,
+                        color = customColor,
                         style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.W700),
                         textAlign = TextAlign.Center,
                         modifier = Modifier.padding(start = 8.dp)
@@ -449,7 +451,7 @@ fun SubscriptionScreenUI(bundleList:List<CreditModel>,isPaymentProcessing:Boolea
                             style = TextStyle(
                                 fontSize = 18.sp,
                                 fontWeight = FontWeight.W700,
-                                fontFamily = Barlow
+                                fontFamily = Labrada
                             ),
                             textAlign = TextAlign.Center,
                             modifier = Modifier.align(Alignment.Center)

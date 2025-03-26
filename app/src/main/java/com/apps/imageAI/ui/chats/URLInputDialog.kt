@@ -72,13 +72,9 @@ fun URLInputDialog(onContinue:(String)->Unit, onCancel:()->Unit)
         Column(
             modifier = Modifier
                 .heightIn(300.dp)
-                /*.fillMaxHeight()
-                .navigationBarsPadding()
-                .imePadding()*/
                 .background(MaterialTheme.colorScheme.onSecondary)
                 .padding(16.dp)
-                .verticalScroll(rememberScrollState())
-            /*.border(1.dp, MaterialTheme.colors.onPrimary, RoundedCornerShape(35.dp))*/,
+                .verticalScroll(rememberScrollState()),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
 
@@ -89,8 +85,6 @@ fun URLInputDialog(onContinue:(String)->Unit, onCancel:()->Unit)
                     .padding(3.dp)
                     .click {
                         onCancel()
-                        //val file = Glide.with(contex).asFile().load(imageUri).submit().get()
-
                     })
 
             Spacer(modifier = Modifier.height(20.dp))
@@ -101,7 +95,7 @@ fun URLInputDialog(onContinue:(String)->Unit, onCancel:()->Unit)
                 },
                 label = {
                     Text(
-                        text = stringResource(id = R.string.image_url),
+                        text = stringResource(id = R.string.picha_url),
                         style = MaterialTheme.typography.bodyLarge,
                         color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f)
                     )
@@ -164,9 +158,6 @@ fun URLInputDialog(onContinue:(String)->Unit, onCancel:()->Unit)
 
                 }
             }
-
-
-
         }
     }
 }

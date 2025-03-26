@@ -18,13 +18,6 @@ class NoCreditsInfoViewModel @Inject constructor(private val firebaseRepository:
     val creditsCount get() = creditHelpers.credits
     fun giveAdReward() = viewModelScope.launch {
         firebaseRepository.incrementCredits(1)
-       /* if (firebaseRepository.isLoggedIn().not())
-        {
-            preferenceRepository.updateCredits(creditsCount.value+1)
-        }
-        else{
-            firebaseRepository.incrementCredits(1)
-        }*/
     }
 
 }

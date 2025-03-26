@@ -31,7 +31,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -43,8 +42,7 @@ import com.apps.imageAI.R
 import com.apps.imageAI.components.bounceClick
 import com.apps.imageAI.components.click
 import com.apps.imageAI.ui.theme.ImageAITheme
-import com.apps.imageAI.ui.theme.Barlow
-import com.apps.imageAI.ui.theme.CreditsTint
+import com.apps.imageAI.ui.theme.Labrada
 import com.apps.imageAI.ui.theme.OnSurfaceDark
 import com.skydoves.landscapist.ImageOptions
 import com.skydoves.landscapist.glide.GlideImage
@@ -53,7 +51,7 @@ import com.skydoves.landscapist.glide.GlideImage
 @Composable
 fun ImageInputCard(modifier: Modifier = Modifier,imageUri: Uri,isPremium:Boolean,isLoadingError:MutableState<Boolean>,onPromptSelected:(String)->Unit,onCancel:()->Unit)
 {
-    Box (modifier = modifier/*.background(Color.Black.copy(0.1f))*/) {
+    Box (modifier = modifier) {
 
         Box(modifier = Modifier
             .fillMaxWidth()
@@ -104,29 +102,15 @@ fun ImageInputCard(modifier: Modifier = Modifier,imageUri: Uri,isPremium:Boolean
                     }
                 )
 
-               /* Text(
-                    text = stringResource(R.string.image_input_prompt),
-                    color = MaterialTheme.colors.onSurface,
-                    style = TextStyle(
-                        fontSize = 18.sp,
-                        fontWeight = FontWeight.W600,
-                        fontFamily = Barlow,
-                        lineHeight = 20.sp
-                    ),
-                    textAlign = TextAlign.Center, modifier = Modifier
-                        .padding(10.dp)
-                        .fillMaxWidth()
-                )*/
 
-
-                val p1 = stringResource(id = R.string.image_input_p1)
+                val p1 = stringResource(id = R.string.picha_input_p1)
                 Text(
                     text = p1,
                     color = MaterialTheme.colorScheme.onSurface,
                     style = TextStyle(
                         fontSize = 16.sp,
                         fontWeight = FontWeight.W500,
-                        fontFamily = Barlow,
+                        fontFamily = Labrada,
                         lineHeight = 25.sp
                     ),
                     textAlign = TextAlign.Center
@@ -147,31 +131,7 @@ fun ImageInputCard(modifier: Modifier = Modifier,imageUri: Uri,isPremium:Boolean
 
                 )
 
-                val p2 = stringResource(id = R.string.image_input_p2)
-              /*  Text(
-                    text = p2,
-                    color = MaterialTheme.colors.onSurface,
-                    style = TextStyle(
-                        fontSize = 16.sp,
-                        fontWeight = FontWeight.W500,
-                        fontFamily = Barlow,
-                        lineHeight = 25.sp
-                    ),
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier
-                        .padding(5.dp)
-                        .background(
-                            color = MaterialTheme.colors.onPrimary,
-                            shape = RoundedCornerShape(20)
-                        )
-                        .bounceClick(
-                            onClick = {
-                                onPromptSelected(p2)
-                            })
-                        .padding(10.dp)
-                        .fillMaxWidth()
-
-                )*/
+                val p2 = stringResource(id = R.string.picha_input_p2)
 
                 Row(verticalAlignment = Alignment.CenterVertically,modifier = Modifier
                     .padding(5.dp)
@@ -191,32 +151,23 @@ fun ImageInputCard(modifier: Modifier = Modifier,imageUri: Uri,isPremium:Boolean
                         style = TextStyle(
                             fontSize = 16.sp,
                             fontWeight = FontWeight.W500,
-                            fontFamily = Barlow,
+                            fontFamily = Labrada,
                             lineHeight = 25.sp
                         ),
                         textAlign = TextAlign.Start, modifier = Modifier.weight(1.0f)
                     )
                     Spacer(modifier = Modifier.width(8.dp))
-                   /* if (isPremium.not()){
-                    Icon(
-                        painter = painterResource(R.drawable.ic_crown),
-                        contentDescription = stringResource(R.string.app_name),
-                        tint = CreditsTint,
-                        modifier = Modifier
-                            .size(width = 20.dp, height = 20.dp)
-                    )
-                    Spacer(modifier = Modifier.width(8.dp))
-                    }*/
+
                 }
 
-                val p3 = stringResource(id = R.string.image_input_p3)
+                val p3 = stringResource(id = R.string.picha_input_p3)
                 Text(
                     text = p3,
                     color = MaterialTheme.colorScheme.onSurface,
                     style = TextStyle(
                         fontSize = 16.sp,
                         fontWeight = FontWeight.W500,
-                        fontFamily = Barlow,
+                        fontFamily = Labrada,
                         lineHeight = 25.sp
                     ),
                     textAlign = TextAlign.Center,
@@ -236,14 +187,14 @@ fun ImageInputCard(modifier: Modifier = Modifier,imageUri: Uri,isPremium:Boolean
 
                 )
 
-                val p4 = stringResource(id = R.string.image_input_p4)
+                val p4 = stringResource(id = R.string.picha_input_p4)
                 Text(
                     text = p4,
                     color = MaterialTheme.colorScheme.onSurface,
                     style = TextStyle(
                         fontSize = 16.sp,
                         fontWeight = FontWeight.W500,
-                        fontFamily = Barlow,
+                        fontFamily = Labrada,
                         lineHeight = 25.sp
                     ),
                     textAlign = TextAlign.Center,
@@ -265,7 +216,6 @@ fun ImageInputCard(modifier: Modifier = Modifier,imageUri: Uri,isPremium:Boolean
                 Spacer(modifier = Modifier.height(10.dp))
             }
 
-          //  val contex = LocalContext.current
 
             Image(imageVector = Icons.Outlined.Close, contentDescription = null,
                 Modifier
@@ -274,7 +224,6 @@ fun ImageInputCard(modifier: Modifier = Modifier,imageUri: Uri,isPremium:Boolean
                     .background(OnSurfaceDark, CircleShape)
                     .padding(3.dp)
                     .click {
-                        //val file = Glide.with(contex).asFile().load(imageUri).submit().get()
                         onCancel()
                     })
         }
@@ -286,6 +235,5 @@ fun ImageInputCard(modifier: Modifier = Modifier,imageUri: Uri,isPremium:Boolean
 @Composable
 fun ImageInputPreview(){
     ImageAITheme {
-    //ImageInputCard(imageUri = Uri.parse(""), onPromptSelected ={}, onCancel = {} )
     }
 }

@@ -83,12 +83,6 @@ class ImageRepositoryImpl @Inject constructor(@ApplicationContext val applicatio
                close(it)
           }
 
-
-         /* awaitClose {
-               downloadId?.let {
-                    kDownloader.cancel(it)
-               }
-          }*/
      }.flowOn(Dispatchers.IO)
 
      override fun generateImageWithStability(request: StabilityImageRequest): Flow<ImageGenerationStatus> = callbackFlow {
@@ -136,12 +130,6 @@ class ImageRepositoryImpl @Inject constructor(@ApplicationContext val applicatio
                close(it)
           }
 
-
-          /*  awaitClose {
-                downloadId?.let {
-                    kDownloader.cancel(it)
-                }
-            }*/
      }.flowOn(Dispatchers.IO)
 
      override fun generateTextFromImage(request: ImageRequest): Flow<String> {
@@ -156,44 +144,44 @@ class ImageRepositoryImpl @Inject constructor(@ApplicationContext val applicatio
          var requestText = text
          var isTemplate = false
          when(text){
-              application.getString(R.string.image_inp_1)->
-              {    requestText = getStringByLocal(R.string.image_inp_1,"en")
+              application.getString(R.string.image_suggestion_1)->
+              {    requestText = getStringByLocal(R.string.image_suggestion_1,"en")
                    isTemplate = true
               }
-              application.getString(R.string.image_inp_2)->
-              {    requestText = getStringByLocal(R.string.image_inp_2,"en")
+              application.getString(R.string.image_suggestion_2)->
+              {    requestText = getStringByLocal(R.string.image_suggestion_2,"en")
                    isTemplate = true
               }
-              application.getString(R.string.image_inp_3)->
-              {    requestText = getStringByLocal(R.string.image_inp_3,"en")
+              application.getString(R.string.image_suggestion_3)->
+              {    requestText = getStringByLocal(R.string.image_suggestion_3,"en")
                    isTemplate = true
               }
-              application.getString(R.string.image_inp_4)->
-              {    requestText = getStringByLocal(R.string.image_inp_4,"en")
+              application.getString(R.string.image_suggestion_4)->
+              {    requestText = getStringByLocal(R.string.image_suggestion_4,"en")
                    isTemplate = true
               }
-              application.getString(R.string.image_inp_5)->
-              {    requestText = getStringByLocal(R.string.image_inp_5,"en")
+              application.getString(R.string.image_suggestion_5)->
+              {    requestText = getStringByLocal(R.string.image_suggestion_5,"en")
                    isTemplate = true
               }
-              application.getString(R.string.image_inp_6)->
-              {    requestText = getStringByLocal(R.string.image_inp_6,"en")
+              application.getString(R.string.image_suggestion_6)->
+              {    requestText = getStringByLocal(R.string.image_suggestion_6,"en")
                    isTemplate = true
               }
-              application.getString(R.string.image_inp_7)->
-              {    requestText = getStringByLocal(R.string.image_inp_7,"en")
+              application.getString(R.string.image_suggestion_7)->
+              {    requestText = getStringByLocal(R.string.image_suggestion_7,"en")
                    isTemplate = true
               }
-              application.getString(R.string.image_inp_8)->
-              {    requestText = getStringByLocal(R.string.image_inp_8,"en")
+              application.getString(R.string.image_suggestion_8)->
+              {    requestText = getStringByLocal(R.string.image_suggestion_8,"en")
                    isTemplate = true
               }
-              application.getString(R.string.image_inp_9)->
-              {    requestText = getStringByLocal(R.string.image_inp_9,"en")
+              application.getString(R.string.image_suggestion_9)->
+              {    requestText = getStringByLocal(R.string.image_suggestion_9,"en")
                    isTemplate = true
               }
-              application.getString(R.string.image_inp_10)->
-              {    requestText = getStringByLocal(R.string.image_inp_10,"en")
+              application.getString(R.string.image_suggestion_10)->
+              {    requestText = getStringByLocal(R.string.image_suggestion_10,"en")
                    isTemplate = true
               }
               else -> isTemplate = false
@@ -236,7 +224,6 @@ class ImageRepositoryImpl @Inject constructor(@ApplicationContext val applicatio
                              }catch (ex:Exception){ex.printStackTrace()}
                         }
 
-                      //  AppLogger.logE(TAG,"result: ${result.body()!!.string()}")
                    }
 
               }.onFailure {

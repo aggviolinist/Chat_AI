@@ -4,9 +4,6 @@ import android.app.Application
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-//import com.apps.imageAI.components.ApiKeyHelpers
-//import com.apps.imageAI.components.CreditHelpers
-//import com.apps.imageAI.data.repository.FirebaseRepository
 import com.apps.imageAI.components.ApiKeyHelpers
 import com.apps.imageAI.components.AppLogger
 import com.apps.imageAI.components.Constants
@@ -78,14 +75,4 @@ class WelcomeViewModel @Inject constructor(private val app: Application,
         }
 
     }
-
-  /*  fun continueWithGuest() =viewModelScope.launch {
-        _isProcessing.value = true
-        preferenceRepository.setIsGuest(true)
-        creditHelpers.connectAsGuest()
-        delay(300)
-        _isProcessing.value = false
-        _loginSuccess.value = true
-    }*/
-
 }

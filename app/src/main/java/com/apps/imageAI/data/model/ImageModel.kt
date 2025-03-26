@@ -17,4 +17,3 @@ data class StabilityImageGenerationResponse(@SerializedName("artifacts") val art
 data class ImageInputRequest(val prompt: String="")
 
 
-//artifacts

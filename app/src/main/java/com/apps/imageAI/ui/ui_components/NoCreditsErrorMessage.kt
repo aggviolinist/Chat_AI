@@ -18,7 +18,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.apps.imageAI.R
-import com.apps.imageAI.ui.theme.Barlow
+import com.apps.imageAI.ui.theme.Labrada
 
 @Composable
 fun NoCreditsErrorMessage(modifier: Modifier, minReq:Int) {
@@ -26,12 +26,12 @@ fun NoCreditsErrorMessage(modifier: Modifier, minReq:Int) {
 
         Column {
             Text(
-                text = stringResource(R.string.you_reach_free_message_limit,minReq),
+                text = stringResource(R.string.you_reached_free_message_limit,minReq),
                 color = MaterialTheme.colorScheme.onSurface,
                 style = TextStyle(
                     fontSize = 14.sp,
                     fontWeight = FontWeight.W600,
-                    fontFamily = Barlow,
+                    fontFamily = Labrada,
                 ),
                 textAlign = TextAlign.Justify,
                 modifier = Modifier

@@ -1,19 +1,11 @@
 package com.apps.imageAI.ui
 
 import android.app.AlertDialog
-import android.content.Context
-import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.imePadding
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.safeContentPadding
-import androidx.compose.foundation.layout.safeDrawingPadding
-import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.MaterialTheme
@@ -24,25 +16,17 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
 import androidx.navigation.compose.rememberNavController
-//import com.apps.imageAI.BuildConfig
 import com.apps.imageAI.components.ApiKeyHelpers
-//import com.apps.imageAI.components.AppLogger
 import com.apps.imageAI.components.CreditHelpers
-//import com.apps.imageAI.components.InAppPurchaseHelper
-//import com.apps.imageAI.components.Utils
-//import com.apps.imageAI.ui.drawer.AppDrawerContent
 import com.apps.imageAI.ui.navigation.NavigationGraph
-//import com.apps.imageAI.ui.navigation.Screen
 import com.apps.imageAI.ui.theme.ImageAITheme
 import com.apps.imageAI.BuildConfig
 import com.apps.imageAI.components.AppLogger
 import com.apps.imageAI.components.InAppPurchaseHelper
 import com.apps.imageAI.components.Utils
-import com.apps.imageAI.ui.MainActivityViewModel
 import com.apps.imageAI.ui.drawer.AppDrawerContent
 import com.apps.imageAI.ui.navigation.Screen
 import com.google.firebase.auth.FirebaseAuth
@@ -65,9 +49,9 @@ class MainActivity : ComponentActivity() {
     private val viewModel: MainActivityViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        //enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         AppLogger.logE(TAG,"onCreate")
+
         installSplashScreen().apply {
             setKeepOnScreenCondition {
                 return@setKeepOnScreenCondition viewModel.isLoading.value
@@ -81,14 +65,7 @@ class MainActivity : ComponentActivity() {
         apiKeyHelpers.connect()
         creditsKeyHelpers.resetFreeCredits()
         creditsKeyHelpers.connect()
-       /* if (viewModel.isGuestMode() && FirebaseAuth.getInstance().currentUser == null)
-        {
-            creditsKeyHelpers.connectAsGuest()
-        }
-        else
-        {
-            creditsKeyHelpers.connect()
-        }*/
+
         val startDestination = if (FirebaseAuth.getInstance().currentUser != null || viewModel.isGuestMode()) Screen.RecentChats.route else Screen.Welcome.route
 
         setContent {
@@ -99,7 +76,7 @@ class MainActivity : ComponentActivity() {
             ImageAITheme(darkTheme) {
                 // A surface container using the 'background' color from the theme
                 Surface(
-                    modifier = Modifier.systemBarsPadding()/*.imePadding()*/.fillMaxSize(),
+                    modifier = Modifier.systemBarsPadding().fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
                     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)

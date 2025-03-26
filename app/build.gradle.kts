@@ -7,8 +7,6 @@ plugins {
     alias(libs.plugins.playServices)
     alias(libs.plugins.compose.compiler)
 
-
-    // JetBrains Compose Plugin (For Compose UI)
 }
 
 android {
@@ -84,7 +82,10 @@ dependencies {
     implementation(libs.material3)
     implementation(libs.material.icons)
     implementation(libs.appcompat)
-    implementation("androidx.credentials:credentials:1.2.0")
+    implementation(libs.androidx.credentials)
+    implementation (libs.androidx.credentials)
+    implementation (libs.androidx.credentials.play.services.auth)
+
 
 
     // Google Guava for Android
@@ -132,15 +133,12 @@ dependencies {
     implementation(libs.billing.client)
     implementation(libs.billing.client.ktx)
 
-    // AdMob
-    implementation(libs.play.services.admob)
-    implementation(libs.play.services.admob.lite)
+    //FB Ads
+    implementation (libs.androidx.annotation)
+    implementation (libs.audience.network.sdk)
 
     // Glide
     implementation(libs.glide)
-
-    // Credential Manager
-//    implementation(libs.credential.manager)
 
     // Firebase
     implementation(platform(libs.firebase.bom))
@@ -167,5 +165,14 @@ dependencies {
     androidTestImplementation(libs.ui.test.junit4)
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.ui.test.manifest)
+
+    implementation("androidx.compose.ui:ui:1.5.4")
+    implementation("androidx.compose.material:material:1.5.4")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.5.4")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.5.4")
+    implementation(libs.androidx.activity.compose.v182)
+
+
+
 
 }

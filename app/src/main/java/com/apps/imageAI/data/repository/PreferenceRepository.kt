@@ -15,12 +15,6 @@ interface PreferenceRepository {
     fun setIsGuest(isGuest:Boolean)
     fun getGPTModel(): String
     fun setGPTModel(modelName: String)
-/*    fun updateCredits(amount:Int)
-    fun getCredits():Int
-    fun updateCreditPurchasedStatus(status:Boolean)
-    fun getCreditsPurchasedStatus():Boolean
-    fun updateFreeCreditDate(date:String)
-    fun getFreeCreditDate():String*/
     fun setIsImageGen(enabled: Boolean)
     fun getIsImageGen(): Boolean
     fun setCurrentLanguage(language: String)
@@ -76,30 +70,6 @@ class PreferenceRepositoryImpl @Inject constructor(
         sharedPreferences.edit().putBoolean(PreferenceConstant.IS_GUEST_KEY, isGuest).commit()
     }
 
-  /*  override fun updateCredits(amount: Int) {
-        sharedPreferences.edit().putInt(PreferenceConstant.CREDITS_COUNT_KEY, amount).apply()
-    }
-
-    override fun getCredits(): Int {
-        return sharedPreferences.getInt(PreferenceConstant.CREDITS_COUNT_KEY,0)
-    }
-
-    override fun updateCreditPurchasedStatus(status: Boolean) {
-        sharedPreferences.edit().putBoolean(PreferenceConstant.IS_PREMIUM_KEY, status).apply()
-    }
-
-    override fun getCreditsPurchasedStatus(): Boolean {
-       return sharedPreferences.getBoolean(PreferenceConstant.IS_PREMIUM_KEY,false)
-    }
-
-    override fun updateFreeCreditDate(date: String) {
-        sharedPreferences.edit().putString(PreferenceConstant.FREE_CREDITS_KEY, date).apply()
-    }
-
-    override fun getFreeCreditDate(): String {
-        return sharedPreferences.getString(PreferenceConstant.FREE_CREDITS_KEY,"")?:""
-    }
-*/
     override fun setIsImageGen(enabled: Boolean) {
         sharedPreferences.edit().putBoolean(PreferenceConstant.IMAGE_GENERATION, enabled).apply()
     }
@@ -154,6 +124,5 @@ class PreferenceRepositoryImpl @Inject constructor(
     override fun getGPT4DailyCount(): Int {
         return sharedPreferences.getInt(PreferenceConstant.GPT4_LIMIT, 0)
     }
-
 
 }

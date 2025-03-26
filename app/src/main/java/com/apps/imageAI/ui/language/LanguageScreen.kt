@@ -29,7 +29,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.apps.imageAI.R
 import com.apps.imageAI.components.click
 import com.apps.imageAI.data.model.LanguageModel
-import com.apps.imageAI.ui.theme.Barlow
+import com.apps.imageAI.ui.theme.Labrada
 import com.apps.imageAI.ui.ui_components.ToolBar
 import java.util.Locale
 
@@ -99,11 +99,10 @@ fun LanguageScreen(
                 ) {
                     Text(
                         text = it.name,
-                       /* color = MaterialTheme.colorScheme.surface,*/
                         style = TextStyle(
                             fontSize = 20.sp,
                             fontWeight = FontWeight.W600,
-                            fontFamily = Barlow,
+                            fontFamily = Labrada,
                             lineHeight = 25.sp
                         ),
                         modifier = Modifier.weight(1f)
@@ -118,8 +117,6 @@ fun LanguageScreen(
                                 .size(27.dp)
                         )
                     }
-
-
                 }
 
                 HorizontalDivider(

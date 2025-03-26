@@ -33,7 +33,7 @@ import androidx.compose.ui.unit.sp
 import com.apps.imageAI.R
 import com.apps.imageAI.components.click
 import com.apps.imageAI.ui.theme.ImageAITheme
-import com.apps.imageAI.ui.theme.Barlow
+import com.apps.imageAI.ui.theme.Labrada
 import com.apps.imageAI.ui.theme.CreditsTint
 
 @Composable
@@ -57,7 +57,7 @@ fun ToolBar(
             style = TextStyle(
                 fontWeight = FontWeight.W600,
                 fontSize = 17.sp,
-                fontFamily = Barlow,
+                fontFamily = Labrada,
                 textAlign = TextAlign.Center, platformStyle = PlatformTextStyle(includeFontPadding = false)
             )
         )
@@ -138,7 +138,7 @@ fun ToolBarChat(
                     style = TextStyle(
                         fontWeight = FontWeight.W700,
                         fontSize = 20.sp,
-                        fontFamily = Barlow,
+                        fontFamily = Labrada,
                         textAlign = TextAlign.Center
                     )
                 )
@@ -162,7 +162,7 @@ fun ToolBarChat(
                 style = TextStyle(
                     fontWeight = FontWeight.W700,
                     fontSize = 20.sp,
-                    fontFamily = Barlow,
+                    fontFamily = Labrada,
                     textAlign = TextAlign.Center
                 )
             )
@@ -244,7 +244,7 @@ fun ToolBarChat(
                             style = TextStyle(
                                 fontSize = 20.sp,
                                 fontWeight = FontWeight.W600,
-                                fontFamily = Barlow,
+                                fontFamily = Labrada,
                                 lineHeight = 25.sp
                             ),
                             textAlign = TextAlign.Center
