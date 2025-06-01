@@ -22,4 +22,4 @@
 - 🌐 **API Integration**: Efficiently connects to AI services via secure RESTful API calls.
 - 📱 **Available on Google Play**: Easily accessible and ready to use on Android devices.
 
-[➡️ Download Image AI on Google Play]()
+[➡️ Download Image AI on Google Play](https://play.google.com/store/apps/details?id=com.apps.imageAI)
