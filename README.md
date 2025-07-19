@@ -6,11 +6,11 @@
 
 ## 🚀 Key Technologies
 
-- **Kotlin** & **Java** – Core app development
-- **Jetpack Compose** – Modern, declarative UI toolkit
-- **RESTful APIs** – For seamless communication with AI services
-- **ChatGPT API** – For intelligent and contextual text generation
-- **Stability AI API** – For converting text into AI-generated images
+- **Kotlin** & **Java** – Core app development.
+- **Jetpack Compose** – Modern, declarative UI toolkit.
+- **RESTful APIs** – For seamless communication with AI services.
+- **ChatGPT API** – For intelligent and contextual text generation.
+- **Stability AI API** – For converting text into AI-generated images.
 
 ---
 
